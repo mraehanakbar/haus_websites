@@ -1,8 +1,5 @@
 {% extends "main.html" %} {% load static %} {%block content%}
 
 <h3>Ini Isi Location Page</h3>
-
-{% comment %} Location Map{% endcomment %}
-<div class="container">{% block location%} {% endblock location%}</div>
-
-{% endblock content %}
+{% include "content_page.html" %} {% include "map_location.html" %} aa
+{%endblock content%}
