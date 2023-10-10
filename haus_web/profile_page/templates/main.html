@@ -1,21 +1,73 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Haus Profile Page</title>
-  </head>
 
-  <header>
-    <div>
-      <h3>Ini Header</h4>
+<head>
+  <title>Haus Profile Page</title>
+  {% load static tailwind_tags %} {% load static %} {% tailwind_css %}
+
+  <link rel="stylesheet" type="text/css" href="{% static '/css/dist/home.css' %}">
+  <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+
+<header>
+  <div>
+    <h3 class="bg-red-300">Ini Header</h3>
+  </div>
+  <br />
+</header>
+
+<body>
+  <div class="container">{% block content %}{% endblock content %}</div>
+</body>
+
+<footer class="bg-white-haus text-black py-8 mx-16">
+  <div class="container flex justify-between">
+
+    <!-- First Column -->
+    <div class="w-1/4 flex flex-col">
+      <img class="logo-haus" src="{% static '/images/logo_haus.png' %}" :alt="Logo Haus">
+      <p class="tracking-wider my-3">PT. INSPIRASI BISNIS NUSANTARA</p>
+
+      <div class="flex flex-row">
+        <img class="mail-icon mr-4" src="{% static '/images/mail.png' %}" alt="Logo Mail">
+        <div class="flex justify-center items-center ">
+          <p class="text-center">hello@haus.co.id</p>
+        </div>
+      </div>
+
+      <div class="font-bold mt-5">Follow Us</div>
+      <div class="flex flex-row mt-2">
+        <img class="social-media-logo w-10 h-auto" src="{% static '/images/instagram_icon.png' %}" :alt="Logo Haus">
+        <img class="social-media-logo" src="{% static '/images/tiktok_icon.png' %}" :alt="Logo Tiktok">
+        <img class="social-media-logo" src="{% static '/images/linkedin_icon.png' %}" :alt="Logo Linkedin">
+      </div>
     </div>
-    <br />
-  </header>
-  <body>
-    <div class="container">{% block content %}{% endblock content %}</div>
-  </body>
 
-  <footer>
-    <br />
-    <h3>Footer</h3>
-  </footer>
+    <!-- Second Column -->
+    <div class="w-1/4 flex flex-col pl-7 mx-auto mt-7 justify-items-center">
+      <h2 class="text-2xl font-bold">BRAND</h2>
+      <div class="my-5">Haus! Indonesia</div>
+      <div>Ganjel Roti</div>
+      <div class="my-5">Pedes Cyin</div>
+      <div>Hot Oppa</div>
+    </div>
+
+    <!--Third column  -->
+    <div class="w-1/4 mt-7">
+      <h2 class="text-2xl font-bold">HAUS! APPS</h2>
+      <div class="mt-5 font-bold">Download Now</div>
+      <img class="download-icon" src="{% static '/images/google_play_icon.png' %}" alt="Google Play">
+      <img class="download-icon" src="{% static '/images/app_store_icon.png' %}" alt="App Store">
+    </div>
+    
+    <!--Fourth column  -->
+    <div class="w-1/4 mt-7">
+      <h2 class="text-2xl font-bold">Lokasi Kami</h2>
+      <p class="mt-2">Taman Meruya Ilir, Jl. Safifr I Blok E6 No.27</p>
+      <img class="haus-maps" src="{% static '/images/haus_maps.png' %}" alt="Haus Maps">
+    </div>
+  </div>
+</footer>
+
 </html>
