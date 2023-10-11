@@ -1,7 +1,214 @@
 {% extends "main.html" %}
 
-{%block content%}
-<h3>Ini adalah homepage</h3>
+{% load static %}
+
+{% block content %}
+
+<link rel="stylesheet" type="text/css" href="{% static '/css/dist/home.css' %}">
+
+<!-- Background Mobile App -->
+
+<div class="relative">
+  <img class="logo-haus min-w-full h-auto" src="{% static '/images/background-mobile.jpg' %}"
+    alt="Background Mobile App">
+  <div class="content absolute inset-0 flex flex-col h-2/5 w-3/5 ml-20 justify-center mt-32">
+    <h1 class="text-7xl text-white font-bold mb-4 flex-1 leading-normal">Haus! Mobile App for Order</h1>
+    <div class="flex-1 text-white text-2xl w-1/2">"Spreading Happiness to Everyone Through Cup of Drink"</div>
+    <img class="download-icon" src="{% static '/images/google_play_icon.png' %}" alt="Google Play">
+  </div>
+  <img class="min-w-full absolute bottom-0" src="{% static '/images/footer-aksen.png' %}" alt="Footer Aksen">
+  <div class="min-w-full flex justify-center">
+    <!-- Masih belum benar -->
+    <img class="absolute bottom-0 z-10" src="{% static '/images/polygon_arrow.svg' %}" alt="Polygon Arrow">
+    <div class="absolute bottom-0 z-20 text-white">Promo</div>
+  </div>
+</div>
+
+<!-- Background -->
+<div class="relative">
+  <hr
+    class="z-10 border-t-4 border-purple-haus w-1/12 mx-auto absolute inset-0 mt-4 sm:mt-8 md:mt-12 lg:mt-16 xl:mt-20" />
+  <div class="z-10 absolute inset-1 text-center text-3xl text-white font-bold mt-8 sm:mt-12 md:mt-16 lg:mt-20 xl:mt-24">Special Deal</div>
+  <img class="logo-haus min-w-full" src="{% static '/images/promo-background.jpg' %}" alt="Background Promo">
+  <img class="w-10/12 absolute inset-0 my-auto mx-auto" src="{% static '/images/lemon.jpg' %}" alt="Footer Aksen">
+  <div class="absolute inset-y-0 left-0 flex items-center ml-4">
+    <img src="{% static '/images/left-arrow.svg' %}">
+  </div>
+  <div class="absolute inset-y-0 right-0 flex items-center mr-4">
+    <img src="{% static '/images/left-arrow.svg' %}">
+  </div>
+  </div>
+</div>
+</div>
+
+
+<!-- Card -->
+<div class="mx-16">
+  <hr class="sub-title-line mt-14 mb-3.5  border-t-4 border-blue-500 w-1/12 mx-auto my-3">
+  <div class="sub-title text-xl font-bold text-center mb-10">Brand Kami</div>
+  <div class="flex flex-row space-x-4 justify-between">
+    <!-- Haus -->
+    <div class="max-w-sm rounded overflow-hidden shadow-lg border border-gray-300">
+      <img class="w-6/12 mx-auto" src="{% static '/images/haus.png' %}" alt="Logo Haus">
+      <div class="px-6 py-4">
+        <div class="sub-title  font-bold text-xl mb-2">Haus!</div>
+        <p class="text-gray-700 text-base">
+          Minuman favorit warga
+        </p>
+      </div>
+      <div class="px-6 py-4 flex flex-row justify-between">
+        <a href="#" class="detail text-red font-bold py-2">
+          Lihat Detail
+        </a>
+        <img class="ms-2" src="{% static '/images/arrow-more.svg' %}" alt="Logo Haus">
+      </div>
+    </div>
+    <!-- Ganjel Roti -->
+    <div class="max-w-sm rounded overflow-hidden shadow-lg border border-gray-300">
+      <img class="w-6/12 mx-auto" src="{% static '/images/ganjel-roti.png' %}" alt="Ganjel Roti">
+      <div class="px-6 py-4">
+        <div class="sub-title font-bold text-xl mb-2">Ganjel Roti</div>
+        <p class="text-gray-700 text-base">
+          Ganjel Perut dengan #ganjelroti
+        </p>
+      </div>
+      <div class="px-6 py-4 flex flex-row justify-between">
+        <a href="#" class="detail text-red font-bold py-2">
+          Lihat Detail
+        </a>
+        <img class="ms-2" src="{% static '/images/arrow-more.svg' %}" alt="Logo Haus">
+      </div>
+    </div>
+    <!-- Pedes Cyin -->
+    <div class="max-w-sm rounded overflow-hidden shadow-lg border border-gray-300 bg-red-300">
+      <img class="w-6/12 mx-auto" src="{% static '/images/pedes-cyin.png' %}" alt="Pedes Cyin">
+      <div class="px-6 py-4">
+        <div class="sub-title  font-bold text-xl mb-2">Pedes Cyin</div>
+        <p class="text-gray-700 text-base">
+          Cemilan Pedas buat temen ngeHaus!
+        </p>
+      </div>
+      <div class="px-6 py-4 flex flex-row justify-between">
+        <a href="#" class="detail text-red font-bold py-2">
+          Lihat Detail
+        </a>
+        <img class="ms-2" src="{% static '/images/arrow-more.svg' %}" alt="Logo Haus">
+      </div>
+    </div>
+    <!-- Hot Oppa -->
+    <div class="max-w-sm rounded overflow-hidden shadow-lg border border-gray-300">
+      <img class="w-6/12 mx-auto" src="{% static '/images/hot-oppa.png' %}" alt="Hot Oppa">
+      <div class="px-6 py-4">
+        <div class="sub-title font-bold text-xl mb-2">Hot Oppa</div>
+        <p class="text-gray-700 text-base">
+          Mie Pedas Korea
+        </p>
+      </div>
+      <div class="px-6 py-4 flex flex-row justify-between">
+        <a href="#" class="detail text-red font-bold py-2">
+          Lihat Detail
+        </a>
+        <img class="ms-2" src="{% static '/images/arrow-more.svg' %}" alt="Logo Haus">
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Berita -->
+<!-- <div class="flex flex-row mx-16"> -->
+<!-- Left Column -->
+<!-- <div class="w-3/5 h-full">  -->
+<!-- Konten left column di sini -->
+<!-- <div class="flex flex-col "> 
+      <div class="text-xl font-bold">Berita</div>
+      <div class="flex flex-row">  -->
+<!-- Berita 1 -->
+<!-- <div class="max-w-full rounded overflow-hidden shadow-lg">
+          <img class="w-full" src="{% static '/images/tamvan-series.jpg' %}" alt="Logo Haus">
+          <div class="px-6 py-4">
+            <div>2022/06/21 - 13:00:04 pm</div>
+            <div class="font-bold text-xl mb-2">Haus! Tutup Semester I-2022 dengan Pendanaan Series B</div>
+            <div class="font-normal">Haus!, (F&B) pada semester I-2022 menutup pendanaan Seri B1 dari beberapa angel investors dan VC Regional seperti Strategic Year Holding dan Atlas Global Ventures.</div>
+          </div>
+          <div class="px-6 py-4 flex flex-row">
+            <a href="#" class="text-red font-bold py-2">
+              Lihat Detail
+            </a>
+            <img class="ms-2" src="{% static '/images/arrow-more.svg' %}" alt="Logo Haus">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div> -->
+
+<!-- Right Column -->
+<!-- <div class="w-2/5 h-full"> 
+    <div class="flex flex-col"> 
+      <div class="text-xl font-bold">Promo</div> -->
+
+<!-- Baris Pertama - 50% tinggi -->
+<!-- <div class="h-1/4 flex flex-col">
+        <div class="flex flex-row">
+          <div class="max-w-full rounded overflow-hidden shadow-lg">
+
+            <div class="h-1/2">
+              <img class="w-1/5 h-auto mx-auto" src="{% static '/images/teh-tarik.jpg' %}" alt="Logo Haus">
+            </div>
+
+            <div class="px-6 py-4 ">
+              <div>2022/06/21 - 13:00:04 pm</div>
+              <div class="font-bold mb-2">Perjalanan Haus! Bisnis Minuman Kekinian Bangun 120 Kedai Selama 3 Tahun</div>
+            </div>
+            <div class="px-6 py-4 flex flex-row">
+              <a href="#" class="text-red font-bold py-2">
+                Lihat Detail
+              </a>
+              <img class="ms-2" src="{% static '/images/arrow-more.svg' %}" alt="Logo Haus">
+            </div>
+          </div>
+        </div>
+      </div> -->
+
+<!-- Baris Kedua - 50% tinggi -->
+<!-- <div class="h-1/4 flex flex-col">
+        <div class="flex flex-row">
+          <div class="max-w-full rounded overflow-hidden shadow-lg">
+            <img class="w-1/5 h-auto mx-auto" src="{% static '/images/teh-tarik.jpg' %}" alt="Logo Haus">
+            <div class="px-6 py-4">
+              <div>2022/06/21 - 13:00:04 pm</div>
+              <div class="font-bold mb-2">Perjalanan Haus! Bisnis Minuman Kekinian Bangun 120 Kedai Selama 3 Tahun</div>
+            </div>
+            <div class="px-6 py-4 flex flex-row">
+              <a href="#" class="text-red font-bold py-2">
+                Lihat Detail
+              </a>
+              <img class="ms-2" src="{% static '/images/arrow-more.svg' %}" alt="Logo Haus">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div> -->
+
+<!-- Haus! Rame-rame -->
+<hr class="sub-title-line mt-14 mb-3.5  border-t-4 border-blue-500 w-1/12 mx-auto my-3">
+<div class="sub-title text-xl font-bold text-center mb-10">Haus! Rame-Rame</div>
+<div class="w-full haus-rame">
+  <div class="flex flex-row haus-rame py-10 w-3/4 mx-auto">
+    <div class="w-1/2 flex justify-center">
+      <img class="w-3/4" src="{% static '/images/pair-of-photos.png' %}" alt="Logo Haus">
+    </div>
+    <div class="w-1/2 flex flex-col justify-center">
+      <div class="text-3xl font-bold text-white leading-normal">Ciptakan Momen Bahagiamu Bersama Haus!</div>
+      <div class="text-white pt-1 pb-8">Semua menu haus! dalam paket rame-rame</div>
+      <button class=" btn-haus-rame text-white font-bold border border-white py-1  rounded-full hover:bg-purple-600 w-5/12">
+        Pelajari Selengkapnya
+      </button>
+    </div>
+  </div>
+
+</div>
+
 
 
 {% endblock content %}
