@@ -5,7 +5,7 @@
     {% load static %} {% load static tailwind_tags %} {% tailwind_css %}
   </head>
 
-  <nav class="bg-white shadow-xl text-black py-3 sticky top-0 z-50 font-poppins">
+  <nav class="bg-white shadow-xl text-black py-3 sticky top-0 z-50 ">
     <div class="container m-auto grid grid-cols-5 items-center">
       <!-- Brand Logo -->
       <div class="flex px-4 justify-center col-span-1">
@@ -33,14 +33,14 @@
       <!-- Download Apps Button -->
       <div class="col-span-1 flex justify-center">
         <button
-          class="bg-[#8A489C] text-white py-2 px-4 rounded-md font-semibold"
+          class="bg-purple-main text-white py-2 px-4 rounded-md font-semibold"
         >
           Download Apps
         </button>
       </div>
     </div>
   </nav>
-  <body>
+  <body class="bg-white-gray">
     <div class="container">
       {% block content %}{% endblock content %}
     </div>

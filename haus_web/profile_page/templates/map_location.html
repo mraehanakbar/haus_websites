@@ -1,23 +1,43 @@
-{% block location %}
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD0wbav-kd9S6sVwpcot5rBl-Do5tHMpK8"></script>
+{% block location %} {% load static %}
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD0wbav-kd9S6sVwpcot5rBl-Do5tHMpK8&map_ids=87c7b55241ce2052"></script>
 
 <script>
   function initMap() {
     var map = new google.maps.Map(document.getElementById("map"), {
-      center: { lat: -6.2, lng: 107},
-      zoom: 12,
+      center: { lat: -6.2, lng: 107 },
+      zoom: 14,
+      mapID: "MAP_ID",
     });
 
     // Loop through store locations and add markers
-    var locations = {{ locations }};
+    var locations = JSON.parse("{{ locations|escapejs }}");
 
     for (var i = 0; i < locations.length; i++) {
-        var location = locations[i];
-        var marker = new google.maps.Marker({
-            position: { lat: location[0], lng: location[1] },
-            map: map,
-            title: "Haus"
+      var location = locations[i];
+      const marker = new google.maps.Marker({
+        position: { lat: location[0], lng: location[1] },
+        map,
+        title: "Haus",
+        icon: {
+          url: "{% static 'icon/haus_icon.png' %}",
+          scaledSize: new google.maps.Size(27, 42),
+        },
+      });
+
+      const infowindow = new google.maps.InfoWindow({
+        content: location[0].toString(),
+      });
+
+      marker.addListener("mouseover", () => {
+        infowindow.open({
+          anchor: marker,
+          map,
         });
+      });
+
+      marker.addListener("mouseout", function () {
+        infowindow.close();
+      });
     }
   }
 </script>

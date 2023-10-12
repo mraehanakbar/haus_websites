@@ -1,8 +1,22 @@
 {% extends "main.html" %} {%block content%}
 
-<div>
-  <h1>Temukan Store Haus! Disekitarmu</h1>
-  <div>Search Bar</div>
+<div class="mt-9">
+  <div class="text-center font-bold">Temukan Store Haus! Disekitarmu</div>
+  <div class="flex justify-center mt-2">
+    <input
+      type="text"
+      id="search-input"
+      class="rounded-l-lg focus:border-none border-none focus:ring-0 bg-white shadow-md w-80"
+      placeholder="Cari Store Haus! Disekitarmu"
+    />
+    <button
+      id="search-button"
+      class="rounded-r-lg h-[42px] relative left-[-5px] px-10 bg-purple-main text-white shadow-md"
+    >
+      Search
+    </button>
+  </div>
 </div>
 
-{% include "map_location.html" %} {%endblock content%}
+<div class="mt-8">{% include "map_location.html" %}</div>
+{%endblock content%}

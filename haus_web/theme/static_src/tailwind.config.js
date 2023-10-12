@@ -50,6 +50,10 @@ module.exports = {
       fontFamily: {
         poppins: ["Poppins"],
       },
+      colors: {
+        "white-gray": "#F3F3F3",
+        "purple-main": "#8A489C",
+      },
     },
   },
   plugins: [
