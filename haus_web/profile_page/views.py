@@ -5,6 +5,10 @@ from django.http import JsonResponse
 def home(request):
     return render(request,"home.html")
 
+def homepage(request):
+    return render(request,"homepage.html")
+
+
 def location_page(request):
     return render(request, "location_page.html", context={})
 
