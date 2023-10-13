@@ -1,7 +1,104 @@
 {% block location %} {% load static %}
+
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD0wbav-kd9S6sVwpcot5rBl-Do5tHMpK8&map_ids=87c7b55241ce2052"></script>
 
 <script>
+  function autocomplete(inp, arr) {
+    let currentFocus;
+
+    function createAutoCompleteList() {
+      closeAllLists();
+      const inputValue = inp.value;
+      if (!inputValue) return;
+
+      currentFocus = -1;
+      const autoCompleteList = document.createElement("DIV");
+      autoCompleteList.id = inp.id + "autocomplete-list";
+      autoCompleteList.className =
+        "autocomplete-items max-h-32 overflow-y-auto"; // Added max height and scrolling
+      inp.parentNode.appendChild(autoCompleteList);
+
+      const displayedItems = 5; // Maximum number of displayed items
+
+      arr.forEach((item, index) => {
+        if (
+          item.toUpperCase().startsWith(inputValue.toUpperCase()) &&
+          index < displayedItems
+        ) {
+          const autoCompleteItem = document.createElement("DIV");
+          const matchingPart = item.substr(0, inputValue.length);
+          autoCompleteItem.innerHTML = `<strong>${matchingPart}</strong>${item.substr(
+            inputValue.length
+          )}`;
+          autoCompleteItem.innerHTML += `<input type='hidden' value='${item}'>`;
+          autoCompleteItem.addEventListener("click", function () {
+            inp.value = this.getElementsByTagName("input")[0].value;
+            closeAllLists();
+          });
+          autoCompleteList.appendChild(autoCompleteItem);
+        }
+      });
+    }
+
+    function handleKeyDown(e) {
+      const autoCompleteList = document.getElementById(
+        inp.id + "autocomplete-list"
+      );
+      if (!autoCompleteList) return;
+
+      const autoCompleteItems = autoCompleteList.getElementsByTagName("div");
+
+      switch (e.keyCode) {
+        case 40: // Arrow DOWN key
+          currentFocus++;
+          addActive(autoCompleteItems);
+          break;
+        case 38: // Arrow UP key
+          currentFocus--;
+          addActive(autoCompleteItems);
+          break;
+        case 13: // ENTER key
+          e.preventDefault();
+          if (currentFocus > -1) {
+            autoCompleteItems[currentFocus].click();
+          }
+          break;
+      }
+    }
+
+    function addActive(autoCompleteItems) {
+      removeActive(autoCompleteItems);
+
+      if (currentFocus >= autoCompleteItems.length) currentFocus = 0;
+      if (currentFocus < 0) currentFocus = autoCompleteItems.length - 1;
+
+      autoCompleteItems[currentFocus].classList.add("autocomplete-active");
+    }
+
+    function removeActive(autoCompleteItems) {
+      for (let i = 0; i < autoCompleteItems.length; i++) {
+        autoCompleteItems[i].classList.remove("autocomplete-active");
+      }
+    }
+
+    function closeAllLists(elmnt) {
+      const autoCompleteItems =
+        document.getElementsByClassName("autocomplete-items");
+      for (let i = 0; i < autoCompleteItems.length; i++) {
+        if (elmnt != autoCompleteItems[i] && elmnt != inp) {
+          autoCompleteItems[i].parentNode.removeChild(autoCompleteItems[i]);
+        }
+      }
+    }
+
+    inp.addEventListener("input", createAutoCompleteList);
+    inp.addEventListener("keydown", handleKeyDown);
+
+    document.addEventListener("click", function (e) {
+      closeAllLists(e.target);
+    });
+  }
+
   function initMap() {
     var map = new google.maps.Map(document.getElementById("map"), {
       center: { lat: -6.2, lng: 107 },
@@ -15,6 +112,9 @@
         return response.json();
       })
       .then(function (outlets) {
+        const autocompleteData = outlets.map((item) => item[0].toLowerCase());
+        autocomplete(document.getElementById("search-input"), autocompleteData);
+
         for (var i = 0; i < outlets.length; i++) {
           var outlet = outlets[i];
           const marker = new google.maps.Marker({
@@ -23,7 +123,7 @@
             title: outlet[0],
             icon: {
               url: "{% static 'icon/haus_icon.png' %}",
-              scaledSize: new google.maps.Size(27, 42),
+              scaledSize: new google.maps.Size(22, 34),
             },
           });
 

@@ -1,22 +1,58 @@
 {% extends "main.html" %} {%block content%}
+<script></script>
 
 <div class="mt-9">
-  <div class="text-center font-bold">Temukan Store Haus! Disekitarmu</div>
-  <div class="flex justify-center mt-2">
-    <input
-      type="text"
-      id="search-input"
-      class="rounded-l-lg focus:border-none border-none focus:ring-0 bg-white shadow-md w-80"
-      placeholder="Cari Store Haus! Disekitarmu"
-    />
-    <button
-      id="search-button"
-      class="rounded-r-lg h-[42px] relative left-[-5px] px-10 bg-purple-main text-white shadow-md"
-    >
-      Search
-    </button>
+    <div class="text-center font-bold">Temukan Store Haus! Disekitarmu</div>
+    <div class="flex justify-center mt-2">
+      <div class="autocomplete bg-white shadow-md w-80 rounded-l-lg">
+        <input
+          type="text"
+          id="search-input"
+          class="rounded-l-lg focus:border-none border-none focus:ring-0 w-full"
+          placeholder="Cari Store Haus! Disekitarmu"
+          autocomplete="off"
+        />
+      </div>
+      <button
+        id="search-button"
+        class="rounded-r-lg h-[42px] relative left-[-5px] px-10 bg-purple-main text-white shadow-md"
+      >
+        Search
+      </button>
+    </div>
+  </div>
+
+  <style>
+    .autocomplete input[type="text"] {
+      @apply w-full px-4 py-2 border rounded-lg focus:outline-none;
+    }
+
+    .autocomplete input[type="submit"] {
+      @apply bg-blue-500 text-white;
+      cursor: pointer;
+    }
+
+    .autocomplete-items {
+      @apply border border-gray-300 z-10 w-full mt-2 bg-white rounded-lg shadow-lg;
+      top: 100%;
+    }
+
+    .autocomplete-items div {
+      @apply p-2 cursor-pointer;
+      background-color: #fff;
+      border-bottom: 1px solid #d4d4d4;
+    }
+
+    .autocomplete-items div:hover {
+      @apply bg-purple-main;
+    }
+
+    .autocomplete-active {
+      @apply bg-blue-500 text-white !important;
+    }
+  </style>
+  <div class="mt-9">
+    {% include "map_location.html" %}
   </div>
 </div>
-
-<div class="mt-8">{% include "map_location.html" %}</div>
 {%endblock content%}
