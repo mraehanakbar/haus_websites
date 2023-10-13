@@ -1,25 +1,51 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <title>Haus Profile Page</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    {% load static %} {% load static tailwind_tags %} {% tailwind_css %}
+  </head>
 
-<head>
-  <title>Haus Profile Page</title>
-  {% load static tailwind_tags %} {% load static %} {% tailwind_css %}
+  <nav class="bg-white shadow-xl text-black py-3 sticky top-0 z-50 ">
+    <div class="container m-auto grid grid-cols-5 items-center">
+      <!-- Brand Logo -->
+      <div class="flex px-4 justify-center col-span-1">
+        <a href="#" class="content-center text-2xl font-bold text-white">
+          <img
+            src="{% static '/images/nav_logo.png' %}"
+            alt="Brand Logo"
+            class="inline-block mx-20"
+            width="100"
+          />
+        </a>
+      </div>
 
-  <link rel="stylesheet" type="text/css" href="{% static '/css/dist/home.css' %}">
-  <script src="https://cdn.tailwindcss.com"></script>
+      <!-- Navigation Links -->
+      <div class="hidden md:flex justify-center col-span-3 space-x-6">
+        <a href="#" class="hover:text-gray-700 font-semibold">BRAND <i class="text-xs">&#9660</i></a>
+        <a href="#" class="hover:text-gray-700">LOKASI TOKO</a>
+        <a href="#" class="hover:text-gray-700">BIG ORDER</a>
+        <a href="#" class="hover:text-gray-700">MENU</a>
+        <a href="#" class="hover:text-gray-700">NEWS</a>
+        <a href="#" class="hover:text-gray-700">TENTANG KAMI</a>
+        <a href="#" class="hover:text-gray-700">KARIR</a>
+      </div>
 
-</head>
-
-<header>
-  <div>
-    <h3 class="bg-red-300">Ini Header</h3>
-  </div>
-  <br />
-</header>
-
-<body>
-  <div class="container">{% block content %}{% endblock content %}</div>
-</body>
+      <!-- Download Apps Button -->
+      <div class="col-span-1 flex justify-center">
+        <button
+          class="bg-purple-main text-white py-2 px-4 rounded-md font-semibold"
+        >
+          Download Apps
+        </button>
+      </div>
+    </div>
+  </nav>
+  <body class="bg-white-gray">
+    <div class="container">
+      {% block content %}{% endblock content %}
+    </div>
+  </body>
 
 <footer class="bg-white-haus text-black py-8 mx-16">
   <div class="container flex justify-between">
