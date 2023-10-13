@@ -1,16 +1,4 @@
-from django.shortcuts import render
-from django.http import JsonResponse
-
-# Create your views here.
-def home(request):
-    return render(request,"home.html")
-
-def location_page(request):
-    return render(request, "location_page.html", context={})
-
-def get_json_data(request):
-    # data = YourModel.objects.all().values()  # Replace with your model and query
-    data = [
+[
   [
     "HAUS! CIJERAH",
     "Jl. Melong 1 Blok 5 No.11, Melong, Kota Cimahi, Jawa Barat",
@@ -1545,5 +1533,3 @@ def get_json_data(request):
     106.7870911289
   ]
 ]
-
-    return JsonResponse(data, safe=False)
