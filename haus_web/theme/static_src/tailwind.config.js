@@ -53,6 +53,8 @@ module.exports = {
       colors: {
         "white-gray": "#F3F3F3",
         "purple-main": "#8A489C",
+        "pink-main": "#CD3B8E",
+        "pink-font": "#C73480",
       },
     },
   },
