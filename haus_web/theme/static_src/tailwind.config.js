@@ -55,6 +55,11 @@ module.exports = {
         "purple-main": "#8A489C",
         "pink-main": "#CD3B8E",
         "pink-font": "#C73480",
+        "pink-dropdown": "#FAFAFA",
+      },
+      fontSize: {
+        "1.5xl": "22px",
+        "2.5xl": "28px",
       },
     },
   },

@@ -1,12 +1,91 @@
 {% extends "main.html" %} {%block content%}
 <script></script>
-
+{% load static%}
 <div class="mt-9">
-  <div>
-    <div class="bg-purple-main w-4 h-2"></div>
-    <h1 class="font-bold">Lokasi Store Baru</h1>
+  <!-- NEW STORE HEADER -->
+  <div class="flex justify-center">
+    <div class="px-4 w-64">
+      <div class="flex justify-center w-full">
+        <div class="bg-pink-main w-36 h-1.5"></div>
+      </div>
+      <h1 class="mt-2.5 font-semibold text-center text-2.5xl">
+        Lokasi Store Baru
+      </h1>
+    </div>
   </div>
 
-  <div class="mt-9">{% include "map_location.html" %}</div>
+  <div class="flex justify-center mt-10">
+    <!-- NEW STORE LIST -->
+    <div class="px-48 grid grid-cols-3 items-center text-center">
+      <!-- FIRST COLUMN -->
+      <div class="col-span-1 flex justify-center w-80">
+        <div>
+          <div class="mb-10">
+            <h1 class="font-bold text-pink-font text-1.5xl">Haus! Cibadak</h1>
+            <p class="mt-6 font-semibold text-lg">
+              Jl. Raya Kresek Rt. 01/12 Duri Kosambi Cengkareng, Jakarta Barat
+            </p>
+          </div>
+          <div class="mb-10">
+            <h1 class="font-bold text-pink-font text-1.5xl">Haus! Cibadak</h1>
+            <p class="mt-6 font-semibold text-lg">
+              Jl. Raya Kresek Rt. 01/12 Duri Kosambi Cengkareng, Jakarta Barat
+            </p>
+          </div>
+          <div>
+            <h1 class="font-bold text-pink-font text-1.5xl">Haus! Cibadak</h1>
+            <p class="mt-6 font-semibold text-lg">
+              Jl. Raya Kresek Rt. 01/12 Duri Kosambi Cengkareng, Jakarta Barat
+            </p>
+          </div>
+        </div>
+      </div>
+      <!-- BLANK COLUMN -->
+      <div class="col-span-1 flex justify-center w-80"></div>
+      <!-- THIRD COLUMN -->
+      <div class="col-span-1 flex justify-center w-80">
+        <div>
+          <div class="mb-10">
+            <h1 class="font-bold text-pink-font text-1.5xl">Haus! Cibadak</h1>
+            <p class="mt-6 font-semibold text-lg">
+              Jl. Raya Kresek Rt. 01/12 Duri Kosambi Cengkareng, Jakarta Barat
+            </p>
+          </div>
+          <div class="mb-10">
+            <h1 class="font-bold text-pink-font text-1.5xl">Haus! Cibadak</h1>
+            <p class="mt-6 font-semibold text-lg">
+              Jl. Raya Kresek Rt. 01/12 Duri Kosambi Cengkareng, Jakarta Barat
+            </p>
+          </div>
+          <div>
+            <h1 class="font-bold text-pink-font text-1.5xl">Haus! Cibadak</h1>
+            <p class="mt-6 font-semibold text-lg">
+              Jl. Raya Kresek Rt. 01/12 Duri Kosambi Cengkareng, Jakarta Barat
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- <div class="mt-9">{% include "map_location.html" %}</div> -->
+    </div>
+  </div>
+
+  <!-- STORE LIST HEADER -->
+  <div class="mt-14 flex justify-center">
+    <div class="px-4">
+      <div class="flex justify-center w-full">
+        <div class="bg-pink-main w-36 h-1.5"></div>
+      </div>
+      <h1 class="mt-2.5 font-semibold text-center text-2.5xl">
+        Lokasi Store Baru
+      </h1>
+      <p class="mt-2.5 text-center text-2xl font-normal">
+        Temukan Store terdekat dari lokasimu
+      </p>
+    </div>
+  </div>
+
+  <!-- STORE LIST -->
+  {% include 'components/store_lists.html' %}
 </div>
 {%endblock content%}
