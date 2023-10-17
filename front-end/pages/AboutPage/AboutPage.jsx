@@ -1,12 +1,16 @@
 import { Component } from "react";
-import { NavbarComponent, CardComponent, FooterComponent } from "../component";
+import {
+  NavbarComponent,
+  CardComponent,
+  FooterComponent,
+} from "../../component";
 import PropTypes from "prop-types";
 import "./about.css";
-import Number from "../utils/animations";
-import img1 from "../src/assets/images/img1.png";
-import img2 from "../src/assets/images/img2.png";
-import card1 from "../src/assets/images/card1.png";
-import card2 from "../src/assets/images/card2.png";
+import Number from "../../utils/animations";
+import img1 from "../../src/assets/images/img1.png";
+import img2 from "../../src/assets/images/img2.png";
+import card1 from "../../src/assets/images/card1.png";
+import card2 from "../../src/assets/images/card2.png";
 
 export default class AboutPage extends Component {
   render() {

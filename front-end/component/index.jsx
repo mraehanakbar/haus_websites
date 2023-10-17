@@ -1,6 +1,5 @@
-import NavbarComponent from "./NavBarComponent"
-import CardComponent from "./CardComponent"
-import FooterComponent from "./FooterComponent"
+import NavbarComponent from "./Navbars/NavBarComponent";
+import CardComponent from "./Cards/CardComponent";
+import FooterComponent from "./Footers/FooterComponent";
 
-
-export {NavbarComponent,CardComponent,FooterComponent}
+export { NavbarComponent, CardComponent, FooterComponent };

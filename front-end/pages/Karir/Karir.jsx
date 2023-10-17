@@ -1,9 +1,9 @@
 import { Component } from "react";
-import { NavbarComponent, FooterComponent } from "../component";
+import { NavbarComponent, FooterComponent } from "../../component";
 import "./karir.css";
-import karir1 from "../src/assets/images/karir1.png";
-import karir2 from "../src/assets/images/karir2.png";
-import arrow from "../src/assets/images/arrow.png";
+import karir1 from "../../src/assets/images/karir1.png";
+import karir2 from "../../src/assets/images/karir2.png";
+import arrow from "../../src/assets/images/arrow.png";
 
 export default class Karir extends Component {
   render() {
