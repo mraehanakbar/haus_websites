@@ -8,24 +8,9 @@ import img1 from "../../assets/images/img1.png";
 import img2 from "../../assets/images/img2.png";
 import card1 from "../../assets/images/card1.png";
 import card2 from "../../assets/images/card2.png";
-import { useSpring, animated } from "react-spring";
-import PropTypes from "prop-types";
+import NumberAnimation from "../../../utils/NumberAnimation";
 
 const AboutPage = () => {
-  function NumberAnimation({ n }) {
-    const { number } = useSpring({
-      from: { number: 0 },
-      number: n,
-      delay: 10,
-      config: { mass: 1, tension: 2, friction: 8 },
-    });
-    return <animated.span>{number.to((n) => n.toFixed(0))}</animated.span>;
-  }
-
-  NumberAnimation.propTypes = {
-    n: PropTypes.number.isRequired,
-  };
-
   return (
     <>
       <NavbarComponent />

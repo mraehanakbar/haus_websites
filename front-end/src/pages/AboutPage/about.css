@@ -3,12 +3,13 @@
 }
 
 .content-1 {
-  padding-top: 100px;
+  margin: 80px 40px 0;
   display: flex;
 }
 .content-2 {
+  margin: 0 40px 100px;
   display: flex;
-  margin-bottom: 100px;
+
 }
 
 .box {
@@ -147,5 +148,5 @@
 .news {
   display: flex;
   align-items: center;
-  margin: 0 50px;
+  margin: 0 30px;
 }
