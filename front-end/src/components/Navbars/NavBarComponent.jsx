@@ -1,5 +1,5 @@
 import "./Navbar.css";
-import logo from "../../src/assets/images/logoatas.png";
+import logo from "../../assets/images/logoatas.png";
 
 const NavbarComponent = () => {
   return (
@@ -10,7 +10,7 @@ const NavbarComponent = () => {
       <div className="menu">
         <ul>
           <li>
-            <a href="#tentang-kami">Tentang Kami</a>
+            <a href="/about">Tentang Kami</a>
           </li>
           <li>
             <a href="#menu">Menu</a>
@@ -19,7 +19,7 @@ const NavbarComponent = () => {
             <a href="#lokasi">Lokasi Toko</a>
           </li>
           <li>
-            <a href="#karir">Karir</a>
+            <a href="/karir">Karir</a>
           </li>
           <li>
             <button href="#download-apps">

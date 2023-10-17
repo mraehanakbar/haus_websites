@@ -45,7 +45,6 @@
 
 .explain {
   padding: 70px 100px 20px;
-
 }
 
 .line {
@@ -54,7 +53,7 @@
   flex-direction: column;
 }
 
-.lines{
+.lines {
   margin: 20px 0;
   width: 176px;
   height: 6px;
@@ -148,4 +147,5 @@
 .news {
   display: flex;
   align-items: center;
+  margin: 0 50px;
 }
