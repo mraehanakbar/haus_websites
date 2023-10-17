@@ -1,4 +1,4 @@
 import AboutPage from "./AboutPage";
+import Karir from "./Karir";
 
-
-export {AboutPage}
+export { AboutPage, Karir };

@@ -1,11 +1,10 @@
-import { AboutPage } from "../pages"
+import { Karir } from "../pages";
 function App() {
-
   return (
     <>
-      <AboutPage/>
+      <Karir />
     </>
-  )
+  );
 }
 
-export default App
+export default App;
