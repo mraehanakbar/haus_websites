@@ -1,5 +1,6 @@
 import "./Navbar.css";
 import logo from "../../assets/images/logoatas.png";
+import { Link } from "react-router-dom";
 
 const NavbarComponent = () => {
   return (
@@ -10,16 +11,19 @@ const NavbarComponent = () => {
       <div className="menu">
         <ul>
           <li>
-            <a href="/about">Tentang Kami</a>
+            <Link to="/about">TENTANG KAMI</Link>
           </li>
           <li>
-            <a href="#menu">Menu</a>
+            <Link to="#menu">MENU</Link>
           </li>
           <li>
-            <a href="#lokasi">Lokasi Toko</a>
+            <Link to="#lokasi">LOKASI TOKO</Link>
           </li>
           <li>
-            <a href="/karir">Karir</a>
+            <Link to="/bigorder">BIG ORDER</Link>
+          </li>
+          <li>
+            <Link to="/karir">KARIR</Link>
           </li>
           <li>
             <button href="#download-apps">

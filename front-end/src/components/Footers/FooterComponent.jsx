@@ -12,11 +12,10 @@ const FooterComponent = () => {
   return (
     <footer>
       <div className="footer-content">
-        <div className="logo">
+        <div className="logofooter">
           <img src={logo} alt="logo" />
           <p className="pt">PT. INSPIRASI BISNIS NUSANTARA</p>
           <p>
-            {" "}
             <img src={vektor} alt="" /> hello@haus.co.id
           </p>
           <p>

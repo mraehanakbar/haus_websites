@@ -1,5 +1,4 @@
-import { Karir } from "./pages";
-import { AboutPage } from "./pages";
+import { Karir, AboutPage, Bigorder } from "./pages";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 function App() {
@@ -7,6 +6,7 @@ function App() {
     <>
       <Router>
         <Routes>
+          <Route path="/bigorder" element={<Bigorder />} />
           <Route path="/about" element={<AboutPage />} />
           <Route path="/karir" element={<Karir />} />
         </Routes>

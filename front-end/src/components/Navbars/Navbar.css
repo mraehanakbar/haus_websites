@@ -1,42 +1,53 @@
 .navbar {
-    background-color: rgb(255, 255, 255);
-    display: flex;
-    justify-content: space-between;
-    padding: 30px 80px;
-    font-size: large;
-    box-shadow: 0px 7px 12px 0px rgba(0, 0, 0, 0.25);
-    align-items: center;
-    font-weight: 400;
-    position: relative;
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  justify-content: space-between;
+  padding: 30px 80px;
+  font-size: large;
+  box-shadow: 0px 7px 12px 0px rgba(0, 0, 0, 0.25);
+  align-items: center;
+  font-weight: 400;
+  position: relative;
 }
 
 .menu ul {
-    display: flex;
-    padding: 0 50px;
-    align-items: center;
+  display: flex;
+  padding: 0 0 0 50px;
+  align-items: center;
+  justify-content: end;
 }
 
 .menu ul li {
-    list-style-type: none;
-    padding: 0 20px;
+  list-style-type: none;
+  padding: 0 20px;
 }
 
 .menu ul li a {
-    text-decoration: none; 
-    color: black;
+  text-decoration: none;
+  color: black;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0em;
+  text-align: left;
+
 }
 
 .menu ul li button {
-    width: 180px;
-    height: 40px;
-    flex-shrink: 0;
-    border-radius: 6px;
-    border: 1px solid var(--fuschia-60, #FCDDEC);
-    background: var(--secondary-60, #8A489C);
-    font-size: 16px;
-    font-weight: 400;
-    color: white;
-    transition: background-color 0.3s ease;
-    cursor: pointer;
-  }
-  
+  width: 180px;
+  height: 40px;
+  flex-shrink: 0;
+  border-radius: 6px;
+  border: 1px solid var(--fuschia-60, #fcddec);
+  background: var(--secondary-60, #8a489c);
+  font-size: 16px;
+  font-weight: 400;
+  color: white;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+}
+
+.logo img{
+    width: 148.61px;
+    height: auto;
+}
