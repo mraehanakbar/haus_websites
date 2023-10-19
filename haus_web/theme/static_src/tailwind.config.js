@@ -56,10 +56,15 @@ module.exports = {
         "pink-main": "#CD3B8E",
         "pink-font": "#C73480",
         "pink-dropdown": "#FAFAFA",
+        "pink-menu-headline": "#CE2F8C",
+        "gray-button": "#EDEDED",
       },
       fontSize: {
         "1.5xl": "22px",
         "2.5xl": "28px",
+      },
+      height: {
+        "menu-headline": "914px",
       },
     },
   },

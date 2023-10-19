@@ -13,6 +13,9 @@ def homepage(request):
 def location_page(request):
     return render(request, "location_page.html", context={})
 
+def menu_page(request):
+    return render(request, "menu_page.html", context={})
+
 def get_json_data_store(request):
     data_path = 'theme/static/data/data.json'
     with open(data_path, 'r') as file:

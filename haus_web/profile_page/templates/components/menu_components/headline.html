@@ -1,0 +1,61 @@
+{%block headline%} {%load static%}
+<div class="relative">
+  <!-- HEADLINE -->
+  <img
+    src="{% static 'images/menu_headline.png' %}"
+    alt="menu headline bg"
+    class="min-w-full bg-pink-menu-headline -z-30"
+  />
+
+  <div class="absolute top-0 min-w-full">
+    <div class="">
+      <div class="mt-12 flex justify-center w-full">
+        <div class="bg-pink-main w-40 h-1.5"></div>
+      </div>
+      <h1 class="text-white mt-2.5 font-semibold text-center text-2.5xl">
+        Best Seller Menu
+      </h1>
+    </div>
+
+    <!-- BEST SELLER LIST -->
+    <div class="mx-auto w-10/12 mt-10 bg">
+      <div class="space-y-7">
+        <div class="flex justify-evenly relative">
+          <img
+            src="{% static 'images/best_seller/kitkat_drink.png' %}"
+            class="w-1/5"
+          />
+          <img
+            src="{% static 'images/best_seller/cone_milo.png' %}"
+            class="w-1/5"
+          />
+          <img
+            src="{% static 'images/best_seller/thai_tea.png' %}"
+            class="w-1/5"
+          />
+          <img
+            src="{% static 'images/best_seller/mango_yakult.png' %}"
+            class="w-1/5"
+          />
+        </div>
+        <div class="flex justify-evenly relative">
+          <img
+            src="{% static 'images/best_seller/choco_lava.png' %}"
+            class="w-1/5"
+          />
+          <img
+            src="{% static 'images/best_seller/fresh_lemon.png' %}"
+            class="w-1/5"
+          />
+          <img
+            src="{% static 'images/best_seller/g_thai_tea.png' %}"
+            class="w-1/5"
+          />
+          <img src="{% static 'images/best_seller/oreo.png' %}" class="w-1/5" />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{%endblock headline%}

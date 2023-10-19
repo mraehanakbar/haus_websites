@@ -1,0 +1,215 @@
+{%block menu_list%} {%load static%}
+
+<!-- BUTTON SELECTOR -->
+<section
+  x-data="{ all: true, minuman: false, roti: false, pedes_cyin: false, hot_oppa:false}"
+>
+  <div class="h-44 w-10/12 mx-auto flex justify-evenly font-bold text-2xl">
+    <button
+      @click="all = true;minuman = false;roti=false; pedes_cyin=false;hot_oppa=false"
+      class="w-1/6 bg-gray-button rounded-3xl text-pink-main"
+      :class="!all ? '' : 'bg-purple-main text-white'"
+    >
+      All Menu
+    </button>
+
+    <!-- MINUMAN -->
+    <button
+      @click="all = false; minuman = true;roti=false; pedes_cyin=false;hot_oppa=false"
+      class="w-1/6 py-6 bg-gray-button rounded-3xl text-pink-main flex justify-between flex-col items-center"
+      :class="!minuman ? '' : 'bg-purple-main text-white'"
+    >
+      <img
+        src="{% static 'icon/minuman.svg' %}"
+        class="w-12"
+        :class="!minuman ? '' : 'hidden'"
+      />
+      <img
+        src="{% static 'icon/minuman_selected.svg' %}"
+        class="w-12"
+        :class="minuman ? '' : 'hidden'"
+      />
+      <p>Minuman</p>
+    </button>
+    <!-- GANJEL ROTI -->
+    <button
+      @click="all = false; minuman=false;roti=true; pedes_cyin=false;hot_oppa=false"
+      class="w-1/6 py-6 bg-gray-button rounded-3xl text-pink-main flex justify-between flex-col items-center"
+      :class="!roti ? '' : 'bg-purple-main text-white'"
+    >
+      <img
+        src="{% static 'icon/ganjel_roti.svg' %}"
+        class="h-16"
+        :class="!roti ? '' : 'hidden'"
+      />
+      <img
+        src="{% static 'icon/ganjel_roti_selected.svg' %}"
+        class="h-16"
+        :class="roti ? '' : 'hidden'"
+      />
+      <p>Ganjel Roti</p>
+    </button>
+    <!-- PEDES CYIN -->
+    <button
+      @click="all = false; minuman=false;roti=false; pedes_cyin=true;hot_oppa=false"
+      class="w-1/6 py-6 bg-gray-button rounded-3xl text-pink-main flex justify-between flex-col items-center"
+      :class="!pedes_cyin ? '' : 'bg-purple-main text-white'"
+    >
+      <img
+        src="{% static 'icon/pedes_cyin.svg' %}"
+        class="h-14"
+        :class="!pedes_cyin ? '' : 'hidden'"
+      />
+      <img
+        src="{% static 'icon/pedes_cyin_selected.svg' %}"
+        class="h-14"
+        :class="pedes_cyin ? '' : 'hidden'"
+      />
+      <p>Pedes Cyin</p>
+    </button>
+    <!-- HOT OPPA -->
+    <button
+      @click="all = false; minuman=false;roti=false; pedes_cyin=false;hot_oppa=true"
+      class="w-1/6 py-6 bg-gray-button rounded-3xl text-pink-main flex justify-between flex-col items-center"
+      :class="!hot_oppa ? '' : 'bg-purple-main text-white'"
+    >
+      <img
+        src="{% static 'icon/hot_oppa.svg' %}"
+        class="w-16"
+        :class="!hot_oppa ? '' : 'hidden'"
+      />
+      <img
+        src="{% static 'icon/hot_oppa_selected.svg' %}"
+        class="w-16"
+        :class="hot_oppa ? '' : 'hidden'"
+      />
+      <p>Hot Oppa</p>
+    </button>
+  </div>
+
+  <!-- MENU LIST -->
+  <!-- CLASSIC SERIES -->
+  <div x-show="all || minuman" class="flex justify-center mt-4">
+    <div class="w-10/12 mt-12">
+      <h1 class="font-semibold text-3xl">Classic Series</h1>
+      <div class="flex grid-cols-5 space-x-16 mt-12">
+        <div>
+          <img src="{% static 'images/classic_series/1_Ovaltine.jpg' %}" />
+          <p class="font-medium mt-3">Ovaltine</p>
+        </div>
+        <div>
+          <img src="{% static 'images/classic_series/2_Oreo.jpg' %}" />
+          <p class="font-medium mt-3">Oreo</p>
+        </div>
+        <div>
+          <img src="{% static 'images/classic_series/3_Taro.jpg' %}" />
+          <p class="font-medium mt-3">Taro</p>
+        </div>
+        <div>
+          <img src="{% static 'images/classic_series/4_Thai Tea.jpg' %}" />
+          <p class="font-medium mt-3">Thai Tea</p>
+        </div>
+        <div>
+          <img
+            src="{% static 'images/classic_series/5_Green Thai Tea.jpg' %}"
+          />
+          <p class="font-medium mt-3">Green Thai Tea</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CLASSIC SERIES -->
+  <div x-show="all || roti" class="flex justify-center mt-4">
+    <div class="w-10/12 mt-12">
+      <h1 class="font-semibold text-3xl">Ganjel Roti</h1>
+      <div class="flex grid-cols-5 space-x-16 mt-12">
+        <div>
+          <img src="{% static 'images/classic_series/1_Ovaltine.jpg' %}" />
+          <p class="font-medium mt-3">Ovaltine</p>
+        </div>
+        <div>
+          <img src="{% static 'images/classic_series/2_Oreo.jpg' %}" />
+          <p class="font-medium mt-3">Oreo</p>
+        </div>
+        <div>
+          <img src="{% static 'images/classic_series/3_Taro.jpg' %}" />
+          <p class="font-medium mt-3">Taro</p>
+        </div>
+        <div>
+          <img src="{% static 'images/classic_series/4_Thai Tea.jpg' %}" />
+          <p class="font-medium mt-3">Thai Tea</p>
+        </div>
+        <div>
+          <img
+            src="{% static 'images/classic_series/5_Green Thai Tea.jpg' %}"
+          />
+          <p class="font-medium mt-3">Green Thai Tea</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PEDES CYIN -->
+  <div x-show="all || pedes_cyin" class="flex justify-center mt-4">
+    <div class="w-10/12 mt-12">
+      <h1 class="font-semibold text-3xl">Pedes Cyin</h1>
+      <div class="flex grid-cols-5 space-x-16 mt-12">
+        <div>
+          <img src="{% static 'images/classic_series/1_Ovaltine.jpg' %}" />
+          <p class="font-medium mt-3">Ovaltine</p>
+        </div>
+        <div>
+          <img src="{% static 'images/classic_series/2_Oreo.jpg' %}" />
+          <p class="font-medium mt-3">Oreo</p>
+        </div>
+        <div>
+          <img src="{% static 'images/classic_series/3_Taro.jpg' %}" />
+          <p class="font-medium mt-3">Taro</p>
+        </div>
+        <div>
+          <img src="{% static 'images/classic_series/4_Thai Tea.jpg' %}" />
+          <p class="font-medium mt-3">Thai Tea</p>
+        </div>
+        <div>
+          <img
+            src="{% static 'images/classic_series/5_Green Thai Tea.jpg' %}"
+          />
+          <p class="font-medium mt-3">Green Thai Tea</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- HOT OPPA -->
+  <div x-show="all || hot_oppa" class="flex justify-center mt-4">
+    <div class="w-10/12 mt-12">
+      <h1 class="font-semibold text-3xl">Hot Oppa</h1>
+      <div class="flex grid-cols-5 space-x-16 mt-12">
+        <div>
+          <img src="{% static 'images/classic_series/1_Ovaltine.jpg' %}" />
+          <p class="font-medium mt-3">Ovaltine</p>
+        </div>
+        <div>
+          <img src="{% static 'images/classic_series/2_Oreo.jpg' %}" />
+          <p class="font-medium mt-3">Oreo</p>
+        </div>
+        <div>
+          <img src="{% static 'images/classic_series/3_Taro.jpg' %}" />
+          <p class="font-medium mt-3">Taro</p>
+        </div>
+        <div>
+          <img src="{% static 'images/classic_series/4_Thai Tea.jpg' %}" />
+          <p class="font-medium mt-3">Thai Tea</p>
+        </div>
+        <div>
+          <img
+            src="{% static 'images/classic_series/5_Green Thai Tea.jpg' %}"
+          />
+          <p class="font-medium mt-3">Green Thai Tea</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{%endblock menu_list%}

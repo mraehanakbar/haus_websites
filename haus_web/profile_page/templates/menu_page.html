@@ -1,0 +1,10 @@
+{% extends "main.html" %} {%block content%} {%load static%}
+<link
+  rel="stylesheet"
+  type="text/css"
+  href="{% static '/css/dist/home.css' %}"
+/>
+<div>{%include 'components/menu_components/headline.html'%}</div>
+
+<div class="mt-20">{%include 'components/menu_components/menu_list.html'%}</div>
+{%endblock content%}
