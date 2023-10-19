@@ -4,6 +4,7 @@ import FooterComponent from "./Footers/FooterComponent";
 import Applyjob from "./Applyjob/Applyjob";
 import NewLocation from "./NewLocation/NewLocation";
 import ListLokasi from "./ListLokasi/ListLokasi";
+import ListMenu from "./ListMenu/ListMenu";
 
 export {
   NavbarComponent,
@@ -12,4 +13,5 @@ export {
   Applyjob,
   NewLocation,
   ListLokasi,
+  ListMenu,
 };
