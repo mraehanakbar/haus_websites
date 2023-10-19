@@ -1,0 +1,66 @@
+.llist{
+  margin: 10px;
+  padding: 20px 10px 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  border-radius: 50px;
+}
+
+.llist h1{
+  font-family: Poppins;
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 33px;
+  letter-spacing: 0em;
+  text-align: left;
+  color:rgba(199, 52, 128, 1);
+}
+
+.detaillokasi img {
+  margin-left: 20px;
+  height: 20px;
+  width: auto;
+}
+
+.detaillokasi p {
+  width: 150px;
+  color: #e03e9f;
+  font-size: 26px;
+  font-weight: 500;
+  line-height: 58px;
+  letter-spacing: -0.021em;
+  text-align: left;
+}
+
+.container-lokasi {
+  background-color: rgb(246, 246, 246);
+}
+
+.lokasi-popup {
+  padding: 10px 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  
+}
+
+.lokasi-popup ul {
+  list-style: none;
+  padding: 0 30px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.lokasi-popup ul li {
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 28px;
+  letter-spacing: -0.021em;
+  text-align: left;
+  margin-bottom: 20px;
+}

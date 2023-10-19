@@ -1,13 +1,20 @@
 .topcontainerorder {
   width: 100%;
-  mar
   height: 500px;
   background: linear-gradient(272.54deg, #cd3b8e 37.52%, #ffffff 68.2%);
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   margin-bottom: 100px;
+  padding: 0 0 0 100px;
 }
+
+
+.topcontainerorder img{
+  width: 70%;
+  height: 70%;
+}
+
 
 .descorder p {
   font-size: 22px;
@@ -25,11 +32,12 @@
 
 .callus {
   width: 100%;
-  height: 555px;
+  height: 505px;
   margin: 50px 0 100px 0;
   background: rgba(243, 243, 243, 1);
   display: flex;
-  padding: 50px 100px;
+  justify-content: space-between;
+  padding: 50px 0 0 40px;
 }
 
 .callline {
@@ -45,8 +53,12 @@
   background: var(--primary-60, #cd3b8e);
 }
 
+.title-order{
+  text-align: center;
+}
+
 .callus p {
-  margin: 15px 0;
+  margin-top: 15px;
   font-size: 16px;
   font-weight: 400;
   line-height: 24px;
@@ -68,6 +80,11 @@
   color: #fff;
 }
 
+.packagedl:hover {
+  background-color: rgba(138, 72, 156, 0.8);
+  cursor: pointer;
+}
+
 .whatsapp {
   margin-top: 20px;
   width: 248px;
@@ -82,7 +99,23 @@
   color: #fff;
 }
 
-.callusimg {
-  width: 65%;
-  margin-top: 30px;
+.whatsapp:hover {
+  background-color: rgba(45, 209, 74, 0.8);
+  cursor: pointer;
+}
+
+.callusdesc {
+  display: flex;
+  flex-direction: column;
+}
+
+.callusdesc h2{
+  font-size: 28px;
+  line-height: 36px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
+.callusimg{
+  margin-top: 50px;
 }

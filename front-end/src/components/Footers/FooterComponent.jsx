@@ -8,6 +8,12 @@ import instagram from "../../assets/images/instagram.png";
 import tiktok from "../../assets/images/tiktok.png";
 import linkedin from "../../assets/images/linkedin.png";
 
+const donwloadAPK = () => {
+  window.open(
+    "https://play.google.com/store/apps/details?id=com.ibn.haus_mobile_app&hl=en-ID"
+  );
+};
+
 const FooterComponent = () => {
   return (
     <footer>
@@ -44,7 +50,7 @@ const FooterComponent = () => {
             <strong>Download App</strong>
           </p>
           <br />
-          <img src={playstore} alt="playstore" />
+          <img src={playstore} alt="playstore" onClick={donwloadAPK} />
           <br />
           <img src={appstore} alt="appstore" />
         </div>

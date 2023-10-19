@@ -3,19 +3,35 @@ import orderimage from "../../assets/images/bigorder.png";
 import contentimage from "../../assets/images/callus.png";
 import vektor from "../../assets/images/Vector.png";
 import pin from "../../assets/images/Pin.png";
+import flyer from "../../assets/images/FlyerBigOrder.jpg";
 import "./Bigorder.css";
+
+const downloadFlyer = () => {
+  const link = document.createElement("a");
+  link.href = flyer;
+  link.download = "FlyerBigOrder.jpg";
+  link.click();
+};
+
+const contactTO = () => {
+  window.open("https://wa.me/081119179943", "_blank");
+};
 
 const Bigorder = () => {
   return (
     <>
       <NavbarComponent />
       <div className="topcontainerorder">
-        <img src={orderimage} alt="" />
+        <div className="decstoporder">
+          <h1>Meriahkan Acaramu dengan Product Haus!</h1>
+          <p>Semua menu haus! dalam paket rame - rame</p>
+        </div>
+        <img src={orderimage} alt="content image" />
       </div>
       <div className="line">
         <div className="lines"></div>
       </div>
-      <div className="title">
+      <div className="title-order">
         <h1>Haus! Rame - rame</h1>
       </div>
       <div className="contentorder">
@@ -43,11 +59,15 @@ const Bigorder = () => {
               <img src={pin} alt="" /> Taman Meruya Ilir, Jl. Safir I Blok E6
               No. 27
             </p>
-            <button className="packagedl">Download Package</button>
-            <button className="whatsapp">Contact Via Whatsapp</button>
+            <button className="packagedl" onClick={downloadFlyer}>
+              Download Package
+            </button>
+            <button className="whatsapp" onClick={contactTO}>
+              Contact Via Whatsapp
+            </button>
           </div>
           <div className="callusimg">
-            <img src={contentimage} alt="Content image" />
+            <img src={contentimage} alt="Content image" width={600} />
           </div>
         </div>
       </div>

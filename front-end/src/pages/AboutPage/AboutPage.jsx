@@ -86,7 +86,7 @@ const AboutPage = () => {
         <div className="content-1">
           <div className="text1">
             <h1>Our Vission</h1>
-            <h2>&ldquo;The World with a Test of Joy&rdquo;</h2>
+            <h3>&ldquo;The World with a Test of Joy&rdquo;</h3>
             <p>
               Melalui visi ini, kami akan memberikan kontribusi untuk indonesia
               serta Dunia dengan menghadirkan citarasa yang enak dan
@@ -103,9 +103,9 @@ const AboutPage = () => {
           </div>
           <div className="text2">
             <h1>Our Mission</h1>
-            <h2>
+            <h3>
               &ldquo;Spreading Happiness to Everyone Through Cup of Drink&rdquo;
-            </h2>
+            </h3>
             <p>
               Melalui misi inilah kami memiiki tujuan untuk selalu dapat
               menyebarkan kebahagiaan melalui gelas minuman, seperti tagline
