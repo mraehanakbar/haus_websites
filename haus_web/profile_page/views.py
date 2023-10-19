@@ -8,6 +8,9 @@ def home(request):
 def homepage(request):
     return render(request,"homepage.html")
 
+def homepage_2(request):
+    return render(request,"homepage_2.html")
+
 
 def location_page(request):
     return render(request, "location_page.html", context={})
