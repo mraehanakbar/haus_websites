@@ -1,11 +1,31 @@
 import { NavbarComponent, FooterComponent } from "../../components";
+import kitkat from "../../assets/images/kitkat-drink.png";
+import milo from "../../assets/images/cone-milo.png";
+import thaigreen from "../../assets/images/gree-thai-tea.png";
+import mangoyk from "../../assets/images/mango-yakult.png";
+import clmf from "../../assets/images/choco-lava-milo-float.png";
+import freshlemon from "../../assets/images/fresh-lemon-tea.png";
+import thai from "../../assets/images/thai-tea.png";
+import oreo from "../../assets/images/oreo.png";
+import rame from "../../assets/images/rameee.png";
+import hp from "../../assets/images/hp.png";
+import toptop from "../../assets/images/Desktop.png";
+import googleplay from "../../assets/images/googleplay.png";
 import "./HomePage.css";
+
+const app = () => {
+  window.open(
+    "https://play.google.com/store/apps/details?id=com.ibn.haus_mobile_app&hl=en-ID"
+  );
+};
 
 const Bigorder = () => {
   return (
     <>
       <NavbarComponent />
-
+      <div className="toptop">
+        <img src={toptop} alt="" />
+      </div>
       <div className="top-home">
         <div className="line-home">
           <div className="lines-home"></div>
@@ -30,6 +50,48 @@ const Bigorder = () => {
       </div>
       <div className="title-homepage-mid">
         <h1>Karir di haus! Indonesia</h1>
+      </div>
+      <div className="container-bestseller">
+        <img src={kitkat} alt="" width={210} height={319} />
+        <img src={milo} alt="" width={210} height={319} />
+        <img src={thai} alt="" width={210} height={319} />
+        <img src={mangoyk} alt="" width={210} height={319} />
+        <img src={clmf} alt="" width={210} height={319} />
+        <img src={freshlemon} alt="" width={210} height={319} />
+        <img src={thaigreen} alt="" width={210} height={319} />
+        <img src={oreo} alt="" width={210} height={319} />
+      </div>
+      <div className="line-home">
+        <div className="lines-home"></div>
+      </div>
+      <div className="title-homepage-midbot">
+        <h1>Haus! Rame - rame</h1>
+      </div>
+      <div className="haus-rame">
+        <img src={rame} alt="" width={602.91} />
+        <div className="rame-desc">
+          <h1>Ciptakan Momen Bahagiamu Bersama Haus!</h1>
+          <p>Semua menu Haus! dalam pake rame - rame</p>
+          <button>Pelajari Selengkapnya</button>
+        </div>
+      </div>
+      <div className="app-order">
+        <img src={hp} alt="" width={530} height={653.24} />
+        <div className="app-order-desc">
+          <h1>Haus Mobile App For Order</h1>
+          <h2>Dapatkan voucher menarik, dan ekstra promo</h2>
+          <ul>
+            <li>
+              Lebih Mudah Pesan dengan aplikasi Haus!, kamu bisa pilih , pesanan
+              Delivery, Pickup atau Dine In untuk skip antrian
+            </li>
+            <li>Pesan menu Haus! Favorit kamu dari Toko terdekat</li>
+          </ul>
+          <div className="dl-home">
+            <p>Download aplikasi di</p>
+            <img src={googleplay} alt="" onClick={app} />
+          </div>
+        </div>
       </div>
       <FooterComponent />
     </>

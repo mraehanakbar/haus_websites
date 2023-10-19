@@ -22,7 +22,7 @@ const NavbarComponent = () => {
             <Link to="/about">TENTANG KAMI</Link>
           </li>
           <li>
-            <Link to="#menu">MENU</Link>
+            <Link to="/menu">MENU</Link>
           </li>
           <li>
             <Link to="/lokasi">LOKASI TOKO</Link>
