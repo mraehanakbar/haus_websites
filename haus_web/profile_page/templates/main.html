@@ -1,99 +1,108 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Haus Profile Page</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-    {% load static %} {% load static tailwind_tags %} {% tailwind_css %} 
-    <link rel="stylesheet" type="text/css" href="{% static '/css/dist/home.css' %}">
 
-  </head>
+<head>
+  <title>Haus Profile Page</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  {% load static %} {% load static tailwind_tags %} {% tailwind_css %}
+  <link rel="stylesheet" type="text/css" href="{% static '/css/dist/home.css' %}">
 
-  <nav class="bg-white shadow-xl text-black py-3 sticky top-0 z-50 ">
-    <div class="container m-auto grid grid-cols-5 items-center">
-      <!-- Brand Logo -->
-      <div class="flex px-4 justify-center col-span-1">
-        <a href="#" class="content-center text-2xl font-bold text-white">
-          <img
-            src="{% static '/images/nav_logo.png' %}"
-            alt="Brand Logo"
-            class="inline-block mx-20"
-            width="100"
-          />
-        </a>
-      </div>
 
-      <!-- Navigation Links -->
-      <div class="hidden md:flex justify-center col-span-3 space-x-6">
-        <a href="#" class="hover:text-gray-700 font-semibold">BRAND <i class="text-xs">&#9660</i></a>
-        <a href="#" class="hover:text-gray-700">LOKASI TOKO</a>
-        <a href="#" class="hover:text-gray-700">BIG ORDER</a>
-        <a href="#" class="hover:text-gray-700">MENU</a>
-        <a href="#" class="hover:text-gray-700">NEWS</a>
-        <a href="#" class="hover:text-gray-700">TENTANG KAMI</a>
-        <a href="#" class="hover:text-gray-700">KARIR</a>
-      </div>
+</head>
 
-      <!-- Download Apps Button -->
-      <div class="col-span-1 flex justify-center">
-        <button
-          class="bg-purple-main text-white py-2 px-4 rounded-md font-semibold"
-        >
-          Download Apps
-        </button>
-      </div>
+<nav class="bg-white shadow-xl text-black py-3 sticky top-0 z-50 ">
+  <div class="container m-auto grid grid-cols-5 items-center">
+    <!-- Brand Logo -->
+    <div class="flex px-4 justify-center col-span-1">
+      <a href="#" class="content-center text-2xl font-bold text-white">
+        <img src="{% static '/images/nav_logo.png' %}" alt="Brand Logo" class="inline-block mx-20" width="100" />
+      </a>
     </div>
-  </nav>
-  <body class="bg-white-gray">
-    <div class="container">
-      {% block content %}{% endblock content %}
+
+    <!-- Navigation Links -->
+    <div class="hidden md:flex justify-center col-span-3 space-x-6">
+      <a href="#" class="hover:text-gray-700 font-semibold">BRAND <i class="text-xs">&#9660</i></a>
+      <a href="#" class="hover:text-gray-700">LOKASI TOKO</a>
+      <a href="#" class="hover:text-gray-700">BIG ORDER</a>
+      <a href="#" class="hover:text-gray-700">MENU</a>
+      <a href="#" class="hover:text-gray-700">NEWS</a>
+      <a href="#" class="hover:text-gray-700">TENTANG KAMI</a>
+      <a href="#" class="hover:text-gray-700">KARIR</a>
     </div>
-  </body>
 
-<footer class="bg-white-haus text-black py-8 mx-16">
-  <div class="container flex justify-between">
+    <!-- Download Apps Button -->
+    <div class="col-span-1 flex justify-center">
+      <button class="bg-purple-main text-white py-2 px-4 rounded-md font-semibold">
+        Download Apps
+      </button>
+    </div>
+  </div>
+</nav>
 
-    <!-- First Column -->
-    <div class="w-1/4 flex flex-col">
-      <img class="logo-haus" src="{% static '/images/logo_haus.png' %}" :alt="Logo Haus">
-      <p class="tracking-wider my-3">PT. INSPIRASI BISNIS NUSANTARA</p>
+<body class="bg-white-gray">
+  <div class="container w-screen">
+    {% block content %}{% endblock content %}
+  </div>
+</body>
+
+<!-- New Footer -->
+<footer class="w-screen text-black py-20 lg:py-14 lg:mx-10">
+  <div class="container flex flex-col w-screen lg:flex-row">
+
+    <!-- Logo Haus & Social Media -->
+    <div class="flex flex-col mx-14 lg:mx-0 lg:w-1/4">
+      <img class="w-1/2 lg:w-2/5" src="{% static '/images/logo-haus-black.png' %}" alt="Logo Haus">
+      <div class="w-fit my-10 lg:mt-4 lg:mb-2">
+        <p class="tracking-wider text-4xl my-3 lg:text-lg">PT. INSPIRASI BISNIS NUSANTARA</p>
+        <hr class="z-10 border-t-4 border-purple-haus pb-2" style="border-top: 6px solid #E03E9F;" />
+      </div>
+
 
       <div class="flex flex-row">
-        <img class="mail-icon mr-4" src="{% static '/images/mail.png' %}" alt="Logo Mail">
-        <div class="flex justify-center items-center ">
-          <p class="text-center">hello@haus.co.id</p>
+        <img class="w-1/12 mr-4" src="{% static '/images/mail.png' %}" alt="Logo Mail">
+        <div class="flex justify-center items-center text-2xl ">
+          <p class="text-4xl text-center lg:text-2xl">hello@haus.co.id</p>
         </div>
       </div>
 
-      <div class="font-bold mt-5">Follow Us</div>
-      <div class="flex flex-row mt-2">
-        <img class="social-media-logo w-10 h-auto" src="{% static '/images/instagram_icon.png' %}" :alt="Logo Haus">
-        <img class="social-media-logo" src="{% static '/images/tiktok_icon.png' %}" :alt="Logo Tiktok">
-        <img class="social-media-logo" src="{% static '/images/linkedin_icon.png' %}" :alt="Logo Linkedin">
+      <div class="my-16 lg:my-0">
+        <div class="font-bold mt-5 text-5xl lg:text-3xl">Follow Us</div>
+        <div class="flex flex-row mt-2">
+          <img class="w-2/12" src="{% static '/images/instagram_icon.png' %}" :alt="Logo Haus">
+          <img class="w-2/12" src="{% static '/images/tiktok_icon.png' %}" :alt="Logo Tiktok">
+          <img class="w-2/12" src="{% static '/images/linkedin_icon.png' %}" :alt="Logo Linkedin">
+        </div>
       </div>
     </div>
 
-    <!-- Second Column -->
-    <div class="w-1/4 flex flex-col pl-7 mx-auto mt-7 justify-items-center">
-      <h2 class="text-2xl font-bold">BRAND</h2>
-      <div class="my-5">Haus! Indonesia</div>
-      <div>Ganjel Roti</div>
-      <div class="my-5">Pedes Cyin</div>
-      <div>Hot Oppa</div>
+    <!-- Brand & Haus App -->
+    <div class="flex flex-row w-4/5 mx-auto py-8 justify-around lg:justify-evenly lg:py-0 lg:w-1/2">
+
+      <div class="lg:flex lg:flex-col lg:h-auto ">
+        <h2 class="text-5xl font-bold w-1/2 lg:text-2xl lg:w-fit">BRAND</h2>
+        <div class="lg:flex lg:flex-col lg:justify-evenly lg:h-full">
+          <div class="text-4xl my-10 lg:my-3 lg:text-xl ">Haus! Indonesia</div>
+          <div class="text-4xl lg:text-xl">Ganjel Roti</div>
+          <div class="text-4xl my-10 lg:my-3 lg:text-xl ">Pedes Cyin</div>
+          <div class="text-4xl lg:text-xl">Hot Oppa</div>
+        </div>      
+      </div>
+
+      <!-- Haus App -->
+      <div class="flex flex-col items-center justify-evenly lg:justify-start">
+        <h2 class="text-5xl font-bold lg:text-2xl">HAUS! APPS</h2>
+        <div class="text-4xl mt-5 font-bold lg:text-xl">Download Now</div>
+        <img class="w-9/12 py-8 lg:py-3 lg:w-9/12" src="{% static '/images/google_play_icon.png' %}" alt="Google Play">
+        <img class="w-9/12 lg:w-9/12" src="{% static '/images/app-store.png' %}" alt="App Store">
+      </div>
+
     </div>
 
-    <!--Third column  -->
-    <div class="w-1/4 mt-7">
-      <h2 class="text-2xl font-bold">HAUS! APPS</h2>
-      <div class="mt-5 font-bold">Download Now</div>
-      <img class="download-icon" src="{% static '/images/google_play_icon.png' %}" alt="Google Play">
-      <img class="download-icon" src="{% static '/images/app_store_icon.png' %}" alt="App Store">
-    </div>
-    
-    <!--Fourth column  -->
-    <div class="w-1/4 mt-7">
-      <h2 class="text-2xl font-bold">Lokasi Kami</h2>
-      <p class="mt-2">Taman Meruya Ilir, Jl. Safifr I Blok E6 No.27</p>
-      <img class="haus-maps" src="{% static '/images/haus_maps.png' %}" alt="Haus Maps">
+    <!-- Lokasi Kami -->
+    <div class="mx-14 flex flex-col lg:items-start py-10 lg:w-1/4 lg:py-0 lg:mx-0">
+      <h2 class="text-5xl font-bold lg:text-2xl">Lokasi Kami</h2>
+      <p class="text-4xl mt-10 mb-8 lg:text-xl">Taman Meruya Ilir, Jl. Safifr I Blok E6 No.27</p>
+      <img class="lg:w-full" src="{% static '/images/haus_maps.png' %}" alt="Haus Maps">
     </div>
   </div>
 </footer>

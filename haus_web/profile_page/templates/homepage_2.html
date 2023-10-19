@@ -19,10 +19,10 @@
 
     <!-- Kitkat Text and Logo -->
     <div class="flex flex-row justify-center px-14 pt-5 lg:px-32">
-        <div class="w-2/5 my-auto">
+        <div class="w-2/4 my-auto">
             <img class="logo-haus-kitkat w-3/5 lg:w-1/4" src="{% static '/images/haus-logo.png' %}" alt="Haus Logo">
         </div>
-        <div class="w-2/5 flex justify-end z-10">
+        <div class="w-2/4 flex justify-end z-10">
             <img class="logo-haus-kitkat w-3/5 right-0 lg:w-auto right-0" src="{% static '/images/kitkat-logo.png' %}">
 
         </div>
@@ -30,7 +30,7 @@
 
     <!-- Kitkat Text and Picture -->
     <div class="flex flex-col justify-center lg:flex-row mt-20 lg:mt-px">
-        <div class="flex justify-center h-2/5 my-auto lg:w-2/5 lg:justify-end">
+        <div class="flex justify-center h-2/5 my-auto lg:w-2/4 lg:justify-end">
             <img class="kitkat-text w-11/12 lg:w-4/5" src="{% static '/images/kitkat-text.png' %}" alt="Kitkat Text">
         </div>
         <div class=" flex justify-center h-2/4 lg:w-3/5 lg:justify-start">
@@ -44,21 +44,17 @@
     </div>
 
     <!-- Center-align the elements in lg mode -->
-    <div class="flex flex-col mx-auto items-center justify-center pb-20 lg:absolute min-w-full lg:mb-20">
+    <div class="flex flex-col mx-auto items-center justify-center pb-20 lg:absolute min-w-full lg:pb-10">
         <div class="z-20 text-2xl text-white">Promo</div>
         <img class="z-10 lg:w-20" src="{% static '/images/polygon_arrow.svg' %}" alt="Polygon Arrow">
     </div>
-    <img class="footer-aksen absolute bottom-0 min-w-full lg:h-16" src="{% static '/images/footer-aksen.png' %}"
+    <img class="footer-aksen absolute bottom-0 min-w-full lg:h-28" src="{% static '/images/footer-aksen.png' %}"
         alt="Footer Aksen">
 </div>
 
 
 <!-- Promo -->
-<div class="relative w-screen h-auto py-10 lg:py-30" style="background-color: #89489C;">
-    <div class="flex flex-col items-center pb-10">
-        <hr class="z-10 border-t-4 border-purple-haus w-1/12 pb-2" style="color: #E03E9F;" />
-        <div class=" text-3xl lg:text-2xl text-white font-bold">Special Deal</div>
-    </div>
+<div class="relative w-screen h-auto py-10 lg:py-40" style="background-color: #89489C;">
 
     <!-- Decoration Background -->
     <div>
@@ -70,16 +66,22 @@
 
     <!-- Promo Image -->
     <div class="relative z-10 pb-20">
-        <img class="w-4/5 mx-auto lg:w-9/12" src="{% static '/images/lemon.jpg' %}" alt="Footer Aksen">
+        <div class=" slider w-full flex overflow-hidden">
+            <img class="w-4/5 mx-auto lg:w-9/12 transform transition-transform ease-in-out duration-300"
+                src="{% static '/images/ganjel-ah.png' %}" alt="Promo Image">
+            <img class="w-4/5 mx-auto lg:w-9/12 transform transition-transform ease-in-out duration-300"
+                src="{% static '/images/tamvan-series.png' %}" alt="Your Image 2">
+            <!-- Tambahkan gambar-gambar lain di sini -->
+        </div>
     </div>
 
     <!-- Arrow for navigation Promo -->
     <div>
-        <div class="absolute z-20 inset-y-0 left-0 flex items-center ml-14">
-            <img src="{% static '/images/left-arrow.svg' %}">
+        <div class="absolute z-20 inset-y-0 left-0 flex items-center ml-14 cursor-pointer">
+            <img src="{% static '/images/left-arrow.svg' %}" id="prevButton">
         </div>
-        <div class="absolute z-20 inset-y-0 right-0 flex items-center mr-14">
-            <img src="{% static '/images/right-arrow.svg' %}">
+        <div class="absolute z-20 inset-y-0 right-0 flex items-center mr-14 cursor-pointer">
+            <img src="{% static '/images/right-arrow.svg' %}" id="nextButton">
         </div>
     </div>
 
@@ -94,33 +96,33 @@
         <div class="sub-title text-3xl lg:text-2xl text-white font-bold">Best Seller Menu</div>
     </div>
 
-    <div class="flex flex-col lg:mx-36">
+    <div class="flex flex-row justify-around lg:flex-col lg:mx-36">
 
         <!-- Row Pertama -->
-        <div class="flex flex-col flex-wrap items-center py-4 lg:flex-row lg:w-full lg:justify-between ">
-            <img class="haus-menu w-2/5 py-2 lg:w-1/6" src="{% static '/images/kitkat-drink.png' %}" alt="Kitkat Drink">
-            <img class="haus-menu w-2/5 py-2 lg:w-1/6" src="{% static '/images/cone-milo.png' %}"
+        <div class="flex flex-col flex-wrap items-center w-full py-4 lg:flex-row lg:justify-between ">
+            <img class="haus-menu w-2/4 py-2 lg:w-1/6" src="{% static '/images/kitkat-drink.png' %}" alt="Kitkat Drink">
+            <img class="haus-menu w-2/4 py-2 lg:w-1/6" src="{% static '/images/cone-milo.png' %}"
                 alt="Ice Cream Cone Coklat Milo">
-            <img class="haus-menu w-2/5 py-2 lg:w-1/6" src="{% static '/images/thai-tea.png' %}" alt="Thai Tea">
-            <img class="haus-menu w-2/5 py-2 lg:w-1/6" src="{% static '/images/mango-yakult.png' %}"
+            <img class="haus-menu w-2/4 py-2 lg:w-1/6" src="{% static '/images/thai-tea.png' %}" alt="Thai Tea">
+            <img class="haus-menu w-2/4 py-2 lg:w-1/6" src="{% static '/images/mango-yakult.png' %}"
                 alt="Ice Mango Mix Yakult">
         </div>
 
         <!-- Row Kedua -->
-        <div class="flex flex-col items-center py-4 lg:flex-row lg:w-full lg:justify-between">
-            <img class="haus-menu w-2/5 py-2 lg:w-1/6" src="{% static '/images/choco-lava-milo-float.png' %}"
+        <div class="flex flex-col items-center w-full py-4 lg:flex-row lg:w-full lg:justify-between">
+            <img class="haus-menu w-2/4 py-2 lg:w-1/6" src="{% static '/images/choco-lava-milo-float.png' %}"
                 alt="Choco Lava Milo Float">
-            <img class="haus-menu w-2/5 py-2 lg:w-1/6" src="{% static '/images/fresh-lemon-tea.png' %}"
+            <img class="haus-menu w-2/4 py-2 lg:w-1/6" src="{% static '/images/fresh-lemon-tea.png' %}"
                 alt="Fresh Lemon Tea">
-            <img class="haus-menu w-2/5 py-2 lg:w-1/6" src="{% static '/images/green-thai-tea.png' %}"
+            <img class="haus-menu w-2/4 py-2 lg:w-1/6" src="{% static '/images/green-thai-tea.png' %}"
                 alt="Green Thai Tea">
-            <img class="haus-menu w-2/5 py-2 lg:w-1/6" src="{% static '/images/oreo.png' %}" alt="Oreo">
+            <img class="haus-menu w-2/4 py-2 lg:w-1/6" src="{% static '/images/oreo.png' %}" alt="Oreo">
         </div>
     </div>
 </div>
 
 <!-- Haus Rame-Rame -->
-<div class="w-screen py-20  " style="background-color:#8A489C;">
+<div class="w-screen py-20  " style="background-color:#E03E9F;">
     <!-- Sub Title -->
     <div class="flex flex-col items-center pb-10">
         <hr class="z-10 border-t-4 border-purple-haus w-1/12 pb-2" style="border-top: 4px solid #F3CE72;" />
@@ -131,9 +133,11 @@
     <div class="flex flex-col lg:flex-row">
         <!--  Text and Button -->
         <div class="flex flex-col items-center lg:items-start lg:order-2 lg:w-1/2 lg:my-auto">
-            <div class="text-5xl text-center text-white font-bold leading-normal w-2/5 lg:w-4/5 lg:text-left lg:text-4xl">Ciptakan
+            <div
+                class="text-5xl text-center text-white font-bold leading-normal w-2/4 lg:w-4/5 lg:text-left lg:text-4xl">
+                Ciptakan
                 Momen Bahagiamu Bersama Haus!</div>
-            <div class=" text-3xl text-white  py-10 w-2/5 text-center lg:text-left lg:w-4/5">Semua menu haus! dalam
+            <div class=" text-3xl text-white  py-10 w-2/4 text-center lg:text-left lg:w-4/5">Semua menu haus! dalam
                 paket rame-rame</div>
             <button
                 class="hidden lg:block btn-haus-rame text-white font-bold border text-xl border-white py-3 mt-10 rounded-full hover:bg-purple-600 w-5/12">
@@ -156,45 +160,73 @@
 <!-- Haus Mobile App -->
 <div class="w-screen h-auto relative">
 
-    <!-- Background Devoration -->
+    <!-- Background Decoration -->
     <div>
         <img src="{% static '/images/app-order-decoration.png' %}" alt="App Haus Decoration">
-        <img class="absolute bottom-0" src="{% static '/images/app-order-decoration.png' %}" alt="App Haus Decoration">      
+        <img class="absolute bottom-0" src="{% static '/images/app-order-decoration.png' %}" alt="App Haus Decoration">
     </div>
 
-
     <!-- Content -->
-    <div class="flex flex-col lg:flex-row w-4/5 mx-auto">
+    <div class="flex flex-col lg:flex-row mx-auto">
         <!--Text & Google Play-->
         <div class="flex flex-col items-center mx-auto lg:items-start lg:order-2 lg:w-1/2 lg:my-auto">
-            <div class="text-5xl text-center w-4/5 font-bold leading-normal lg:w-4/5 lg:text-left lg:text-3xl" style="color: #89489C;">Haus
+            <div class="text-6xl text-center font-bold leading-normal mx-5 lg:mx-0 lg:w-4/5 lg:text-left lg:text-4xl"
+                style="color: #89489C;">Haus
                 Mobile App For Order</div>
-            <div class=" text-3xl py-10 w-4/5 text-left font-bold lg:text-left lg:w-4/5 lg:text-xl lg:py-3">Dapatkan voucher menarik,
+            <div class=" text-4xl py-10 text-left font-bold lg:text-left lg:w-4/5 lg:text-xl lg:py-3">Dapatkan voucher
+                menarik,
                 dan ekstra promo</div>
-            <ul class="list-disc mb-3 w-4/5 lg:w-4/5 text-2xl lg:text-base lg:ms-4">
-                <li class="mb-2 py-3 lg:py-1">Lebih Mudah Pesan dengan aplikasi Haus!, kamu bisa pilih pesanan Delivery, Pickup atau
+            <ul class="flex flex-col w-9/12 list-disc mb-3 text-2xl lg:w-4/5  lg:text-base lg:ms-4">
+                <li class="mb-2 py-3 lg:py-1">Lebih Mudah Pesan dengan aplikasi Haus!, kamu bisa pilih pesanan Delivery,
+                    Pickup atau
                     Dine In
                     untuk skip antrian</li>
                 <li class="mb-2 py-3 lg:py-1">Pesan menu Haus! Favorit kamu dari Toko terdekat</li>
             </ul>
             <div class="py-7 text-3xl lg:py-2 lg:text-base">Download aplikasi di</div>
-            <img class="lg:w-3/12" src="{% static '/images/google_play_icon.png' %}" alt="App Haus Decoration">
+            <img class="w-2/6 lg:w-3/12" src="{% static '/images/google_play_icon.png' %}" alt="App Haus Decoration">
         </div>
 
         <!-- Ilustrasi Haus App Image -->
         <div class="flex flex-col items-center lg:order-1 lg:w-1/2">
-            <img class="w-3/5 lg:w-4/5" src="{% static '/images/hp.png' %}"
-                alt="Ilustrasi Visual Lifestyle">
+            <img class="w-3/4 lg:w-4/5" src="{% static '/images/hp.png' %}" alt="Ilustrasi Visual Lifestyle">
         </div>
     </div>
 
-
 </div>
 
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const images = document.querySelectorAll(".slider img");
+        const prevButton = document.getElementById("prevButton");
+        const nextButton = document.getElementById("nextButton");
+        let currentImageIndex = 0;
 
+        function showImage(index) {
+            images.forEach((image, i) => {
+                if (i === index) {
+                    image.classList.remove("hidden");
+                } else {
+                    image.classList.add("hidden");
+                }
+            });
+        }
 
+        function goToNextImage() {
+            currentImageIndex = (currentImageIndex + 1) % images.length;
+            showImage(currentImageIndex);
+        }
 
+        function goToPreviousImage() {
+            currentImageIndex = (currentImageIndex - 1 + images.length) % images.length;
+            showImage(currentImageIndex);
+        }
 
+        prevButton.addEventListener("click", goToPreviousImage);
+        nextButton.addEventListener("click", goToNextImage);
 
+        showImage(currentImageIndex);
+    });
+</script>
 
 {% endblock content %}
