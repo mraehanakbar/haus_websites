@@ -1,21 +1,10 @@
-import PropTypes from "prop-types";
-import "./ListMenu.css";
-
-const ListMenu = ({ series, gambar }) => {
+const ListMenu = ({ title, imgSource }) => {
   return (
-    <div className="list-menu-container">
-      <div className="menu-list">
-        <img src={gambar} alt="" />
-        <p>{series}</p>
-      </div>
+    <div className=" col-span-1">
+      <img src={imgSource} width="208px" />
+      <p class="font-medium text-xl mt-3">{title}</p>
     </div>
   );
-};
-
-ListMenu.propTypes = {
-  series: PropTypes.string,
-  nama: PropTypes.string,
-  gambar: PropTypes.string,
 };
 
 export default ListMenu;
