@@ -1,0 +1,42 @@
+footer {
+  background-color: #333;
+  background: #f3f3f3;
+  text-align: center;
+  width: 100%;
+  height: 380px;
+}
+
+.footer-content {
+  padding: 50px 50px 0;
+  display: flex;
+  justify-content: space-around;
+  text-align: left;
+}
+
+.footer-content p {
+  margin-top: 30px;
+}
+
+.pt {
+  text-decoration: underline;
+  text-decoration-color: #cd3b8e;
+  text-decoration-thickness: 0.2em;
+}
+
+.follow img {
+  height: 40px;
+  width: 40px;
+  margin-top: 10px;
+  margin-right: 15px;
+}
+
+.app img {
+  margin-bottom: 10px;
+  width: 124px;
+  height: 36.46px;
+  cursor: pointer;
+}
+
+.lokasi img {
+  margin-top: 20px;
+}

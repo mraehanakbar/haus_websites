@@ -10,7 +10,9 @@ import oreo from "../../assets/images/oreo.png";
 import rame from "../../assets/images/rameee.png";
 import hp from "../../assets/images/hp.png";
 import toptop from "../../assets/images/Desktop.png";
+import kitkatlogo from "../../assets/images/kitkat-logo.png";
 import googleplay from "../../assets/images/googleplay.png";
+import hauslogoputih from "../../assets/images/haus-logo.png";
 import "./HomePage.css";
 
 const app = () => {
@@ -25,7 +27,25 @@ const Bigorder = () => {
       <NavbarComponent />
       <div className="toptop">
         <img src={toptop} alt="" />
+
+        <div className="text-2xl">Haus Indonesia</div>
       </div>
+
+
+
+      {/* <div className="relative w-screen h-auto lg:h-screen" style={"background-color: #DA1E32;"} > */}
+
+      {/* Kitkat Text and Logo */}
+      {/* <div className="flex-row justify-center px-14 pt-5 lg:px-32">
+          <div className="w-2/4 my-auto">
+            <img className="w-3/5 lg:w-1/4" src={hauslogoputih} alt="" />
+          </div>
+          <div className="w-2/4 flex justify-end z-10">
+            <img className="w-3/5 right-0 lg:w-auto right-0" src={kitkatlogo} alt="Kitkat Logo" />
+          </div>
+        </div>
+      </div> */}
+
       <div className="top-home">
         <div className="line-home">
           <div className="lines-home"></div>

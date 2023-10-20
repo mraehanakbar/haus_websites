@@ -1,0 +1,29 @@
+.title-lokasi-a h1 {
+  font-size: 28px;
+  font-weight: 600;
+  line-height: 42px;
+  text-align: center;
+}
+
+.newlocation-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 50px;
+  text-align: justify;
+  padding: 0 150px;
+}
+
+.title-lokasi-a p {
+  font-family: Poppins;
+  font-size: 25px;
+  font-weight: 400;
+  line-height: 38px;
+  text-align: center;  
+}
+
+.list-lokasi{
+  padding: 30px 150px 0 150px;
+  margin-bottom: 300px;
+}
