@@ -1,7 +1,7 @@
 import { NavbarComponent, FooterComponent, ListMenu } from "../../components";
 import kitkat from "../../assets/images/kitkat-drink.png";
 import milo from "../../assets/images/cone-milo.png";
-import thaigreen from "../../assets/images/gree-thai-tea.png";
+import thaigreen from "../../assets/images/green-thai-tea.png";
 import mangoyk from "../../assets/images/mango-yakult.png";
 import clmf from "../../assets/images/choco-lava-milo-float.png";
 import freshlemon from "../../assets/images/fresh-lemon-tea.png";
