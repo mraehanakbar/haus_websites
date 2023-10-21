@@ -21,9 +21,11 @@ const FooterComponent = () => {
         <div className="logofooter">
           <img src={logo} alt="logo" />
           <p className="pt">PT. INSPIRASI BISNIS NUSANTARA</p>
-          <p>
-            <img src={vektor} alt="" /> hello@haus.co.id
-          </p>
+          <div className="email-footer">
+            <p>
+              <img src={vektor} alt="" /> hello@haus.co.id
+            </p>
+          </div>
           <p>
             <strong>Follow Us</strong>
           </p>
@@ -33,26 +35,28 @@ const FooterComponent = () => {
             <img src={linkedin} alt="linkedin" />
           </div>
         </div>
-        <div className="brand">
-          <p>
-            <strong>Brand</strong>
-          </p>
-          <p>Haus! Indonesia</p>
-          <p>Ganjel Roti</p>
-          <p>Pedes Cyin</p>
-          <p>Hot Oppa</p>
-        </div>
-        <div className="app">
-          <p>
-            <strong>HAUS! APP</strong>
-          </p>
-          <p>
-            <strong>Download App</strong>
-          </p>
-          <br />
-          <img src={playstore} alt="playstore" onClick={donwloadAPK} />
-          <br />
-          <img src={appstore} alt="appstore" />
+        <div className="mid-footer">
+          <div className="brand">
+            <p>
+              <strong>Brand</strong>
+            </p>
+            <p>Haus! Indonesia</p>
+            <p>Ganjel Roti</p>
+            <p>Pedes Cyin</p>
+            <p>Hot Oppa</p>
+          </div>
+          <div className="app">
+            <p>
+              <strong>HAUS! APP</strong>
+            </p>
+            <p>
+              <strong>Download App</strong>
+            </p>
+            <br />
+            <img src={playstore} alt="playstore" onClick={donwloadAPK} />
+            <br />
+            <img src={appstore} alt="appstore" />
+          </div>
         </div>
         <div className="lokasi">
           <p>

@@ -6,15 +6,16 @@
   justify-content: space-between;
   align-items: center;
   margin-bottom: 100px;
-  padding: 0 0 0 100px;
+  padding: 0 100px 0 100px;
 }
 
-
-.topcontainerorder img{
-  width: 70%;
-  height: 70%;
+.decstoporder h1 {
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 48px;
+  text-align: left;
+  margin-right: 200px;
 }
-
 
 .descorder p {
   font-size: 22px;
@@ -31,18 +32,21 @@
 }
 
 .callus {
-  width: 100%;
+  width: 80%;
   height: 505px;
   margin: 50px 0 100px 0;
   background: rgba(243, 243, 243, 1);
   display: flex;
-  justify-content: space-between;
-  padding: 50px 0 0 40px;
+  justify-content: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  padding: 0 0 0 50px;
+  margin: 30px auto;
 }
 
 .callline {
   display: flex;
-  align-items: start;
+  align-items: flex-start;
   flex-direction: column;
 }
 
@@ -53,7 +57,13 @@
   background: var(--primary-60, #cd3b8e);
 }
 
-.title-order{
+.title-order {
+  text-align: center;
+  font-family: Poppins;
+  font-size: 28px;
+  font-weight: 600;
+  line-height: 42px;
+  letter-spacing: 0em;
   text-align: center;
 }
 
@@ -104,18 +114,113 @@
   cursor: pointer;
 }
 
-.callusdesc {
+.callus h2 {
+  font-size: 28px;
+  font-weight: 600;
+  line-height: 42px;
+  letter-spacing: 0em;
+}
+.callus h3 {
+  margin-top: 20px;
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 33px;
+  text-align: left;
+}
+
+.callus p {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+  gap: 10px;
+}
+
+.button-call{
   display: flex;
   flex-direction: column;
 }
 
-.callusdesc h2{
-  font-size: 28px;
-  line-height: 36px;
-  letter-spacing: 0em;
-  text-align: left;
+.callusimg {
+  margin-top: 50px;
 }
 
-.callusimg{
-  margin-top: 50px;
+@media (max-width: 768px) {
+  .topcontainerorder {
+    flex-direction: column-reverse;
+    padding: 30px 50px 0 50px;
+    background-image: linear-gradient(to bottom, #cd3b8e 37.52%, #ffffff 68.2%);
+
+  }
+
+  .decstoporder h1{
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 42px;
+    text-align: center;
+    margin-right: 0;
+  }
+
+  .decstoporder p{
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 27px;
+    letter-spacing: 0em;
+    text-align: center;
+    margin-top: 20px;
+    padding: 0 20px;
+  }
+
+  .contentorder{
+    margin: 30px 30px 0 30px;
+  }
+
+  .descorder{
+    margin: 30px 0 0 0;
+  }
+
+  .descorder p {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 27px;
+    letter-spacing: 0em;
+    text-align: center;
+  }
+
+  .callus {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    width: 100%;
+    padding: 20px;
+  }
+
+  .callline{
+    display: flex;
+    align-items: center;
+  }
+
+  .head-call {
+    order: 1;
+    
+  }
+
+  .callusimg {
+    order: 2;
+  }
+
+  .desc-call {
+    order: 3;
+    margin: 0 40px;
+    
+  }
+
+  .address-call {
+    order: 4;
+  }
+
+  .button-call {
+    order: 5;
+  }
 }
