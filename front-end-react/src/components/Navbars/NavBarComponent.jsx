@@ -22,7 +22,7 @@ const NavbarComponent = () => {
           <img src={logo} alt="Logo" className="w-36 cursor-pointer" />
         </Link>
       </div>
-      <div className="space-x-2.5">
+      <div className="space-x-2.5 lg:ml-64 ">
         <Link className="px-2.5" to="/about">
           TENTANG KAMI
         </Link>
@@ -46,7 +46,7 @@ const NavbarComponent = () => {
       <div>
         <button
           onClick={donwloadAPK}
-          className="p-3 bg-purple-main hover:bg-[#6e3e7e] rounded-md text-white "
+          className="p-3 bg-purple-main hover:bg-[#6e3e7e] rounded-md text-white lg:mr-10 "
         >
           <strong>Download Apps</strong>
         </button>
