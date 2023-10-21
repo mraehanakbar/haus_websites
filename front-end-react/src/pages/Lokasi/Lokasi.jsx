@@ -9,7 +9,7 @@ import LocationIter from "./LocationIter";
 const Lokasi = () => {
   return (
     <>
-      {/* <NavbarComponent /> */}
+      <NavbarComponent />
       <div className="mt-9">
         <div className="flex justify-center">
           <div className="px-4 w-72">
@@ -81,7 +81,7 @@ const Lokasi = () => {
       </div>
       <LocationIter />
 
-      {/* <FooterComponent /> */}
+      <FooterComponent />
     </>
   );
 };
