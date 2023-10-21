@@ -10,7 +10,7 @@
   background-color: #89489C;
 }
 
-.sub-title {
+.sub-title-content {
   color: #89489C;
 }
 
@@ -19,13 +19,22 @@
 }
 
 .sub-title-line-rame{
-  border-top: 4px solid #F3CE72;
+  border-top: 4px solid #89489C;
 }
 
 .haus-rame{
   background-color:#E03E9F;
 }
 
+.sub-title-content-haus-rame{
+  color: #E03E9F;
+}
+
 .haus-mobile{
   color: #89489C;
 }
+
+.btn-haus-rame{
+  background-color: #89489C;
+}
+
