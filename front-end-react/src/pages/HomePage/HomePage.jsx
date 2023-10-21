@@ -38,7 +38,7 @@ const scrollToBestDeal = () => {
 const HomePage = () => {
   return (
     <>
-      {/* <NavbarComponent /> */}
+      <NavbarComponent />
       {/* Kitkat */}
       <body className="w-full">
         <div className="relative w-full kitkat-bg h-auto lg:h-screen">
@@ -311,7 +311,7 @@ const HomePage = () => {
         </div>
       </body>
 
-      {/* <FooterComponent /> */}
+      <FooterComponent />
     </>
   );
 };
