@@ -41,15 +41,17 @@ import mangoYk from "../../assets/images/menu/yakult_series/Mango Yakult.jpg";
 
 // COFFEE SERIES
 import coffeeSG from "../../assets/images/menu/coffee_series/kopi susu gula aren.jpg";
+import MenuSection from "../../components/ListMenu/MenuSection";
 
 const Minuman = () => {
   return (
     <>
       <section x-show="all || minuman">
-        <div className="flex justify-center mt-4">
-          <div className="w-10/12 mt-12">
-            <h1 className="font-semibold text-3xl">Classic Series</h1>
-            <div className="grid grid-cols-5 gap-x-12 gap-y-10 mt-12">
+        {/* CLASSIC SERIES */}
+        <MenuSection
+          title="Classic Series"
+          content={
+            <>
               <ListMenu imgSource={greenTeaC} title="Green Tea Cheese" />
               <ListMenu
                 imgSource={chocoAvocadoC}
@@ -58,14 +60,15 @@ const Minuman = () => {
               <ListMenu imgSource={mangoCT} title="Mango Cheese Tea" />
               <ListMenu imgSource={ovaltineC} title="Ovaltine Cheese" />
               <ListMenu imgSource={oreoC} title="Oreo Cheese" />
-            </div>
-          </div>
-        </div>
+            </>
+          }
+        />
 
-        <div className="flex justify-center mt-4">
-          <div className="w-10/12 mt-12">
-            <h1 className="font-semibold text-3xl">Cheese Series</h1>
-            <div className="grid grid-cols-5 gap-x-12 gap-y-10 mt-12">
+        {/* CHEESE SERIES */}
+        <MenuSection
+          title="Cheese Series"
+          content={
+            <>
               <ListMenu
                 imgSource={strawberryCT}
                 title="Strawberry Cheese Tea"
@@ -85,27 +88,27 @@ const Minuman = () => {
               <ListMenu imgSource={taro} title="Taro" />
               <ListMenu imgSource={thaiTea} title="Thai Tea" />
               <ListMenu imgSource={greenThai} title="Green Thai Tea" />
-            </div>
-          </div>
-        </div>
+            </>
+          }
+        />
 
         {/* CHOCO SERIES */}
-        <div className="flex justify-center mt-4">
-          <div className="w-10/12 mt-12">
-            <h1 className="font-semibold text-3xl">Choco Series</h1>
-            <div className="grid grid-cols-5 gap-x-12 gap-y-10 mt-12">
+        <MenuSection
+          title="Choco Series"
+          content={
+            <>
               <ListMenu imgSource={chocoAvocado} title="Choco Avocado" />
               <ListMenu imgSource={chocoHazelnut} title="Choco Hazelnut" />
               <ListMenu imgSource={chocoLavaMilo} title="Choco Lava Milo" />
-            </div>
-          </div>
-        </div>
+            </>
+          }
+        />
 
         {/* BOBA SERIES */}
-        <div className="flex justify-center mt-4">
-          <div className="w-10/12 mt-12">
-            <h1 className="font-semibold text-3xl">Boba Series</h1>
-            <div className="grid grid-cols-5 gap-x-12 gap-y-10 mt-12">
+        <MenuSection
+          title="Boba Series"
+          content={
+            <>
               <ListMenu
                 imgSource={bobaMilk}
                 title="Boba Brown Sugar Fresh Milk"
@@ -114,45 +117,43 @@ const Minuman = () => {
                 imgSource={bobaMilkT}
                 title="Boba Brown Sugar Milk Tea"
               />
-            </div>
-          </div>
-        </div>
+            </>
+          }
+        />
 
         {/* TEA SERIES */}
-        <div className="flex justify-center mt-4">
-          <div className="w-10/12 mt-12">
-            <h1 className="font-semibold text-3xl">Tea Series</h1>
-            <div className="grid grid-cols-5 gap-x-12 gap-y-10 mt-12">
+        <MenuSection
+          title="Tea Series"
+          content={
+            <>
               <ListMenu imgSource={strawberryT} title="Strawberry Tea" />
               <ListMenu imgSource={blackJasmineT} title="Black Jasmine Tea" />
               <ListMenu imgSource={kiwiT} title="Kiwi Tea" />
               <ListMenu imgSource={lycheeT} title="Lychee Tea" />
               <ListMenu imgSource={mangoT} title="Mango Tea" />
-            </div>
-          </div>
-        </div>
+            </>
+          }
+        />
 
-        {/* YAKULT SERIES */}
-        <div className="flex justify-center mt-4">
-          <div className="w-10/12 mt-12">
-            <h1 className="font-semibold text-3xl">Yakult Series</h1>
-            <div className="grid grid-cols-5 gap-x-12 gap-y-10 mt-12">
+        <MenuSection
+          title="Yakult Series"
+          content={
+            <>
               <ListMenu imgSource={grapeYk} title="Grape Yakult" />
               <ListMenu imgSource={lycheeYk} title="Lychee Yakult" />
               <ListMenu imgSource={mangoYk} title="Mango Yakult" />
-            </div>
-          </div>
-        </div>
+            </>
+          }
+        />
 
-        {/* COFFEE SERIES */}
-        <div className="flex justify-center mt-4">
-          <div className="w-10/12 mt-12">
-            <h1 className="font-semibold text-3xl">Coffee Series</h1>
-            <div className="grid grid-cols-5 gap-x-12 gap-y-10 mt-12">
+        <MenuSection
+          title="Coffee Series"
+          content={
+            <>
               <ListMenu imgSource={coffeeSG} title="Kopi Susu Gula Aren" />
-            </div>
-          </div>
-        </div>
+            </>
+          }
+        />
       </section>
     </>
   );

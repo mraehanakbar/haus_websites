@@ -30,16 +30,15 @@ import "./HomePage.css";
 
 const scrollToBestDeal = () => {
   const bestDealElement = document.getElementById("best-deal");
-  if(bestDealElement){
+  if (bestDealElement) {
     bestDealElement.scrollIntoView({ behavior: "smooth" });
   }
 };
-  
 
 const HomePage = () => {
   return (
     <>
-      <NavbarComponent />
+      {/* <NavbarComponent /> */}
       {/* Kitkat */}
       <body className="w-full">
         <div className="relative w-full kitkat-bg h-auto lg:h-screen">
@@ -101,7 +100,10 @@ const HomePage = () => {
           </div>
 
           {/* Promo & Footer Aksen */}
-          <div onClick={scrollToBestDeal} className="promo-footer-aksen cursor-pointer flex flex-col pb-20 lg:pb-18 lg:absolute lg:inset-x-0 bottom-0 lg:h-[28%] lg:justify-center">
+          <div
+            onClick={scrollToBestDeal}
+            className="promo-footer-aksen cursor-pointer flex flex-col pb-20 lg:pb-18 lg:absolute lg:inset-x-0 bottom-0 lg:h-[28%] lg:justify-center"
+          >
             <div className="z-20 text-2xl text-white flex justify-center lg:text-2xl">
               Promo
             </div>
@@ -160,7 +162,6 @@ const HomePage = () => {
 
         {/* Best Seller Menu */}
         <div className="w-full py-32 lg:h-auto lg:flex lg:flex-col lg:justify-center lg:py-20">
-
           {/* Subtitle */}
           <div className="flex flex-col items-center pb-6 ">
             <hr className="sub-title-line mb-3.5 border-t-4  w-1/5 lg:w-1/12 mx-auto my-3 lg:my-0" />
@@ -170,7 +171,6 @@ const HomePage = () => {
           </div>
 
           <div className="flex flex-row justify-around lg:justify-evenly lg:flex-col lg:mx-auto lg:w-full">
-
             {/* Row Pertama */}
             <div className="flex flex-col flex-wrap items-center w-full py-4 lg:py-2 lg:flex-row lg:justify-evenly">
               <img
@@ -225,7 +225,7 @@ const HomePage = () => {
         <div className="w-full haus-rame pb-40 lg:pb-0">
           {/* Sub Title */}
           <div className="flex flex-col items-center pt-20 pb-10 lg:bg-white">
-            <hr className=" sub-title-line-rame z-10 border-t-4 h-fit w-1/5 lg:w-1/12 pb-2 lg:border-pink-500"/>
+            <hr className=" sub-title-line-rame z-10 border-t-4 h-fit w-1/5 lg:w-1/12 pb-2 lg:border-pink-500" />
             <div className="sub-title-content font-bold mt-5 text-white text-4xl lg:mt-0 lg:text-2xl lg:text-[#89489C]">
               Haus Rame-Rame
             </div>
@@ -307,7 +307,11 @@ const HomePage = () => {
 
             {/* <Ilustrasi Haus App Image */}
             <div className="flex flex-col items-center lg:order-1 lg:w-1/2">
-              <img className="z-20 mt-20 w-[85%] lg:w-[50%] lg:mt-0" src={hp} alt="Handphone" />
+              <img
+                className="z-20 mt-20 w-[85%] lg:w-[50%] lg:mt-0"
+                src={hp}
+                alt="Handphone"
+              />
             </div>
           </div>
         </div>

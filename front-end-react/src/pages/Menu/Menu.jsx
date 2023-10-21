@@ -22,9 +22,6 @@ const Menu = () => {
         <ToggleButtonGroup />
 
         <Minuman />
-        <Roti />
-        <PedesCyn />
-        <HotOppa />
       </section>
 
       <FooterComponent />
