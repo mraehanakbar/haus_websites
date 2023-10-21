@@ -80,6 +80,7 @@ const Lokasi = () => {
         </div>
       </div>
       <LocationIter />
+      <div className="h-14"></div>
 
       <FooterComponent />
     </>
