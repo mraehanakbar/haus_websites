@@ -1,4 +1,5 @@
 import { useState } from "react";
+import "./Navbar.css";
 import logo from "../../assets/images/logoatas.png";
 import { Link } from "react-router-dom";
 
