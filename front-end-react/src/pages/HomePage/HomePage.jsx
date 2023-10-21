@@ -132,7 +132,7 @@ const HomePage = () => {
           <div className="relative z-10 py-24">
             <div className=" slider w-full flex overflow-hidden">
               <img
-                className="w-4/5 mx-auto lg:w-9/12 transform transition-transform ease-in-out duration-300"
+                className="w-[90%] mx-auto lg:w-9/12 transform transition-transform ease-in-out duration-300"
                 src={ganjel_ah}
                 alt="Promo Image"
               />
@@ -143,10 +143,10 @@ const HomePage = () => {
 
           {/* Arrow for navigation Promo */}
           <div>
-            <div className="absolute z-20 inset-y-0 left-0 flex items-center ml-14 cursor-pointer">
+            <div className="absolute z-20 inset-y-0 left-0 flex items-center ml-2 lg:ml-14 cursor-pointer">
               <img src={arrow_left} id="prevButton" />
             </div>
-            <div className="absolute z-20 inset-y-0 right-0 flex items-center mr-14 cursor-pointer">
+            <div className="absolute z-20 inset-y-0 right-0 flex items-center mr-2 lg:mr-14 cursor-pointer">
               <img src={arrow_right} id="nextButton" />
             </div>
           </div>
@@ -243,7 +243,7 @@ const HomePage = () => {
             {/* Ilustrasi Visual Image */}
             <div className="flex flex-col items-center lg:order-1 lg:w-1/2 lg:my-auto">
               <img
-                className="w-[90%] lg:w-4/5"
+                className="w-[90%] lg:w-[65%]"
                 src={ilustrasi_visual}
                 alt="Ilustrasi Visual Lifestyle"
               />
@@ -301,7 +301,7 @@ const HomePage = () => {
 
             {/* <Ilustrasi Haus App Image */}
             <div className="flex flex-col items-center lg:order-1 lg:w-1/2">
-              <img className="z-20 mt-20 w-[85%] lg:w-[50%]" src={hp} alt="Handphone" />
+              <img className="z-20 mt-20 w-[85%] lg:w-[50%] lg:mt-0" src={hp} alt="Handphone" />
             </div>
           </div>
         </div>
