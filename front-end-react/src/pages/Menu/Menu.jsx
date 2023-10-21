@@ -1,4 +1,4 @@
-import { NavbarComponent, FooterComponent, ListMenu } from "../../components";
+import { NavbarComponent, FooterComponent } from "../../components";
 // NOTE 10 MENU PERTAMA BLM GANTI JADI PNG
 import HeadlineMenu from "./HeadlineMenu";
 import ToggleButtonGroup from "./ToggleButtonGroup";

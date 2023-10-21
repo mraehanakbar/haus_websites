@@ -55,13 +55,13 @@ const NavbarComponent = () => {
           </a>
           {isDropdownOpen && (
             <div className="dropdown-content">
-              <a href="#brand1">Brand 1</a>
-              <a href="#brand2">Brand 2</a>
-              <a href="#brand2">Brand 2</a>
-              <a href="#brand2">Brand 2</a>
-              <a href="#brand2">Brand 2</a>
-              <a href="#brand2">Brand 2</a>
-              {/* Add more brands as needed */}
+              <a href="/menu">MENU</a>
+              <a href="/lokasi">LOKASI TOKO</a>
+              <a href="/bigorder">BIG ORDER</a>
+              <a href="/karir">KARIR</a>
+              <button onClick={donwloadAPK}>
+                <strong>Download Apps</strong>
+              </button>
             </div>
           )}
         </button>

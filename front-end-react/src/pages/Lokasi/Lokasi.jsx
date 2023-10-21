@@ -9,7 +9,7 @@ import LocationIter from "./LocationIter";
 const Lokasi = () => {
   return (
     <>
-      {/* <NavbarComponent /> */}
+      <NavbarComponent />
       <div className="mt-9">
         <div className="flex justify-center">
           <div className="px-4 w-72">
@@ -66,22 +66,22 @@ const Lokasi = () => {
         <section></section>
       </div>
       {/* <!-- STORE LIST HEADER --> */}
-      <div class="mt-14 mb-14 flex justify-center">
-        <div class="px-4">
-          <div class="flex justify-center w-full">
-            <div class="bg-pink-main w-36 h-1.5"></div>
+      <div className="mt-14 mb-14 flex justify-center">
+        <div className="px-4">
+          <div className="flex justify-center w-full">
+            <div className="bg-pink-main w-36 h-1.5"></div>
           </div>
-          <h1 class="mt-2.5 font-semibold text-center text-2.5xl">
+          <h1 className="mt-2.5 font-semibold text-center text-2.5xl">
             Lokasi Store Baru
           </h1>
-          <p class="mt-2.5 text-center text-2xl font-normal">
+          <p className="mt-2.5 text-center text-2xl font-normal">
             Temukan Store terdekat dari lokasimu
           </p>
         </div>
       </div>
       <LocationIter />
 
-      {/* <FooterComponent /> */}
+      <FooterComponent />
     </>
   );
 };
