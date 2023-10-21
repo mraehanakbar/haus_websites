@@ -20,7 +20,7 @@ const HeadlineMenu = () => {
           className="min-w-full bg-pink-menu-headline -z-30 "
         />
 
-        <div className="absolute -top-8 md:top-4 min-w-full">
+        <div className="absolute -top-8 md:top-0 lg:top-8 min-w-full">
           <div className="">
             <div className="mt-12 flex justify-center w-full">
               <div className="bg-pink-main w-32 md:w-40 h-1.5"></div>
@@ -31,8 +31,8 @@ const HeadlineMenu = () => {
           </div>
 
           {/* <!-- BEST SELLER LIST --> */}
-          <div className="mx-auto w-11/12 md:10/12 md:mt-10 bg">
-            <div className="space-y-1 md:space-y-7">
+          <div className="mx-auto w-11/12 md:10/12 md:mt-5 lg:mt-10 bg">
+            <div className="space-y-1 md:space-y-3 lg:space-y-7">
               <div className="flex justify-evenly relative">
                 <img src={kitkatDrink} className="w-1/5" />
                 <img src={coneMilo} className="w-1/5" />

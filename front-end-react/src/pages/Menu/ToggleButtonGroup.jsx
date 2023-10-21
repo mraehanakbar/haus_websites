@@ -10,7 +10,7 @@ import pedes_cyin_selected from "../../assets/images/menu/button_icon/pedes_cyin
 const ToggleButtonGroup = () => {
   return (
     <>
-      <div class="w-11/12 md:w-10/12 px-10 mx-auto grid grid-cols-4 md:grid-cols-10 gap-x-4 gap-y-4 text-base sm:text-lg md:text-xl justify-center font-bold ">
+      <div class="w-11/12 lg:w-10/12 px-10 mx-auto grid grid-cols-4 md:grid-cols-10 gap-x-4 gap-y-4 text-base sm:text-lg md:text-xl justify-center font-bold ">
         <button
           x-on:click="all = true;minuman = false;roti=false; pedes_cyin=false;hot_oppa=false"
           class=" bg-gray-button rounded-3xl text-pink-main col-span-2"
@@ -56,7 +56,6 @@ const ToggleButtonGroup = () => {
           <p>Ganjel Roti</p>
         </button>
 
-        {/* SECOND ROW */}
         {/* <!-- PEDES CYIN --> */}
         <button
           x-on:click="all = false; minuman=false;roti=false; pedes_cyin=true;hot_oppa=false"
