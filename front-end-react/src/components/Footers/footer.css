@@ -13,6 +13,13 @@ footer {
   text-align: left;
 }
 
+.mid-footer {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 150px;
+  padding-top: 0 20px;
+}
+
 .footer-content p {
   margin-top: 30px;
 }
@@ -21,6 +28,10 @@ footer {
   text-decoration: underline;
   text-decoration-color: #cd3b8e;
   text-decoration-thickness: 0.2em;
+}
+
+.follow {
+  display: flex;
 }
 
 .follow img {
@@ -39,4 +50,31 @@ footer {
 
 .lokasi img {
   margin-top: 20px;
+}
+
+@media screen and (max-width: 768px) {
+  footer {
+    height: 100%;
+  }
+
+
+  .footer-content {
+    flex-direction: column;
+    text-align: left;
+  }
+
+  .email-footer p {
+    display: flex;
+    align-items: center;
+    padding-right: 10px;
+  }
+
+  .mid-footer {
+    margin-top: 20px;
+    gap: 50px;
+  }
+
+  .lokasi{
+    margin-top: 20px;
+  }
 }

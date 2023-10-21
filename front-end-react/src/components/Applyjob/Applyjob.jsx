@@ -33,6 +33,8 @@ const Applyjob = ({ title, requirements }) => {
             src={arrow}
             alt="arrow"
             className={`detail ${isArrowRotated ? "rotate" : ""}`}
+            width={20}
+            height={20}
           />
         </div>
       </div>

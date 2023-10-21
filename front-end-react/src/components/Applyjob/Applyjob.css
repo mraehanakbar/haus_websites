@@ -20,12 +20,6 @@
   flex: 8;
 }
 
-.detail img {
-  margin-left: 20px;
-  height: 20px;
-  width: auto;
-}
-
 .detail p {
   width: 150px;
   color: #e03e9f;
@@ -110,4 +104,36 @@
 
 .show {
   transition: opacity 0.3s ease, max-height 0.3s ease;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .applyjob {
+    margin: 10px;
+    padding: 20px 10px 30px 20px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    cursor: pointer;
+    border-radius: 50px;
+  }
+
+  .applyjob h1 {
+    font-size: 26px;
+    font-weight: 500;
+    line-height: 58px;
+    letter-spacing: -0.021em;
+    text-align: left;
+    flex: 8;
+  }
+
+  .detail p {
+    width: 150px;
+    color: #e03e9f;
+    font-size: 26px;
+    font-weight: 500;
+    line-height: 58px;
+    letter-spacing: -0.021em;
+    text-align: left;
+  }
 }

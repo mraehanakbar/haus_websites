@@ -44,31 +44,38 @@ const Bigorder = () => {
             membuat berbagai minuman Haus! dan menu lainnya.
           </p>
         </div>
-        <div className="callus">
-          <div className="callusdesc">
-            <div className="callline">
-              <div className="calllines"></div>
-            </div>
-            <h2>Hubungi Kami</h2>
-            <p>Untuk info dan pemesanan haus rame - rame harap hubungi kami</p>
-            <h3>Kontak Kami</h3>
-            <p>
-              <img src={vektor} alt="" /> hello@haus.co.id
-            </p>
-            <p>
-              <img src={pin} alt="" /> Taman Meruya Ilir, Jl. Safir I Blok E6
-              No. 27
-            </p>
-            <button className="packagedl" onClick={downloadFlyer}>
-              Download Package
-            </button>
-            <button className="whatsapp" onClick={contactTO}>
-              Contact Via Whatsapp
-            </button>
+      </div>
+      <div className="callus">
+        <div className="head-call">
+          <div className="callline">
+            <div className="calllines"></div>
           </div>
-          <div className="callusimg">
-            <img src={contentimage} alt="Content image" width={600} />
-          </div>
+          <h2>Hubungi Kami</h2>
+        </div>
+        <div className="desc-call">
+          <p>Untuk info dan pemesanan haus rame - rame harap hubungi kami</p>
+        </div>
+        <div className="address-call">
+          <h3>Kontak Kami</h3>
+          <p>
+            <img src={vektor} alt="" />
+            hello@haus.co.id
+          </p>
+          <p>
+            <img src={pin} alt="" /> Taman Meruya Ilir, Jl. Safir I Blok E6 No.
+            27
+          </p>
+        </div>
+        <div className="button-call">
+          <button className="packagedl" onClick={downloadFlyer}>
+            Download Package
+          </button>
+          <button className="whatsapp" onClick={contactTO}>
+            Contact Via Whatsapp
+          </button>
+        </div>
+        <div className="callusimg">
+          <img src={contentimage} alt="Content image" width={600} />
         </div>
       </div>
       <FooterComponent />

@@ -1,3 +1,4 @@
+import { useState } from "react";
 import "./Navbar.css";
 import logo from "../../assets/images/logoatas.png";
 import { Link } from "react-router-dom";
@@ -9,6 +10,12 @@ const donwloadAPK = () => {
 };
 
 const NavbarComponent = () => {
+  const [isDropdownOpen, setDropdownOpen] = useState(false);
+
+  const toggleDropdown = () => {
+    setDropdownOpen(!isDropdownOpen);
+  };
+
   return (
     <nav className="navbar">
       <div className="logo">
@@ -39,6 +46,25 @@ const NavbarComponent = () => {
             </button>
           </li>
         </ul>
+        <button
+          className={`dropdown ${isDropdownOpen ? "active" : ""}`}
+          onClick={toggleDropdown}
+        >
+          <a href="#brand">
+            <strong>☰</strong>
+          </a>
+          {isDropdownOpen && (
+            <div className="dropdown-content">
+              <a href="#brand1">Brand 1</a>
+              <a href="#brand2">Brand 2</a>
+              <a href="#brand2">Brand 2</a>
+              <a href="#brand2">Brand 2</a>
+              <a href="#brand2">Brand 2</a>
+              <a href="#brand2">Brand 2</a>
+              {/* Add more brands as needed */}
+            </div>
+          )}
+        </button>
       </div>
     </nav>
   );
