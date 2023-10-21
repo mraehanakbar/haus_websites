@@ -10,7 +10,7 @@ import pedes_cyin_selected from "../../assets/images/menu/button_icon/pedes_cyin
 const ToggleButtonGroup = () => {
   return (
     <>
-      <div class="w-11/12 md:w-10/12 px-10 mx-auto grid grid-cols-4 md:grid-cols-5 gap-x-4 gap-y-4 text-base sm:text-lg md:text-xl justify-center font-bold ">
+      <div class="w-11/12 md:w-10/12 px-10 mx-auto grid grid-cols-4 md:grid-cols-10 gap-x-4 gap-y-4 text-base sm:text-lg md:text-xl justify-center font-bold ">
         <button
           x-on:click="all = true;minuman = false;roti=false; pedes_cyin=false;hot_oppa=false"
           class=" bg-gray-button rounded-3xl text-pink-main col-span-2"
@@ -27,12 +27,12 @@ const ToggleButtonGroup = () => {
         >
           <img
             src={minuman}
-            class="w-12 scale-50 sm:scale-75 md:scale-90 lg:scale-100"
+            class="w-12 scale-75 md:scale-90 lg:scale-100"
             x-bind:class="!minuman ? '' : 'hidden'"
           />
           <img
             src={minuman_selected}
-            class="w-12 scale-50 sm:scale-75 md:scale-90 lg:scale-100"
+            class="w-12 scale-75 md:scale-90 lg:scale-100"
             x-bind:class="minuman ? '' : 'hidden'"
           />
           <p>Minuman</p>
@@ -45,12 +45,12 @@ const ToggleButtonGroup = () => {
         >
           <img
             src={ganjel_roti}
-            class="h-16 scale-50 sm:scale-75 md:scale-90 lg:scale-100"
+            class="h-16 scale-75 md:scale-90 lg:scale-100"
             x-bind:class="!roti ? '' : 'hidden'"
           />
           <img
             src={ganjel_roti_selected}
-            class="h-16 scale-50 sm:scale-75 md:scale-90 lg:scale-100"
+            class="h-16 scale-75 md:scale-90 lg:scale-100"
             x-bind:class="roti ? '' : 'hidden'"
           />
           <p>Ganjel Roti</p>
@@ -65,12 +65,12 @@ const ToggleButtonGroup = () => {
         >
           <img
             src={pedes_cyin}
-            class="h-14 scale-50 sm:scale-75 md:scale-90 lg:scale-100"
+            class="h-14 scale-75 md:scale-90 lg:scale-100"
             x-bind:class="!pedes_cyin ? '' : 'hidden'"
           />
           <img
             src={pedes_cyin_selected}
-            class="h-14 scale-50 sm:scale-75 md:scale-90 lg:scale-100"
+            class="h-14 scale-75 md:scale-90 lg:scale-100"
             x-bind:class="pedes_cyin ? '' : 'hidden'"
           />
           <p>Pedes Cyin</p>
@@ -79,17 +79,17 @@ const ToggleButtonGroup = () => {
         {/* <!-- HOT OPPA --> */}
         <button
           x-on:click="all = false; minuman=false;roti=false; pedes_cyin=false;hot_oppa=true"
-          class=" py-6 bg-gray-button rounded-3xl text-pink-main flex justify-between flex-col items-center col-span-2 col-start-2 md:col-start1"
+          class=" py-6 bg-gray-button rounded-3xl text-pink-main flex justify-between flex-col items-center col-span-2 col-start-2 md:col-start-9"
           x-bind:class="!hot_oppa ? '' : 'bg-purple-main text-white'"
         >
           <img
             src={hot_oppa}
-            class="w-16 scale-50 sm:scale-75 md:scale-90 lg:scale-100"
+            class="w-16 scale-75 md:scale-90 lg:scale-100"
             x-bind:class="!hot_oppa ? '' : 'hidden'"
           />
           <img
             src={hot_oppa_selected}
-            class="w-16 scale-50 sm:scale-75 md:scale-90 lg:scale-100"
+            class="w-16 scale-75 md:scale-90 lg:scale-100"
             x-bind:class="hot_oppa ? '' : 'hidden'"
           />
           <p>Hot Oppa</p>
