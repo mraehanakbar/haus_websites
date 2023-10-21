@@ -30,11 +30,10 @@ import "./HomePage.css";
 
 const scrollToBestDeal = () => {
   const bestDealElement = document.getElementById("best-deal");
-  if(bestDealElement){
+  if (bestDealElement) {
     bestDealElement.scrollIntoView({ behavior: "smooth" });
   }
 };
-  
 
 const HomePage = () => {
   return (
@@ -170,7 +169,6 @@ const HomePage = () => {
           </div>
 
           <div className="flex flex-row justify-around lg:justify-evenly lg:flex-col lg:mx-auto lg:w-full">
-
             {/* Row Pertama */}
             <div className="flex flex-col flex-wrap items-center w-full py-4 lg:py-2 lg:flex-row lg:justify-evenly">
               <img
