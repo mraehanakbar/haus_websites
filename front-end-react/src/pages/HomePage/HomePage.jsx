@@ -28,15 +28,21 @@ import kitkat_blur_bottom_left from "../../assets/images/kitkat-blur-bottom-left
 import kitkat_blur_bottom_right from "../../assets/images/kitkat-blur-top-right.png";
 import "./HomePage.css";
 
-
+const scrollToBestDeal = () => {
+  const bestDealElement = document.getElementById("best-deal");
+  if(bestDealElement){
+    bestDealElement.scrollIntoView({ behavior: "smooth" });
+  }
+};
+  
 
 const HomePage = () => {
   return (
     <>
-    <NavbarComponent />
+      <NavbarComponent />
       {/* Kitkat */}
-      <body className="container w-screen">
-        <div className="relative w-screen kitkat-bg h-auto lg:h-screen">
+      <body className="w-full">
+        <div className="relative w-full kitkat-bg h-auto lg:h-screen">
           {/* Decoration Background  */}
           <img
             className="decoration-bg-kitkat-left absolute bottom-0 left-0 w-1/3 lg:w-auto"
@@ -95,7 +101,7 @@ const HomePage = () => {
           </div>
 
           {/* Promo & Footer Aksen */}
-          <div className="flex flex-col pb-20 lg:pb-18 lg:absolute lg:inset-x-0 bottom-0 lg:h-[28%] lg:justify-center">
+          <div onClick={scrollToBestDeal} className="promo-footer-aksen cursor-pointer flex flex-col pb-20 lg:pb-18 lg:absolute lg:inset-x-0 bottom-0 lg:h-[28%] lg:justify-center">
             <div className="z-20 text-2xl text-white flex justify-center lg:text-2xl">
               Promo
             </div>
@@ -106,14 +112,14 @@ const HomePage = () => {
             />
           </div>
           <img
-            className="footer-aksen absolute bottom-0 min-w-full lg:h-[12%]"
+            className="footer-aksen absolute bottom-0 w-full lg:h-[12%]"
             src={footer_aksen}
             alt="Footer Aksen"
           />
         </div>
 
         {/* Best Deal */}
-        <div className="relative best-deal w-screen h-auto py-10 lg:py-40">
+        <div className="relative best-deal w-full h-auto py-10 lg:py-40">
           {/* Decoration Background */}
           <div>
             <img
@@ -129,7 +135,7 @@ const HomePage = () => {
           </div>
 
           {/*Promo Image*/}
-          <div className="relative z-10 py-24">
+          <div id="best-deal" className="relative z-10 py-24">
             <div className=" slider w-full flex overflow-hidden">
               <img
                 className="w-[90%] mx-auto lg:w-9/12 transform transition-transform ease-in-out duration-300"
@@ -153,7 +159,7 @@ const HomePage = () => {
         </div>
 
         {/* Best Seller Menu */}
-        <div className="w-screen py-32 lg:h-auto lg:flex lg:flex-col lg:justify-center lg:py-20">
+        <div className="w-full py-32 lg:h-auto lg:flex lg:flex-col lg:justify-center lg:py-20">
 
           {/* Subtitle */}
           <div className="flex flex-col items-center pb-6 ">
@@ -163,7 +169,7 @@ const HomePage = () => {
             </div>
           </div>
 
-          <div className="flex flex-row justify-around lg:justify-evenly lg:flex-col lg:mx-auto lg:w-screen">
+          <div className="flex flex-row justify-around lg:justify-evenly lg:flex-col lg:mx-auto lg:w-full">
 
             {/* Row Pertama */}
             <div className="flex flex-col flex-wrap items-center w-full py-4 lg:py-2 lg:flex-row lg:justify-evenly">
@@ -216,7 +222,7 @@ const HomePage = () => {
         </div>
 
         {/* Haus Rame-Rame */}
-        <div className="w-screen haus-rame pb-40 lg:pb-0">
+        <div className="w-full haus-rame pb-40 lg:pb-0">
           {/* Sub Title */}
           <div className="flex flex-col items-center pt-20 pb-10 lg:bg-white">
             <hr className=" sub-title-line-rame z-10 border-t-4 h-fit w-1/5 lg:w-1/12 pb-2 lg:border-pink-500"/>
@@ -255,16 +261,16 @@ const HomePage = () => {
         </div>
 
         {/* Haus Mobile App */}
-        <div className="w-screen h-auto relative">
+        <div className="w-full h-auto relative">
           {/* Background Decoration */}
           <div>
             <img
-              className="w-screen"
+              className="w-full"
               src={app_order_decoration}
               alt="App Haus Decoration"
             />
             <img
-              className="w-screen absolute bottom-0 z-10"
+              className="w-full absolute bottom-0 z-10"
               src={app_order_decoration}
               alt="App Haus Decoration"
             />

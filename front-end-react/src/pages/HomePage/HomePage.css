@@ -38,3 +38,18 @@
   background-color: #89489C;
 }
 
+
+
+
+
+/* Animation for Promo Button */
+@keyframes clickMeAnimation {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0); }
+}
+
+.promo-footer-aksen {
+  animation: clickMeAnimation 2s infinite; 
+}
+
