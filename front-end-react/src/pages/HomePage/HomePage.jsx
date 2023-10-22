@@ -28,7 +28,7 @@ import haus_logo_putih from "../../assets/images/haus-logo.png";
 import kitkat_blur_bottom_left from "../../assets/images/kitkat-blur-bottom-left.png";
 import kitkat_blur_bottom_right from "../../assets/images/kitkat-blur-top-right.png";
 import "./HomePage.css";
-import React, { useState,useEffect } from "react";
+import React, { useState, useEffect } from "react";
 
 const scrollToBestDeal = () => {
   const bestDealElement = document.getElementById("best-deal");
@@ -38,7 +38,6 @@ const scrollToBestDeal = () => {
 };
 
 const HomePage = () => {
-
   let interval;
 
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -53,21 +52,26 @@ const HomePage = () => {
     );
   };
 
-const autoRotate = () => {
+  const autoRotate = () => {
     interval = setInterval(() => {
       nextImage();
     }, 5000); // Ganti gambar setiap 5 detik (5000 milidetik)
 
-    return () =>{
+    return () => {
       clearInterval(interval); // Bersihkan interval saat komponen tidak lagi digunakan
-    }
+    };
   };
-
 
   useEffect(() => {
     autoRotate(); // Mulai pemutaran otomatis saat komponen dimuat
   }, []);
   const img = [ganjel_ah, tamvan_series, teh_tarik];
+
+  const donwloadAPK = () => {
+    window.open(
+      "https://play.google.com/store/apps/details?id=com.ibn.haus_mobile_app&hl=en-ID"
+    );
+  };
 
   return (
     <>
@@ -171,7 +175,7 @@ const autoRotate = () => {
 
           {/*Promo Image*/}
           <div id="best-deal" className="relative z-10 lg:py-24">
-            <div className="slider w-full flex overflow-hidden">
+            <div className="slider w-full flex overflow">
               {img.map((image, index) => (
                 <div
                   key={index}
@@ -289,7 +293,7 @@ const autoRotate = () => {
                 Semua menu haus! dalam paket rame-rame
               </div>
               <button className="btn-haus-rame hidden lg:block btn-haus-rame text-white font-bold border text-xl border-white py-3 mt-10 rounded-full w-5/12">
-                Pelajari Selengkapnya
+                <a href="/bigorder">Pelajari Selengkapnya</a>
               </button>
             </div>
 
@@ -346,9 +350,10 @@ const autoRotate = () => {
                 Download aplikasi di
               </div>
               <img
-                className="w-2/6 lg:w-3/12"
+                className="w-2/6 lg:w-3/12 cursor-pointer"
                 src={google_play}
                 alt="Google Play Icon"
+                onClick={donwloadAPK}
               />
             </div>
 
