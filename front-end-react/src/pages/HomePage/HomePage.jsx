@@ -39,35 +39,46 @@ const scrollToBestDeal = () => {
 
 const HomePage = () => {
 
-  let interval;
-
   const [currentIndex, setCurrentIndex] = useState(0);
+  const img = [ganjel_ah, tamvan_series, teh_tarik];
+  let interval; // Interval reference
+  let waiting = false; // Flag to indicate if waiting is active
 
   const nextImage = () => {
+    clearInterval(interval); // Clear the interval when the user clicks
     setCurrentIndex((prevIndex) => (prevIndex + 1) % img.length);
+    resetAutoRotate();
   };
 
   const prevImage = () => {
+    clearInterval(interval); // Clear the interval when the user clicks
     setCurrentIndex((prevIndex) =>
       prevIndex === 0 ? img.length - 1 : prevIndex - 1
     );
+    resetAutoRotate();
   };
 
-const autoRotate = () => {
+  const autoRotate = () => {
     interval = setInterval(() => {
       nextImage();
-    }, 5000); // Ganti gambar setiap 5 detik (5000 milidetik)
-
-    return () =>{
-      clearInterval(interval); // Bersihkan interval saat komponen tidak lagi digunakan
-    }
+    }, 5000); // Change image every 5 seconds (5000 milliseconds)
   };
 
+  const resetAutoRotate = () => {
+    waiting = true; // Set the waiting flag
+    setTimeout(() => {
+      waiting = false; // Reset the waiting flag after 5 seconds
+      autoRotate(); // Restart the interval with a 5-second timer
+    }, 5000);
+  };
 
   useEffect(() => {
-    autoRotate(); // Mulai pemutaran otomatis saat komponen dimuat
+    autoRotate(); // Start automatic rotation when the component is mounted
+    return () => {
+      clearInterval(interval); // Clear the interval when the component is unmounted
+    };
   }, []);
-  const img = [ganjel_ah, tamvan_series, teh_tarik];
+
 
   return (
     <>
@@ -135,7 +146,7 @@ const autoRotate = () => {
           {/* Promo & Footer Aksen */}
           <div
             onClick={scrollToBestDeal}
-            className="promo-footer-aksen cursor-pointer mx-auto flex flex-col pb-5 w-[10%] lg:w-[80%] lg:pb-18 lg:absolute lg:inset-x-0 bottom-0 lg:h-[28%] lg:justify-center"
+            className="promo-footer-aksen cursor-pointer mx-auto h-auto flex flex-col pb-5 w-[10%] lg:w-[80%] lg:pb-18 lg:absolute lg:inset-x-0 bottom-0 lg:h-[28%] lg:justify-center"
           >
             <div className="z-20 text-base text-white flex justify-center lg:text-2xl">
               Promo
@@ -154,7 +165,7 @@ const autoRotate = () => {
         </div>
 
         {/* Best Deal */}
-        <div className="relative best-deal w-full h-auto py-14 lg:py-40">
+        <div className="relative best-deal w-full h-auto lg:h-screen py-14 lg:py-30">
           {/* Decoration Background */}
           <div>
             <img
@@ -171,14 +182,14 @@ const autoRotate = () => {
 
           {/*Promo Image*/}
           <div id="best-deal" className="relative z-10 lg:py-24">
-            <div className="slider w-full flex overflow-hidden">
+            <div className="slider flex overflow-hidden">
               {img.map((image, index) => (
                 <div
                   key={index}
                   className={`w-full transform transition-transform ease-in-out duration-300 ${
                     index === currentIndex
                       ? "translate-x-0"
-                      : "translate-x-full "
+                      : "translate-x-full hidden"
                   }`}
                 >
                   <img
@@ -208,7 +219,7 @@ const autoRotate = () => {
         </div>
 
         {/* Best Seller Menu */}
-        <div className="w-full py-10 lg:py-22 lg:h-auto lg:flex lg:flex-col lg:justify-center lg:py-20">
+        <div className="w-full py-10 lg:h-auto lg:flex lg:flex-col lg:justify-center lg:py-20">
           {/* Subtitle */}
           <div className="flex flex-col items-center pb-2 lg:pb-6 ">
             <hr className="sub-title-line mb-3.5 border-t-4  w-1/5 lg:w-1/12 mx-auto lg:my-3 lg:my-0" />
@@ -269,7 +280,7 @@ const autoRotate = () => {
         </div>
 
         {/* Haus Rame-Rame */}
-        <div className="w-full my-5 haus-rame lg:pb-40 lg:pb-0">
+        <div className="w-full my-5 haus-rame  lg:pb-0">
           {/* Sub Title */}
           <div className="flex flex-col items-center lg:pt-20 pb-10 lg:bg-white">
             <hr className=" sub-title-line-rame z-10 border-t-4 h-fit w-1/5 lg:w-1/12 pb-2 lg:border-pink-500" />
@@ -296,7 +307,7 @@ const autoRotate = () => {
             {/* Ilustrasi Visual Image */}
             <div className="flex flex-col items-center lg:order-1 lg:w-1/2 lg:my-auto">
               <img
-                className="w-[95%] lg:w-[65%]"
+                className="w-[95%] lg:w-[70%]"
                 src={ilustrasi_visual}
                 alt="Ilustrasi Visual Lifestyle"
               />
