@@ -29,6 +29,7 @@ import kitkat_blur_bottom_left from "../../assets/images/kitkat-blur-bottom-left
 import kitkat_blur_bottom_right from "../../assets/images/kitkat-blur-top-right.png";
 import "./HomePage.css";
 import React, { useState, useEffect } from "react";
+import { useRef } from "react";
 
 const scrollToBestDeal = () => {
   const bestDealElement = document.getElementById("best-deal");
@@ -42,24 +43,41 @@ const HomePage = () => {
 
   const [currentIndex, setCurrentIndex] = useState(0);
 
+  const intervalRef = useRef(null);
+
   const nextImage = () => {
     setCurrentIndex((prevIndex) => (prevIndex + 1) % img.length);
+    resetInterval();
   };
 
   const prevImage = () => {
     setCurrentIndex((prevIndex) =>
       prevIndex === 0 ? img.length - 1 : prevIndex - 1
-      );
+    );
+    resetInterval();
+  };
+
+  const resetInterval = () => {
+    if (intervalRef.current) {
+      clearInterval(intervalRef.current);
+    }
+
+    // Start a new interval
+    intervalRef.current = setInterval(() => {
+      nextImage();
+    }, 5000);
   };
 
   useEffect(() => {
-    const interval = setInterval(() => {
-      nextImage();
-      if (currentIndex === img.length - 1) {
-        setCurrentIndex(0);
+    // Start the initial interval
+    resetInterval();
+
+    return () => {
+      // Clear the interval when the component is unmounted
+      if (intervalRef.current) {
+        clearInterval(intervalRef.current);
       }
-    }, 5000);
-    return () => clearInterval(interval); // Membersihkan interval saat komponen dibersihkan
+    };
   }, []);
 
   const donwloadAPK = () => {
@@ -190,10 +208,10 @@ const HomePage = () => {
                     key={index}
                     className={` top-0 absolute w-full transform transition-transform ease-in-out duration-300 ${
                       index === currentIndex
-                      ? "translate-x-0"
-                      : index > currentIndex
-                      ? "-translate-x-full"
-                      : "translate-x-full"
+                        ? "translate-x-0"
+                        : index > currentIndex
+                        ? "-translate-x-full"
+                        : "translate-x-full"
                     }`}
                   >
                     <img
