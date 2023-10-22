@@ -39,8 +39,9 @@
 }
 
 
-
-
+body{
+  overflow-x: hidden;
+}
 
 /* Animation for Promo Button */
 @keyframes clickMeAnimation {

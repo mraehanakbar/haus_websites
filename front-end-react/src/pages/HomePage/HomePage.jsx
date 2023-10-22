@@ -38,7 +38,7 @@ const scrollToBestDeal = () => {
 };
 
 const HomePage = () => {
-  let interval;
+  const img = [ganjel_ah, tamvan_series, teh_tarik];
 
   const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -49,23 +49,18 @@ const HomePage = () => {
   const prevImage = () => {
     setCurrentIndex((prevIndex) =>
       prevIndex === 0 ? img.length - 1 : prevIndex - 1
-    );
-  };
-
-  const autoRotate = () => {
-    interval = setInterval(() => {
-      nextImage();
-    }, 5000); // Ganti gambar setiap 5 detik (5000 milidetik)
-
-    return () => {
-      clearInterval(interval); // Bersihkan interval saat komponen tidak lagi digunakan
-    };
+      );
   };
 
   useEffect(() => {
-    autoRotate(); // Mulai pemutaran otomatis saat komponen dimuat
+    const interval = setInterval(() => {
+      nextImage();
+      if (currentIndex === img.length - 1) {
+        setCurrentIndex(0);
+      }
+    }, 5000);
+    return () => clearInterval(interval); // Membersihkan interval saat komponen dibersihkan
   }, []);
-  const img = [ganjel_ah, tamvan_series, teh_tarik];
 
   const donwloadAPK = () => {
     window.open(
@@ -157,8 +152,11 @@ const HomePage = () => {
           />
         </div>
 
-        {/* Best Deal */}
-        <div className="relative best-deal w-full h-auto py-14 lg:py-40">
+        {/* Special Deal */}
+        <div
+          id="best-deal"
+          className="relative best-deal w-full py-10 md:py-20 lg:pt-32 lg:pb-20 "
+        >
           {/* Decoration Background */}
           <div>
             <img
@@ -174,54 +172,59 @@ const HomePage = () => {
           </div>
 
           {/*Promo Image*/}
-          <div id="best-deal" className="relative z-10">
-            
-          <div className=" special-deal-title flex flex-col items-center pb-2 lg:pb-10 ">
-            <hr className="sub-title-line mb-3.5 border-t-4  w-1/5 lg:w-[15%] mx-auto lg:my-3" />
-            <div className="sub-title-content mt-2 text-white text-lg lg:text-[28px] lg:mt-1  font-bold">
-              Special Deal
+          <div className="relative h-auto z-10 ">
+            <div className="special-deal-title hidden lg:block flex flex-col items-center pb-2 text-center lg:pb-10 ">
+              <hr className="sub-title-line mb-3.5 border-t-4  w-1/5 lg:w-[15%] mx-auto lg:my-3" />
+              <div className="sub-title-content text-white text-lg lg:text-[28px] lg:mt-1  font-bold">
+                Special Deal
+              </div>
             </div>
-          </div>
-          
 
-            <div className="slider w-full flex overflow">
-              {img.map((image, index) => (
-                <div
-                  key={index}
-                  className={`w-full transform transition-transform ease-in-out duration-300 ${
-                    index === currentIndex
-                      ? "translate-x-0"
-                      : "translate-x-full "
-                  }`}
-                >
-                  <img
-                    className="w-[90%] lg:w-[70%] mx-auto"
-                    src={image}
-                    alt="Promo Image"
-                    onClick={
+            <div className="slider w-full overflow">
+              <div className="relative">
+                {/* Diakalin pake ini */}
+                <img src={tamvan_series} alt="" className="w-[90%] opacity-0" />
+
+                {img.map((image, index) => (
+                  <div
+                    key={index}
+                    className={` top-0 absolute w-full transform transition-transform ease-in-out duration-300 ${
                       index === currentIndex
-                        ? nextImage
-                        : () => setCurrentIndex(index)
-                    }
-                  />
-                </div>
-              ))}
+                      ? "translate-x-0"
+                      : index > currentIndex
+                      ? "-translate-x-full"
+                      : "translate-x-full"
+                    }`}
+                  >
+                    <img
+                      className="w-[90%] lg:w-[70%] mx-auto"
+                      src={image}
+                      alt="Promo Image"
+                      onClick={
+                        index === currentIndex
+                          ? nextImage
+                          : () => setCurrentIndex(index)
+                      }
+                    />
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
 
           {/* Arrow for navigation Promo */}
           <div>
-            <div className="absolute z-20 inset-y-0 left-0 flex items-center ml-1 w-[10%] lg:ml-14 cursor-pointer">
+            <div className="absolute z-20 inset-y-0 left-0 flex  mt-8 lg:mt-0 ml-1 w-[10%] lg:w-[7%] lg:ml-14 cursor-pointer">
               <img src={arrow_left} onClick={prevImage} />
             </div>
-            <div className="absolute z-20 inset-y-0 right-0 flex items-center mr-1 w-[10%] lg:mr-14 cursor-pointer">
+            <div className="absolute z-20 inset-y-0 right-0 flex  mt-8 lg:mt-0 mr-1 w-[10%] lg:w-[7%] lg:mr-14 cursor-pointer">
               <img src={arrow_right} onClick={nextImage} />
             </div>
           </div>
         </div>
 
         {/* Best Seller Menu */}
-        <div className="w-full py-10 lg:py-22 lg:h-auto lg:flex lg:flex-col lg:justify-center lg:py-20">
+        <div className="w-full py-10 lg:py-22 lg:h-auto lg:flex lg:flex-col lg:justify-center">
           {/* Subtitle */}
           <div className="flex flex-col items-center pb-2 lg:pb-6 ">
             <hr className="sub-title-line mb-3.5 border-t-4  w-1/5 lg:w-[15%] mx-auto lg:my-3 lg:my-0" />
@@ -309,7 +312,7 @@ const HomePage = () => {
             {/* Ilustrasi Visual Image */}
             <div className="flex flex-col items-center lg:order-1 lg:w-1/2 lg:my-auto">
               <img
-                className="w-[95%] md:w-[85%] lg:w-[70%]"
+                className="w-[95%] lg:w-[70%]"
                 src={ilustrasi_visual}
                 alt="Ilustrasi Visual Lifestyle"
               />
@@ -359,7 +362,7 @@ const HomePage = () => {
                 Download aplikasi di
               </div>
               <img
-                className="w-2/6 py-3 md:py-10 lg:py-0 md:w-[25%] lg:w-[20%]"
+                className="w-2/6 lg:w-3/12"
                 src={google_play}
                 alt="Google Play Icon"
                 onClick={donwloadAPK}
