@@ -14,7 +14,8 @@ import oreo from "../../assets/images/oreo.png";
 import arrow_right from "../../assets/images/arrow-right.svg";
 import arrow_left from "../../assets/images/arrow-left.svg";
 import ganjel_ah from "../../assets/images/ganjel-ah.png";
-// import tamvan_series from "../../assets/images/tamvan-series.png";
+import tamvan_series from "../../assets/images/tamvan-series.png";
+import teh_tarik from "../../assets/images/teh-tarik.png";
 import box_bottom_left from "../../assets/images/box-bottom-left.png";
 import box_top_right from "../../assets/images/box-top-right.png";
 import polygon_arrow from "../../assets/images/polygon-arrow.svg";
@@ -27,6 +28,7 @@ import haus_logo_putih from "../../assets/images/haus-logo.png";
 import kitkat_blur_bottom_left from "../../assets/images/kitkat-blur-bottom-left.png";
 import kitkat_blur_bottom_right from "../../assets/images/kitkat-blur-top-right.png";
 import "./HomePage.css";
+import React, { useState,useEffect } from "react";
 
 const scrollToBestDeal = () => {
   const bestDealElement = document.getElementById("best-deal");
@@ -36,6 +38,37 @@ const scrollToBestDeal = () => {
 };
 
 const HomePage = () => {
+
+  let interval;
+
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  const nextImage = () => {
+    setCurrentIndex((prevIndex) => (prevIndex + 1) % img.length);
+  };
+
+  const prevImage = () => {
+    setCurrentIndex((prevIndex) =>
+      prevIndex === 0 ? img.length - 1 : prevIndex - 1
+    );
+  };
+
+const autoRotate = () => {
+    interval = setInterval(() => {
+      nextImage();
+    }, 5000); // Ganti gambar setiap 5 detik (5000 milidetik)
+
+    return () =>{
+      clearInterval(interval); // Bersihkan interval saat komponen tidak lagi digunakan
+    }
+  };
+
+
+  useEffect(() => {
+    autoRotate(); // Mulai pemutaran otomatis saat komponen dimuat
+  }, []);
+  const img = [ganjel_ah, tamvan_series, teh_tarik];
+
   return (
     <>
       <NavbarComponent />
@@ -100,7 +133,10 @@ const HomePage = () => {
           </div>
 
           {/* Promo & Footer Aksen */}
-          <div onClick={scrollToBestDeal} className="promo-footer-aksen cursor-pointer mx-auto flex flex-col pb-5 w-[10%] lg:w-[80%] lg:pb-18 lg:absolute lg:inset-x-0 bottom-0 lg:h-[28%] lg:justify-center">
+          <div
+            onClick={scrollToBestDeal}
+            className="promo-footer-aksen cursor-pointer mx-auto flex flex-col pb-5 w-[10%] lg:w-[80%] lg:pb-18 lg:absolute lg:inset-x-0 bottom-0 lg:h-[28%] lg:justify-center"
+          >
             <div className="z-20 text-base text-white flex justify-center lg:text-2xl">
               Promo
             </div>
@@ -135,31 +171,44 @@ const HomePage = () => {
 
           {/*Promo Image*/}
           <div id="best-deal" className="relative z-10 lg:py-24">
-            <div className=" slider w-full flex overflow-hidden">
-              <img
-                className="w-[90%] mx-auto lg:w-9/12 transform transition-transform ease-in-out duration-300"
-                src={ganjel_ah}
-                alt="Promo Image"
-              />
-              {/* <img className="w-4/5 mx-auto lg:w-9/12 transform transition-transform ease-in-out duration-300"
-                src={tamvan_series} alt="Promo Image"/> */}
+            <div className="slider w-full flex overflow-hidden">
+              {img.map((image, index) => (
+                <div
+                  key={index}
+                  className={`w-full transform transition-transform ease-in-out duration-300 ${
+                    index === currentIndex
+                      ? "translate-x-0"
+                      : "translate-x-full "
+                  }`}
+                >
+                  <img
+                    className="w-[90%] lg:w-[70%] mx-auto"
+                    src={image}
+                    alt="Promo Image"
+                    onClick={
+                      index === currentIndex
+                        ? nextImage
+                        : () => setCurrentIndex(index)
+                    }
+                  />
+                </div>
+              ))}
             </div>
           </div>
 
           {/* Arrow for navigation Promo */}
           <div>
             <div className="absolute z-20 inset-y-0 left-0 flex items-center ml-1 w-[10%] lg:ml-14 cursor-pointer">
-              <img src={arrow_left} id="prevButton" />
+              <img src={arrow_left} onClick={prevImage} />
             </div>
             <div className="absolute z-20 inset-y-0 right-0 flex items-center mr-1 w-[10%] lg:mr-14 cursor-pointer">
-              <img src={arrow_right} id="nextButton" />
+              <img src={arrow_right} onClick={nextImage} />
             </div>
           </div>
         </div>
 
         {/* Best Seller Menu */}
         <div className="w-full py-10 lg:py-22 lg:h-auto lg:flex lg:flex-col lg:justify-center lg:py-20">
-
           {/* Subtitle */}
           <div className="flex flex-col items-center pb-2 lg:pb-6 ">
             <hr className="sub-title-line mb-3.5 border-t-4  w-1/5 lg:w-1/12 mx-auto lg:my-3 lg:my-0" />
@@ -223,7 +272,7 @@ const HomePage = () => {
         <div className="w-full my-5 haus-rame lg:pb-40 lg:pb-0">
           {/* Sub Title */}
           <div className="flex flex-col items-center lg:pt-20 pb-10 lg:bg-white">
-            <hr className=" sub-title-line-rame z-10 border-t-4 h-fit w-1/5 lg:w-1/12 pb-2 lg:border-pink-500"/>
+            <hr className=" sub-title-line-rame z-10 border-t-4 h-fit w-1/5 lg:w-1/12 pb-2 lg:border-pink-500" />
             <div className="sub-title-content font-bold mt-5 text-white text-xl lg:mt-0 lg:text-2xl lg:text-[#89489C]">
               Haus Rame-Rame
             </div>
@@ -305,7 +354,11 @@ const HomePage = () => {
 
             {/* <Ilustrasi Haus App Image */}
             <div className="flex flex-col items-center lg:order-1 lg:w-1/2">
-              <img className="z-20 mt-10 w-[85%] lg:w-[50%] lg:mt-0" src={hp} alt="Handphone" />
+              <img
+                className="z-20 mt-10 w-[85%] lg:w-[50%] lg:mt-0"
+                src={hp}
+                alt="Handphone"
+              />
             </div>
           </div>
         </div>
@@ -315,5 +368,4 @@ const HomePage = () => {
     </>
   );
 };
-
 export default HomePage;
