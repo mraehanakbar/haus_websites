@@ -137,7 +137,7 @@ const HomePage = () => {
           {/* Logo Halal */}
           <div className="flex lg:py-0 justify-end lg:absolute right-0  lg:mb-30 lg:m-auto lg:h-auto lg:w-1/5">
             <img
-              className="mr-10 w-[15%] lg:w-full h-auto lg:mr-32 lg:object-contain lg:max-w-[20%]"
+              className="mr-10 w-[15%] md:w-[10%] lg:w-full h-auto lg:mr-32 lg:object-contain lg:max-w-[20%]"
               src={logo_halal}
               alt="Logo Halal"
             />
@@ -146,13 +146,13 @@ const HomePage = () => {
           {/* Promo & Footer Aksen */}
           <div
             onClick={scrollToBestDeal}
-            className="promo-footer-aksen cursor-pointer mx-auto h-auto flex flex-col pb-5 w-[10%] lg:w-[80%] lg:pb-18 lg:absolute lg:inset-x-0 bottom-0 lg:h-[28%] lg:justify-center"
+            className="promo-footer-aksen cursor-pointer mx-auto h-auto flex flex-col pb-5 w-[10%] md:pb-14  lg:w-[80%] lg:pb-18 lg:absolute lg:inset-x-0 bottom-0 lg:h-[28%] lg:justify-center"
           >
-            <div className="z-20 text-base text-white flex justify-center lg:text-2xl">
+            <div className="z-20 text-sm text-white flex justify-center md:text-lg lg:text-2xl">
               Promo
             </div>
             <img
-              className="z-10 lg:w-[4%] mx-auto "
+              className="z-10   lg:w-[4%] mx-auto "
               src={polygon_arrow}
               alt="Polygon Arrow"
             />
@@ -223,7 +223,7 @@ const HomePage = () => {
           {/* Subtitle */}
           <div className="flex flex-col items-center pb-2 lg:pb-6 ">
             <hr className="sub-title-line mb-3.5 border-t-4  w-1/5 lg:w-1/12 mx-auto lg:my-3 lg:my-0" />
-            <div className="sub-title-content mt-2 lg:mt-8 text-[#89489C] text-xl lg:mt-5 lg:text-2xl font-bold">
+            <div className="sub-title-content mt-2 lg:mt-8 text-[#89489C] text-xl lg:mt-1 lg:text-2xl font-bold">
               Best Seller Menu
             </div>
           </div>
@@ -232,22 +232,22 @@ const HomePage = () => {
             {/* Row Pertama */}
             <div className="flex flex-col flex-wrap items-center w-full py-4 lg:py-2 lg:flex-row lg:justify-evenly">
               <img
-                className="haus-menu w-[75%] py-2 lg:py-0 lg:w-[13%] "
+                className="haus-menu w-[75%] py-2 lg:py-0 md:w-[60%] lg:w-[13%] "
                 src={kitkat_drink}
                 alt="Kitkat Drink"
               />
               <img
-                className="haus-menu w-[75%] py-2 lg:py-0 lg:w-[13%]"
+                className="haus-menu w-[75%] py-2 lg:py-0 md:w-[60%] lg:w-[13%]"
                 src={cone_milo}
                 alt="Ice Cream Cone Coklat Milo"
               />
               <img
-                className="haus-menu w-[75%] py-2 lg:py-0 lg:w-[13%]"
+                className="haus-menu w-[75%] py-2 lg:py-0 md:w-[60%] lg:w-[13%]"
                 src={thai_tea}
                 alt="Thai Tea"
               />
               <img
-                className="haus-menu w-[75%] py-2 lg:py-0 lg:w-[13%]"
+                className="haus-menu w-[75%] py-2 lg:py-0 md:w-[60%] lg:w-[13%]"
                 src={mango_yakult}
                 alt="Ice Mango Mix Yakult"
               />
@@ -256,22 +256,22 @@ const HomePage = () => {
             {/* Row Kedua */}
             <div className="flex flex-col items-center w-full py-4 lg:py-2 lg:flex-row lg:justify-evenly">
               <img
-                className="haus-menu w-[75%] py-2 lg:py-0 lg:w-[13%]"
+                className="haus-menu w-[75%] py-2 lg:py-0 md:w-[60%] lg:w-[13%]"
                 src={choco_lava_milo_float}
                 alt="Choco Lava Milo Float"
               />
               <img
-                className="haus-menu w-[75%] py-2 lg:py-0 lg:w-[13%]"
+                className="haus-menu w-[75%] py-2 lg:py-0 md:w-[60%] lg:w-[13%]"
                 src={fresh_lemon_tea}
                 alt="Fresh Lemon Tea"
               />
               <img
-                className="haus-menu w-[75%] py-2 lg:py-0 lg:w-[13%]"
+                className="haus-menu w-[75%] py-2 lg:py-0 md:w-[60%] lg:w-[13%]"
                 src={green_thai_tea}
                 alt="Green Thai Tea"
               />
               <img
-                className="haus-menu w-[75%] py-2 lg:py-0 lg:w-[13%]"
+                className="haus-menu w-[75%] py-2 lg:py-0 md:w-[60%] lg:w-[13%]"
                 src={oreo}
                 alt="Oreo"
               />
@@ -282,9 +282,9 @@ const HomePage = () => {
         {/* Haus Rame-Rame */}
         <div className="w-full my-5 haus-rame  lg:pb-0">
           {/* Sub Title */}
-          <div className="flex flex-col items-center lg:pt-20 pb-10 lg:bg-white">
+          <div className="flex flex-col items-center pt-10 md:pt-20 lg:pt-20 pb-10 lg:bg-white">
             <hr className=" sub-title-line-rame z-10 border-t-4 h-fit w-1/5 lg:w-1/12 pb-2 lg:border-pink-500" />
-            <div className="sub-title-content font-bold mt-5 text-white text-xl lg:mt-0 lg:text-2xl lg:text-[#89489C]">
+            <div className="sub-title-content font-bold mt-2 text-white text-xl lg:mt-0 lg:text-2xl lg:text-[#89489C]">
               Haus Rame-Rame
             </div>
           </div>
@@ -307,7 +307,7 @@ const HomePage = () => {
             {/* Ilustrasi Visual Image */}
             <div className="flex flex-col items-center lg:order-1 lg:w-1/2 lg:my-auto">
               <img
-                className="w-[95%] lg:w-[70%]"
+                className="w-[95%] md:w-[85%] lg:w-[70%]"
                 src={ilustrasi_visual}
                 alt="Ilustrasi Visual Lifestyle"
               />
@@ -335,16 +335,16 @@ const HomePage = () => {
           </div>
 
           {/* Content */}
-          <div className=" pt-5 lg:pt-10 flex flex-col lg:flex-row mx-auto">
+          <div className=" mx-4 lg:pt-10 flex flex-col lg:flex-row mx-auto">
             {/* Text & Google Play */}
             <div className="flex flex-col items-center mx-auto lg:items-start lg:order-2 lg:w-1/2">
-              <div className="haus-mobile text-2xl w-[95%] text-center font-bold leading-normal lg:mx-0 lg:w-4/5 lg:text-left lg:text-4xl">
+              <div className="haus-mobile text-xl w-[90%] md:w-[75%] font-bold leading-normal lg:mx-0 lg:w-4/5 md:text-left lg:text-left md:text-4xl lg:text-4xl">
                 Haus Mobile App For Order
               </div>
-              <div className=" text-base w-[85%] py-5 text-left font-bold text-xl lg:text-left lg:w-4/5 lg:text-xl lg:py-3">
+              <div className=" text-base w-[85%] md:w-[75%] py-5 text-left font-bold text-lg lg:text-left lg:w-4/5 md:text-2xl lg:text-xl lg:py-3">
                 Dapatkan voucher menarik, dan ekstra promo
               </div>
-              <ul className="flex flex-col w-[75%] list-disc mb-3 text-base lg:w-4/5  lg:text-base lg:ms-4">
+              <ul className="flex flex-col w-[75%] md:w-[70%] list-disc mb-3 text-base lg:w-4/5  md:text-lg lg:text-base lg:ms-4">
                 <li className="mb-2 py-3 lg:py-1">
                   Lebih Mudah Pesan dengan aplikasi Haus!, kamu bisa pilih
                   pesanan Delivery, Pickup atau Dine In untuk skip antrian
@@ -353,11 +353,11 @@ const HomePage = () => {
                   Pesan menu Haus! Favorit kamu dari Toko terdekat
                 </li>
               </ul>
-              <div className=" text-lg font-bold py-2 lg:text-base">
+              <div className=" text-lg font-bold py-2 md:text-2xl lg:text-base">
                 Download aplikasi di
               </div>
               <img
-                className="w-2/6 lg:w-3/12"
+                className="w-2/6 py-3 md:py-10 lg:py-0 md:w-[25%] lg:w-3/12"
                 src={google_play}
                 alt="Google Play Icon"
               />
@@ -366,7 +366,7 @@ const HomePage = () => {
             {/* <Ilustrasi Haus App Image */}
             <div className="flex flex-col items-center lg:order-1 lg:w-1/2">
               <img
-                className="z-20 mt-10 w-[85%] lg:w-[50%] lg:mt-0"
+                className="z-20 pt-3 md:pt-0 lg:pt-0 w-[85%] md:w-[60%] lg:w-[50%] lg:mt-0"
                 src={hp}
                 alt="Handphone"
               />
