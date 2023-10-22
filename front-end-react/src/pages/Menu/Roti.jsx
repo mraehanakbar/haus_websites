@@ -32,15 +32,17 @@ import Mkeju from "../../assets/images/menu/roti_maryam/Maryam Keju.jpg";
 import Msusu from "../../assets/images/menu/roti_maryam/Maryam Susu.jpg";
 import Mstrawberry from "../../assets/images/menu/roti_maryam/Roti Maryam Strawberry.png";
 
+import MenuSection from "../../components/ListMenu/MenuSection";
+
 const Roti = () => {
   return (
     <>
       <section x-show="all || roti">
         {/* ROTI BAKAR BANDUNG */}
-        <div className="flex justify-center mt-4">
-          <div className="w-10/12 mt-12">
-            <h1 className="font-semibold text-3xl">Roti Bakar</h1>
-            <div className="grid grid-cols-5 gap-x-12 gap-y-10 mt-12">
+        <MenuSection
+          title="Roti Bakar"
+          content={
+            <>
               <ListMenu
                 imgSource={blueberryK}
                 title="Roti Bakar Blueberry Keju"
@@ -59,15 +61,16 @@ const Roti = () => {
               <ListMenu imgSource={keju} title="Roti Bakar Keju" />
               <ListMenu imgSource={roomButter} title="Roti Bakar Room Butter" />
               <ListMenu imgSource={strawberry} title="Roti Bakar Strawberry" />
-            </div>
-          </div>
-        </div>
+            </>
+          }
+        />
 
         {/* ROTI MARYAM */}
-        <div className="flex justify-center mt-4">
-          <div className="w-10/12 mt-12">
-            <h1 className="font-semibold text-3xl">Roti Maryam</h1>
-            <div className="grid grid-cols-5 gap-x-12 gap-y-10 mt-12">
+        <MenuSection
+          title="Roti Maryam"
+          content={
+            <>
+              {" "}
               <ListMenu
                 imgSource={MblueberryK}
                 title="Roti Maryam Blueberry Keju"
@@ -92,15 +95,16 @@ const Roti = () => {
                 imgSource={Mstrawberry}
                 title="Roti Maryam Strawberry"
               />
-            </div>
-          </div>
-        </div>
+            </>
+          }
+        />
 
         {/* ROTI KUKUS */}
-        <div className="flex justify-center mt-4">
-          <div className="w-10/12 mt-12">
-            <h1 className="font-semibold text-3xl">Roti Kukus</h1>
-            <div className="grid grid-cols-5 gap-x-12 gap-y-10 mt-12">
+        <MenuSection
+          title="Roti Kukus"
+          content={
+            <>
+              {" "}
               <ListMenu
                 imgSource={KblueberryK}
                 title="Roti Kukus Blueberry Keju"
@@ -118,9 +122,9 @@ const Roti = () => {
               <ListMenu imgSource={Kcokelat} title="Roti Kukus Cokelat" />
               <ListMenu imgSource={Kkeju} title="Roti Kukus Keju" />
               <ListMenu imgSource={Kstrawberry} title="Roti Kukus Strawberry" />
-            </div>
-          </div>
-        </div>
+            </>
+          }
+        />
       </section>
     </>
   );

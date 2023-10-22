@@ -41,6 +41,7 @@ import mangoYk from "../../assets/images/menu/yakult_series/Mango Yakult.jpg";
 
 // COFFEE SERIES
 import coffeeSG from "../../assets/images/menu/coffee_series/kopi susu gula aren.jpg";
+
 import MenuSection from "../../components/ListMenu/MenuSection";
 
 const Minuman = () => {
