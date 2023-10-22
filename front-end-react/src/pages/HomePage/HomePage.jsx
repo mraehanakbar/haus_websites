@@ -148,7 +148,7 @@ const HomePage = () => {
             onClick={scrollToBestDeal}
             className="promo-footer-aksen cursor-pointer mx-auto h-auto flex flex-col pb-5 w-[10%] md:pb-14  lg:w-[80%] lg:pb-18 lg:absolute lg:inset-x-0 bottom-0 lg:h-[28%] lg:justify-center"
           >
-            <div className="z-20 text-sm text-white flex justify-center md:text-lg lg:text-2xl">
+            <div className="z-20 text-sm text-white flex justify-center md:text-lg">
               Promo
             </div>
             <img
@@ -181,7 +181,16 @@ const HomePage = () => {
           </div>
 
           {/*Promo Image*/}
-          <div id="best-deal" className="relative z-10 lg:py-24">
+          <div id="best-deal" className="relative z-10">
+            
+          <div className=" special-deal-title flex flex-col items-center pb-2 lg:pb-10 ">
+            <hr className="sub-title-line mb-3.5 border-t-4  w-1/5 lg:w-[15%] mx-auto lg:my-3" />
+            <div className="sub-title-content mt-2 text-white text-lg lg:text-[28px] lg:mt-1  font-bold">
+              Special Deal
+            </div>
+          </div>
+          
+
             <div className="slider flex overflow-hidden">
               {img.map((image, index) => (
                 <div
@@ -222,8 +231,8 @@ const HomePage = () => {
         <div className="w-full py-10 lg:h-auto lg:flex lg:flex-col lg:justify-center lg:py-20">
           {/* Subtitle */}
           <div className="flex flex-col items-center pb-2 lg:pb-6 ">
-            <hr className="sub-title-line mb-3.5 border-t-4  w-1/5 lg:w-1/12 mx-auto lg:my-3 lg:my-0" />
-            <div className="sub-title-content mt-2 lg:mt-8 text-[#89489C] text-xl lg:mt-1 lg:text-2xl font-bold">
+            <hr className="sub-title-line mb-3.5 border-t-4  w-1/5 lg:w-[15%] mx-auto lg:my-3 lg:my-0" />
+            <div className="sub-title-content mt-2 text-[#89489C] text-lg lg:text-[28px] lg:mt-1  font-bold">
               Best Seller Menu
             </div>
           </div>
@@ -280,26 +289,26 @@ const HomePage = () => {
         </div>
 
         {/* Haus Rame-Rame */}
-        <div className="w-full my-5 haus-rame  lg:pb-0">
+        <div className="w-full my-5 haus-rame  lg:my-0 ">
           {/* Sub Title */}
           <div className="flex flex-col items-center pt-10 md:pt-20 lg:pt-20 pb-10 lg:bg-white">
-            <hr className=" sub-title-line-rame z-10 border-t-4 h-fit w-1/5 lg:w-1/12 pb-2 lg:border-pink-500" />
-            <div className="sub-title-content font-bold mt-2 text-white text-xl lg:mt-0 lg:text-2xl lg:text-[#89489C]">
+            <hr className=" sub-title-line-rame z-10 border-t-4 h-fit w-1/5 lg:w-[15%] pb-2 lg:border-pink-500" />
+            <div className="sub-title-content font-bold mt-2 text-white lg:mt-0 lg:text-[#89489C] text-lg lg:text-[28px]">
               Haus Rame-Rame
             </div>
           </div>
 
           {/* Content */}
-          <div className=" haus-rame flex flex-col lg:flex-row lg:py-5">
+          <div className=" haus-rame flex flex-col lg:flex-row lg:py-14">
             {/* Text and Button */}
-            <div className="flex flex-col items-center lg:items-start lg:order-2 lg:w-1/2 lg:my-auto">
-              <div className="text-2xl my-5 text-center text-white font-bold leading-normal w-[80%] lg:my-0 lg:w-[75%] lg:w-4/5 lg:text-left lg:text-4xl">
+            <div className="flex flex-col items-center lg:items-start lg:order-2 lg:w-1/2 lg:py-10">
+              <div className="my-5 text-center text-white font-bold leading-normal w-[80%] lg:my-0 lg:w-[90%] lg:w-4/5 lg:text-left text-[28px] lg:text-[32px]">
                 Ciptakan Momen Bahagiamu Bersama Haus!
               </div>
-              <div className=" text-base text-white py-8 w-[60%] text-center lg:py-10 lg:text-xl lg:text-left lg:w-4/5">
+              <div className="  text-white py-8 w-[70%] text-center lg:pt-5 lg:pb-8 text-base lg:text-xl lg:text-left lg:w-4/5">
                 Semua menu haus! dalam paket rame-rame
               </div>
-              <button className="btn-haus-rame hidden lg:block btn-haus-rame text-white font-bold border text-xl border-white py-3 mt-10 rounded-full w-5/12">
+              <button className="btn-haus-rame hidden lg:block btn-haus-rame text-white font-bold border text-[16px] border-white py-2 mt-5 rounded-full w-[40%]">
                 Pelajari Selengkapnya
               </button>
             </div>
@@ -335,38 +344,38 @@ const HomePage = () => {
           </div>
 
           {/* Content */}
-          <div className=" mx-4 lg:pt-10 flex flex-col lg:flex-row mx-auto">
+          <div className=" mx-4 flex flex-col lg:flex-row mx-auto">
             {/* Text & Google Play */}
             <div className="flex flex-col items-center mx-auto lg:items-start lg:order-2 lg:w-1/2">
-              <div className="haus-mobile text-xl w-[90%] md:w-[75%] font-bold leading-normal lg:mx-0 lg:w-4/5 md:text-left lg:text-left md:text-4xl lg:text-4xl">
+              <div className="haus-mobile w-full md:w-[75%] font-bold lg:mx-0 lg:w-full md:text-left text-center text-[22px] md:text-4xl lg:text-[32px]">
                 Haus Mobile App For Order
               </div>
-              <div className=" text-base w-[85%] md:w-[75%] py-5 text-left font-bold text-lg lg:text-left lg:w-4/5 md:text-2xl lg:text-xl lg:py-3">
+              <div className=" text-base w-[85%] md:w-[75%] py-5 text-left font-bold lg:text-left lg:w-4/5 text-sm md:text-2xl lg:text-[22px] lg:py-3">
                 Dapatkan voucher menarik, dan ekstra promo
               </div>
-              <ul className="flex flex-col w-[75%] md:w-[70%] list-disc mb-3 text-base lg:w-4/5  md:text-lg lg:text-base lg:ms-4">
-                <li className="mb-2 py-3 lg:py-1">
+              <ul className="flex flex-col w-[75%] md:w-[70%] list-disc mb-3 text-xs lg:w-4/5  md:text-base lg:text-lg lg:ms-4">
+                <li className="mb-2 py-3 lg:py-0">
                   Lebih Mudah Pesan dengan aplikasi Haus!, kamu bisa pilih
                   pesanan Delivery, Pickup atau Dine In untuk skip antrian
                 </li>
-                <li className="mb-2 py-3 lg:py-1">
+                <li className="mb-2 py-3 lg:py-0">
                   Pesan menu Haus! Favorit kamu dari Toko terdekat
                 </li>
               </ul>
-              <div className=" text-lg font-bold py-2 md:text-2xl lg:text-base">
+              <div className=" text-base font-bold py-2 lg:py-1 md:text-2xl lg:text-lg">
                 Download aplikasi di
               </div>
               <img
-                className="w-2/6 py-3 md:py-10 lg:py-0 md:w-[25%] lg:w-3/12"
+                className="w-2/6 py-3 md:py-10 lg:py-0 md:w-[25%] lg:w-[20%]"
                 src={google_play}
                 alt="Google Play Icon"
               />
             </div>
 
             {/* <Ilustrasi Haus App Image */}
-            <div className="flex flex-col items-center lg:order-1 lg:w-1/2">
+            <div className="flex flex-col items-center lg:order-1 lg:w-1/2 lg:justify-end">
               <img
-                className="z-20 pt-3 md:pt-0 lg:pt-0 w-[85%] md:w-[60%] lg:w-[50%] lg:mt-0"
+                className="z-20 pt-3 md:pt-0 lg:pt-0 w-[85%] md:w-[60%] lg:w-[70%] lg:mt-0"
                 src={hp}
                 alt="Handphone"
               />
