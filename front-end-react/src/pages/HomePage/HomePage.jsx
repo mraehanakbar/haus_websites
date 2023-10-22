@@ -28,7 +28,7 @@ import haus_logo_putih from "../../assets/images/haus-logo.png";
 import kitkat_blur_bottom_left from "../../assets/images/kitkat-blur-bottom-left.png";
 import kitkat_blur_bottom_right from "../../assets/images/kitkat-blur-top-right.png";
 import "./HomePage.css";
-import React, { useState,useEffect } from "react";
+import React, { useState, useEffect } from "react";
 
 const scrollToBestDeal = () => {
   const bestDealElement = document.getElementById("best-deal");
@@ -38,47 +38,40 @@ const scrollToBestDeal = () => {
 };
 
 const HomePage = () => {
+  let interval;
 
   const [currentIndex, setCurrentIndex] = useState(0);
-  const img = [ganjel_ah, tamvan_series, teh_tarik];
-  let interval; // Interval reference
-  let waiting = false; // Flag to indicate if waiting is active
 
   const nextImage = () => {
-    clearInterval(interval); // Clear the interval when the user clicks
     setCurrentIndex((prevIndex) => (prevIndex + 1) % img.length);
-    resetAutoRotate();
   };
 
   const prevImage = () => {
-    clearInterval(interval); // Clear the interval when the user clicks
     setCurrentIndex((prevIndex) =>
       prevIndex === 0 ? img.length - 1 : prevIndex - 1
     );
-    resetAutoRotate();
   };
 
   const autoRotate = () => {
     interval = setInterval(() => {
       nextImage();
-    }, 5000); // Change image every 5 seconds (5000 milliseconds)
-  };
+    }, 5000); // Ganti gambar setiap 5 detik (5000 milidetik)
 
-  const resetAutoRotate = () => {
-    waiting = true; // Set the waiting flag
-    setTimeout(() => {
-      waiting = false; // Reset the waiting flag after 5 seconds
-      autoRotate(); // Restart the interval with a 5-second timer
-    }, 5000);
+    return () => {
+      clearInterval(interval); // Bersihkan interval saat komponen tidak lagi digunakan
+    };
   };
 
   useEffect(() => {
-    autoRotate(); // Start automatic rotation when the component is mounted
-    return () => {
-      clearInterval(interval); // Clear the interval when the component is unmounted
-    };
+    autoRotate(); // Mulai pemutaran otomatis saat komponen dimuat
   }, []);
+  const img = [ganjel_ah, tamvan_series, teh_tarik];
 
+  const donwloadAPK = () => {
+    window.open(
+      "https://play.google.com/store/apps/details?id=com.ibn.haus_mobile_app&hl=en-ID"
+    );
+  };
 
   return (
     <>
@@ -165,7 +158,7 @@ const HomePage = () => {
         </div>
 
         {/* Best Deal */}
-        <div className="relative best-deal w-full h-auto lg:h-screen py-14 lg:py-30">
+        <div className="relative best-deal w-full h-auto py-14 lg:py-40">
           {/* Decoration Background */}
           <div>
             <img
@@ -191,14 +184,14 @@ const HomePage = () => {
           </div>
           
 
-            <div className="slider flex overflow-hidden">
+            <div className="slider w-full flex overflow">
               {img.map((image, index) => (
                 <div
                   key={index}
                   className={`w-full transform transition-transform ease-in-out duration-300 ${
                     index === currentIndex
                       ? "translate-x-0"
-                      : "translate-x-full hidden"
+                      : "translate-x-full "
                   }`}
                 >
                   <img
@@ -228,7 +221,7 @@ const HomePage = () => {
         </div>
 
         {/* Best Seller Menu */}
-        <div className="w-full py-10 lg:h-auto lg:flex lg:flex-col lg:justify-center lg:py-20">
+        <div className="w-full py-10 lg:py-22 lg:h-auto lg:flex lg:flex-col lg:justify-center lg:py-20">
           {/* Subtitle */}
           <div className="flex flex-col items-center pb-2 lg:pb-6 ">
             <hr className="sub-title-line mb-3.5 border-t-4  w-1/5 lg:w-[15%] mx-auto lg:my-3 lg:my-0" />
@@ -308,8 +301,8 @@ const HomePage = () => {
               <div className="  text-white py-8 w-[70%] text-center lg:pt-5 lg:pb-8 text-base lg:text-xl lg:text-left lg:w-4/5">
                 Semua menu haus! dalam paket rame-rame
               </div>
-              <button className="btn-haus-rame hidden lg:block btn-haus-rame text-white font-bold border text-[16px] border-white py-2 mt-5 rounded-full w-[40%]">
-                Pelajari Selengkapnya
+              <button className="btn-haus-rame hidden lg:block btn-haus-rame text-white font-bold border text-xl border-white py-3 mt-10 rounded-full w-5/12">
+                <a href="/bigorder">Pelajari Selengkapnya</a>
               </button>
             </div>
 
@@ -369,6 +362,7 @@ const HomePage = () => {
                 className="w-2/6 py-3 md:py-10 lg:py-0 md:w-[25%] lg:w-[20%]"
                 src={google_play}
                 alt="Google Play Icon"
+                onClick={donwloadAPK}
               />
             </div>
 

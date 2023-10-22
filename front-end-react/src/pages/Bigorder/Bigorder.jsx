@@ -4,6 +4,7 @@ import contentimage from "../../assets/images/callus.png";
 import vektor from "../../assets/images/Vector.png";
 import pin from "../../assets/images/Pin.png";
 import flyer from "../../assets/images/FlyerBigOrder.jpg";
+import iconback from "../../assets/images/iconbackground.png";
 import "./Bigorder.css";
 
 const downloadFlyer = () => {
@@ -23,8 +24,11 @@ const Bigorder = () => {
       <NavbarComponent />
       <div className="topcontainerorder">
         <div className="decstoporder">
-          <h1>Meriahkan Acaramu dengan Product Haus!</h1>
-          <p>Semua menu haus! dalam paket rame - rame</p>
+          <img src={iconback} alt="" />
+          <div className="decstoporder-text">
+            <h1>Meriahkan Acaramu dengan Product Haus!</h1>
+            <p>Semua menu haus! dalam paket rame - rame</p>
+          </div>
         </div>
         <img src={orderimage} alt="content image" />
       </div>

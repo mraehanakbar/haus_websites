@@ -130,11 +130,7 @@
     width: auto;
     height: 545.3px;
     padding: 30px 20px 30px 20px;
-    gap: 30px;
-  }
-
-  .topcontainer .images {
-    padding: 0px;
+    
   }
 
   .description h1 {
@@ -143,6 +139,7 @@
 
   .description p {
     text-align: center;
+    padding-top: 20px;
   }
   .operational {
     width: 100%;
@@ -166,5 +163,39 @@
     box-shadow: 0px 8px 18px -6px #18274b1f;
     display: flex;
     flex-direction: column;
+  }
+  .containerimg1 {
+    width: 200.95px;
+    height: 207.22px;
+    top: 187.01px;
+    left: 119px;
+    background-color: #ffff;
+    box-shadow: -2px 2px 8px 0px #00000040;
+    rotate: -5.43deg;
+  }
+  .containerimg2 {
+    width: 200.95px;
+    height: 207.22px;
+    top: 187.01px;
+    left: 119px;
+    background-color: #ffff;
+    box-shadow: -2px 2px 8px 0px #00000040;
+    rotate: 5.43deg;
+  }
+
+  .containerimg1 img {
+    width: 200.37px;
+    height: 191.68px;
+    top: 204.55px;
+    left: 132.4px;
+    rotate: 5.71deg;
+  }
+
+  .containerimg2 img {
+    width: 200.37px;
+    height: 191.68px;
+    top: 204.55px;
+    left: 132.4px;
+    rotate: -5.71deg;
   }
 }

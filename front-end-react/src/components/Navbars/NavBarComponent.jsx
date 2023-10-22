@@ -24,7 +24,7 @@ const NavbarComponent = () => {
             <img src={logo} alt="Logo" className="w-36  cursor-pointer" />
           </Link>
         </div>
-        <div className="hidden md:flex xl:ml-32 lg:ml-14 md:ml-0 text items-center">
+        <div className="hidden md:flex xl:ml-auto lg:ml-auto md:ml-0 text items-center">
           <Link className="px-1.5 lg:px-3" to="/about">
             TENTANG KAMI
           </Link>

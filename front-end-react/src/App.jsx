@@ -4,12 +4,6 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 function App() {
   return (
     <>
-      <head>
-        <link
-          rel="stylesheet"
-          href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap"
-        ></link>
-      </head>
       <Router>
         <Routes>
           <Route path="/" element={<HomePage />} />
