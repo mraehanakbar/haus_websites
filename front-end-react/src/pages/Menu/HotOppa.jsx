@@ -31,26 +31,28 @@ import sfCake from "../../assets/images/menu/hot_oppa/Spicy Fish Cake.png";
 import skRamyeon from "../../assets/images/menu/hot_oppa/Spicy Kimchi Ramyeon.png";
 import topokki from "../../assets/images/menu/hot_oppa/Topokki.png";
 
+import MenuSection from "../../components/ListMenu/MenuSection";
+
 const HotOppa = () => {
   return (
     <>
       <section x-show="all || hot_oppa">
         {/* NOODLE SOUP */}
-        <div className="flex justify-center mt-4">
-          <div className="w-10/12 mt-12">
-            <h1 className="font-semibold text-3xl">Noodle Soup</h1>
-            <div className="grid grid-cols-5 gap-x-12 gap-y-10 mt-12">
+        <MenuSection
+          title="Noodle Soup"
+          content={
+            <>
               <ListMenu imgSource={skRamyeon} title="Spicy Kimchi Ramyeon" />
               <ListMenu imgSource={blackGarlic} title="Black Garlic Ramyeon" />
               <ListMenu imgSource={boneMarrow} title="Bone Marrow Ramyeon" />
-            </div>
-          </div>
-        </div>
+            </>
+          }
+        />
         {/* Fried Noodle*/}
-        <div className="flex justify-center mt-4">
-          <div className="w-10/12 mt-12">
-            <h1 className="font-semibold text-3xl">Fried Noodles</h1>
-            <div className="grid grid-cols-5 gap-x-12 gap-y-10 mt-12">
+        <MenuSection
+          title="Fried Noodle"
+          content={
+            <>
               <ListMenu imgSource={bolognese} title="Bolognese Fried Ramyeon" />
               <ListMenu
                 imgSource={chickenFried}
@@ -64,23 +66,25 @@ const HotOppa = () => {
                 imgSource={sbFriedRamyeon}
                 title="Spicy Bimbim Fried Ramyeon"
               />
-            </div>
-          </div>
-        </div>
+            </>
+          }
+        />
+
         {/* Topokki*/}
-        <div className="flex justify-center mt-4">
-          <div className="w-10/12 mt-12">
-            <h1 className="font-semibold text-3xl">Topokki</h1>
-            <div className="grid grid-cols-5 gap-x-12 gap-y-10 mt-12">
+        <MenuSection
+          title="Topokki"
+          content={
+            <>
               <ListMenu imgSource={topokki} title="Topokki" />
-            </div>
-          </div>
-        </div>
+            </>
+          }
+        />
+
         {/* BOILED SIDE DISH */}
-        <div className="flex justify-center mt-4">
-          <div className="w-10/12 mt-12">
-            <h1 className="font-semibold text-3xl">Boiled Side Dish</h1>
-            <div className="grid grid-cols-5 gap-x-12 gap-y-10 mt-12">
+        <MenuSection
+          title="Boiled Side Dish"
+          content={
+            <>
               <ListMenu imgSource={chikuwa} title="Chikuwa" />
               <ListMenu imgSource={fRoll} title="Fish Roll" />
               <ListMenu imgSource={shrimpBall} title="Shrimp Ball" />
@@ -88,14 +92,15 @@ const HotOppa = () => {
               <ListMenu imgSource={gimmari} title="Gimmari" />
               <ListMenu imgSource={ffCake} title="Fried Fish Cake" />
               <ListMenu imgSource={ffBall} title="Fried Fish Ball" />
-            </div>
-          </div>
-        </div>
+            </>
+          }
+        />
+
         {/* Fried SIDE DISH */}
-        <div className="flex justify-center mt-4">
-          <div className="w-10/12 mt-12">
-            <h1 className="font-semibold text-3xl">Fried Side Dish</h1>
-            <div className="grid grid-cols-5 gap-x-12 gap-y-10 mt-12">
+        <MenuSection
+          title="Fried Side Dish"
+          content={
+            <>
               <ListMenu imgSource={cheeseBomb} title="Cheese Bomb Dumpling" />
               <ListMenu imgSource={chickenBomb} title="Chicken Bomb Dumpling" />
               <ListMenu imgSource={chikuwa} title="Chikuwa" />
@@ -105,14 +110,15 @@ const HotOppa = () => {
               <ListMenu imgSource={odeng} title="Odeng" />
               <ListMenu imgSource={sfCake} title="Spicy Fish Cake" />
               <ListMenu imgSource={meatball} title="Meatball" />
-            </div>
-          </div>
-        </div>
+            </>
+          }
+        />
+
         {/* DIMSUM */}
-        <div className="flex justify-center mt-4">
-          <div className="w-10/12 mt-12">
-            <h1 className="font-semibold text-3xl">Dimsum</h1>
-            <div className="grid grid-cols-5 gap-x-12 gap-y-10 mt-12">
+        <MenuSection
+          title="Dimsum"
+          content={
+            <>
               <ListMenu imgSource={dBeef} title="Dimsum Beef" />
               <ListMenu imgSource={dCrab} title="Dimsum Crab" />
               <ListMenu imgSource={dUdang} title="Dimsum Udang" />
@@ -120,9 +126,19 @@ const HotOppa = () => {
               <ListMenu imgSource={dRambutan} title="Dimsum Rambutan" />
               <ListMenu imgSource={dWortel} title="Dimsum Wortel" />
               <ListMenu imgSource={kulitUdang} title="Kulit Udang" />
-            </div>
-          </div>
-        </div>
+            </>
+          }
+        />
+
+        {/* MINUMAN HOT OPPA*/}
+        <MenuSection
+          title="Minuman Hot Oppa"
+          content={
+            <>
+              <ListMenu imgSource={chikuwa} title="Chikuwa" />
+            </>
+          }
+        />
       </section>
     </>
   );

@@ -1,4 +1,4 @@
-import { NavbarComponent, FooterComponent } from "../../components";
+import { NavbarComponent, FooterComponent, ListMenu } from "../../components";
 // NOTE 10 MENU PERTAMA BLM GANTI JADI PNG
 import HeadlineMenu from "./HeadlineMenu";
 import ToggleButtonGroup from "./ToggleButtonGroup";
@@ -22,6 +22,9 @@ const Menu = () => {
         <ToggleButtonGroup />
 
         <Minuman />
+        <Roti />
+        <PedesCyn />
+        <HotOppa />
       </section>
 
       <FooterComponent />
