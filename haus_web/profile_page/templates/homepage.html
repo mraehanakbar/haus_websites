@@ -4,11 +4,13 @@
 
 {% block content %}
 
+<script src="https://cdn.tailwindcss.com"></script>
 <link rel="stylesheet" type="text/css" href="{% static '/css/dist/home.css' %}">
+
 
 <!-- Background Mobile App -->
 
-<div class="relative">
+<!-- <div class="relative">
   <img class="logo-haus min-w-full h-auto" src="{% static '/images/background-mobile.jpg' %}"
     alt="Background Mobile App">
   <div class="content absolute inset-0 flex flex-col h-2/5 w-3/5 ml-20 justify-center mt-32">
@@ -18,37 +20,85 @@
   </div>
   <img class="min-w-full absolute bottom-0" src="{% static '/images/footer-aksen.png' %}" alt="Footer Aksen">
   <div class="min-w-full flex justify-center">
-    <!-- Masih belum benar -->
     <img class="absolute bottom-0 z-10" src="{% static '/images/polygon_arrow.svg' %}" alt="Polygon Arrow">
     <div class="absolute bottom-0 z-20 text-white">Promo</div>
   </div>
+</div> -->
+
+<!-- Kitkat -->
+<div class="relative w-screen h-screen" style="background-color: #DA1E32;">
+
+  <!-- Decoration Background -->
+  <img class="decoration-bg-kitkat absolute bottom-0 left-0 w-1/3 lg:w-auto"
+      src="{% static '/images/kitkat-blur-bottom-left.png' %}" alt="kitkat-bg">
+  <img class="decoration-bg-kitkat absolute top-0 right-0 w-1/3 lg:w-auto"
+      src="{% static '/images/kitkat-blur-top-right.png' %}" alt="Background Kitkat"
+      style="transform: rotate(180deg);">
+
+  <!-- Kitkat Text and Logo -->
+  <div class="flex flex-row pt-8 px-14 lg:px-32">
+      <div class="w-1/2 my-auto">
+          <img class="logo-haus-kitkat w-3/5 lg:w-1/4" src="{% static '/images/haus-logo.png' %}" alt="Haus Logo">
+      </div>
+      <div class="w-1/2 flex justify-end z-10">
+          <img class="logo-haus-kitkat w-3/5 right-0 lg:w-auto right-0" src="{% static '/images/kitkat-logo.png' %}">
+      </div>
+  </div>
+
+  <!-- Kitkat Text and Picture -->
+  <div class="flex flex-col lg:flex-row mt-20 lg:mt-px">
+      <div class="flex justify-center lg:w-1/2 lg:justify-end">
+          <img class="kitkat-text w-11/12 lg:w-4/5" src="{% static '/images/kitkat-text.png' %}" alt="Kitkat Text">
+      </div>
+      <div class=" flex justify-center lg:w-1/2 lg:justify-start">
+          <img class="kitkat-gelas w-full lg:w-4/5" src="{% static '/images/kitkat-gelas.png' %}" alt="Kitkat Gelas">
+      </div>
+  </div>
+
+  <!-- Logo Halal -->
+  <div class="flex justify-end mt-10">
+      <img class="mr-24 w-32 absolute bottom-0 lg:mb-28 lg:w-16" src="{% static '/images/halal-logo.png' %}" alt="Logo Halal">
+  </div>
+
+  <!-- Footer Aksen -->
+  <div class="mx-auto w-full">
+      <!-- Center-align the elements in lg mode -->
+      <div class="flex flex-col items-center mb-24 lg:absolute lg:bottom-0 lg:justify-center lg:min-w-full lg:mb-20">
+          <div class="z-20 text-white lg:order-1">Promo</div>
+          <img class="z-10 lg:order-2" src="{% static '/images/polygon_arrow.svg' %}" alt="Polygon Arrow">
+      </div>
+      <img class="footer-aksen absolute bottom-0 min-w-full lg:h-24" src="{% static '/images/footer-aksen.png' %}"
+          alt="Footer Aksen">
+  </div>
 </div>
+
 
 <!-- Background -->
 <div class="relative">
   <hr
     class="z-10 border-t-4 border-purple-haus w-1/12 mx-auto absolute inset-0 mt-4 sm:mt-8 md:mt-12 lg:mt-16 xl:mt-20" />
-  <div class="z-10 absolute inset-1 text-center text-3xl text-white font-bold mt-8 sm:mt-12 md:mt-16 lg:mt-20 xl:mt-24">Special Deal</div>
-  <img class="logo-haus min-w-full" src="{% static '/images/promo-background.jpg' %}" alt="Background Promo">
-  <img class="w-10/12 absolute inset-0 my-auto mx-auto" src="{% static '/images/lemon.jpg' %}" alt="Footer Aksen">
+  <div class="z-10 absolute inset-1 text-center text-3xl text-white font-bold mt-8 sm:mt-12 md:mt-16 lg:mt-20 xl:mt-24">
+    Special Deal</div>
+  <img class="logo-haus min-w-full " src="{% static '/images/promo-background.jpg' %}" alt="Background Promo">
+  <img class="w-9/12 absolute inset-0 my-auto mx-auto" src="{% static '/images/lemon.jpg' %}" alt="Footer Aksen">
   <div class="absolute inset-y-0 left-0 flex items-center ml-4">
     <img src="{% static '/images/left-arrow.svg' %}">
   </div>
   <div class="absolute inset-y-0 right-0 flex items-center mr-4">
     <img src="{% static '/images/right-arrow.svg' %}">
   </div>
-  </div>
+</div>
 </div>
 </div>
 
 
 <!-- Card -->
-<div class="mx-16">
+<!-- <div class="mx-16">
   <hr class="sub-title-line mt-14 mb-3.5  border-t-4 border-blue-500 w-1/12 mx-auto my-3">
   <div class="sub-title text-xl font-bold text-center mb-10">Brand Kami</div>
-  <div class="flex flex-row space-x-4 justify-between">
-    <!-- Haus -->
-    <div class="max-w-sm rounded overflow-hidden shadow-lg border border-gray-300">
+  <div class="flex flex-row space-x-4 justify-between"> -->
+<!-- Haus -->
+<!-- <div class="max-w-sm rounded overflow-hidden shadow-lg border border-gray-300">
       <img class="w-6/12 mx-auto" src="{% static '/images/haus.png' %}" alt="Logo Haus">
       <div class="px-6 py-4">
         <div class="sub-title  font-bold text-xl mb-2">Haus!</div>
@@ -62,9 +112,9 @@
         </a>
         <img class="ms-2" src="{% static '/images/arrow-more.svg' %}" alt="Logo Haus">
       </div>
-    </div>
-    <!-- Ganjel Roti -->
-    <div class="max-w-sm rounded overflow-hidden shadow-lg border border-gray-300">
+    </div> -->
+<!-- Ganjel Roti -->
+<!-- <div class="max-w-sm rounded overflow-hidden shadow-lg border border-gray-300">
       <img class="w-6/12 mx-auto" src="{% static '/images/ganjel-roti.png' %}" alt="Ganjel Roti">
       <div class="px-6 py-4">
         <div class="sub-title font-bold text-xl mb-2">Ganjel Roti</div>
@@ -78,9 +128,9 @@
         </a>
         <img class="ms-2" src="{% static '/images/arrow-more.svg' %}" alt="Logo Haus">
       </div>
-    </div>
-    <!-- Pedes Cyin -->
-    <div class="max-w-sm rounded overflow-hidden shadow-lg border border-gray-300 bg-red-300">
+    </div> -->
+<!-- Pedes Cyin -->
+<!-- <div class="max-w-sm rounded overflow-hidden shadow-lg border border-gray-300 bg-red-300">
       <img class="w-6/12 mx-auto" src="{% static '/images/pedes-cyin.png' %}" alt="Pedes Cyin">
       <div class="px-6 py-4">
         <div class="sub-title  font-bold text-xl mb-2">Pedes Cyin</div>
@@ -94,9 +144,9 @@
         </a>
         <img class="ms-2" src="{% static '/images/arrow-more.svg' %}" alt="Logo Haus">
       </div>
-    </div>
-    <!-- Hot Oppa -->
-    <div class="max-w-sm rounded overflow-hidden shadow-lg border border-gray-300">
+    </div> -->
+<!-- Hot Oppa -->
+<!-- <div class="max-w-sm rounded overflow-hidden shadow-lg border border-gray-300">
       <img class="w-6/12 mx-auto" src="{% static '/images/hot-oppa.png' %}" alt="Hot Oppa">
       <div class="px-6 py-4">
         <div class="sub-title font-bold text-xl mb-2">Hot Oppa</div>
@@ -112,7 +162,9 @@
       </div>
     </div>
   </div>
-</div>
+</div> -->
+
+
 <!-- Berita -->
 <!-- <div class="flex flex-row mx-16"> -->
 <!-- Left Column -->
@@ -190,23 +242,73 @@
   </div>
 </div> -->
 
+<!-- Best Seller Menu -->
+<div class="w-full">
+  <hr class="sub-title-line mt-14 mb-3.5  border-t-4 border-blue-500 w-1/12 mx-auto my-3">
+  <div class="sub-title text-xl font-bold text-center mb-10">Best Seller Menu</div>
+
+  <div class="flex flex-col mx-36">
+    <!-- Row Pertama -->
+    <div class="flex w-full justify-between py-4">
+      <img class="haus-menu" src="{% static '/images/kitkat-drink.png' %}" alt="Kitkat Drink">
+      <img class="haus-menu" src="{% static '/images/cone-milo.png' %}" alt="Ice Cream Cone Coklat Milo">
+      <img class="haus-menu" src="{% static '/images/thai-tea.png' %}" alt="Thai Tea">
+      <img class="haus-menu" src="{% static '/images/mango-yakult.png' %}" alt="Ice Mango Mix Yakult">
+    </div>
+    <!-- Row Kedua -->
+    <div class="flex w-full justify-between py-4">
+      <img class="haus-menu" src="{% static '/images/choco-lava-milo-float.png' %}" alt="Choco Lava Milo Float">
+      <img class="haus-menu" src="{% static '/images/fresh-lemon-tea.png' %}" alt="Fresh Lemon Tea">
+      <img class="haus-menu" src="{% static '/images/green-thai-tea.png' %}" alt="Green Thai Tea">
+      <img class="haus-menu" src="{% static '/images/oreo.png' %}" alt="Oreo">
+    </div>
+
+  </div>
+</div>
+
 <!-- Haus! Rame-rame -->
 <hr class="sub-title-line mt-14 mb-3.5  border-t-4 border-blue-500 w-1/12 mx-auto my-3">
 <div class="sub-title text-xl font-bold text-center mb-10">Haus! Rame-Rame</div>
 <div class="w-full haus-rame">
   <div class="flex flex-row haus-rame py-10 w-3/4 mx-auto">
     <div class="w-1/2 flex justify-center">
-      <img class="w-3/4" src="{% static '/images/pair-of-photos.png' %}" alt="Logo Haus">
+      <img class="w-3/4" src="{% static '/images/illlustrasi-visual-lifestyle.png' %}" alt="Ilustrasi Visual Lifestyle">
     </div>
     <div class="w-1/2 flex flex-col justify-center">
-      <div class="text-3xl font-bold text-white leading-normal">Ciptakan Momen Bahagiamu Bersama Haus!</div>
+      <div class="text-3xl font-bold text-white">Ciptakan Momen Bahagiamu Bersama Haus!</div>
       <div class="text-white pt-1 pb-8">Semua menu haus! dalam paket rame-rame</div>
-      <button class=" btn-haus-rame text-white font-bold border border-white py-1  rounded-full hover:bg-purple-600 w-5/12">
+      <button
+        class=" btn-haus-rame text-white font-bold border border-white py-1  rounded-full hover:bg-purple-600 w-5/12">
         Pelajari Selengkapnya
       </button>
     </div>
   </div>
+</div>
 
+<div class="relative">
+  <!--Background Decoration -->
+  <img src="{% static '/images/app-order-decoration.png' %}" alt="">
+  <img class="absolute bottom-0" src="{% static '/images/app-order-decoration.png' %}" alt="">
+
+
+  <div class="flex flex-row mx-36">
+    <!-- Foto Hp -->
+    <div class="w-1/2">
+      <img class="w-3/4 mx-auto" src="{% static '/images/hp.png' %}" alt="Logo Haus">
+    </div>
+    <!-- Group of Text -->
+    <div class="w-1/2 flex flex-col justify-center p">
+      <div class="text-2xl font-bold leading-normal sub-title mt-3">Haus Mobile App For Order</div>
+      <div class="font-bold text-lg mb-3">Dapatkan voucher menarik, dan ekstra promo</div>
+      <ul class="list-disc mb-3">
+        <li class="mb-2">Lebih Mudah Pesan dengan aplikasi Haus!, kamu bisa pilih pesanan Delivery, Pickup atau Dine In
+          untuk skip antrian</li>
+        <li class="mb-2">Pesan menu Haus! Favorit kamu dari Toko terdekat</li>
+      </ul>
+      <div>Download aplikasi di</div>
+      <img class="w-1/4" src="{% static '/images/google_play_icon.png' %}" alt="">
+    </div>
+  </div>
 </div>
 
 

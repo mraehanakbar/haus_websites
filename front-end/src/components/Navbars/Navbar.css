@@ -1,0 +1,56 @@
+.navbar {
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  justify-content: space-between;
+  padding: 0 30px 0 80px;
+  font-size: large;
+  box-shadow: 0px 7px 12px 0px rgba(0, 0, 0, 0.25);
+  align-items: center;
+  font-weight: 400;
+  position: relative;
+  height: 106px;
+}
+
+.menu ul {
+  display: flex;
+  padding: 0 0 0 50px;
+  align-items: center;
+  justify-content: end;
+}
+
+.menu ul li {
+  list-style-type: none;
+  padding: 0 10px;
+}
+
+.menu ul li a {
+  text-decoration: none;
+  color: black;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+.menu ul li button {
+  width: 180px;
+  height: 40px;
+  border-radius: 6px;
+  border: 1px solid var(--fuschia-60, #fcddec);
+  background: var(--secondary-60, #8a489c);
+  font-size: 16px;
+  font-weight: 400;
+  color: white;
+  transition: background-color 0.3s ease;
+  position: relative;
+  cursor: pointer;
+}
+
+.menu ul li button:hover {
+  background-color: var(--secondary-80, #6e3e7e);
+}
+
+.logo img {
+  width: 148.61px;
+  height: auto;
+  cursor: pointer;
+}

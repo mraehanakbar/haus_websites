@@ -1,0 +1,14 @@
+/* Reset all styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins";
+}
+
+body {
+  font-family: "Poppins";
+  font-size: 16px;
+}
+
+/* Additional styles for your website go here */

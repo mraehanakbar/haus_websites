@@ -1,0 +1,56 @@
+.kitkat-bg{
+  background-color: #DA1E32;
+}
+
+.decoration-bg-kitkat-right{
+  transform: rotate(180deg);
+}
+
+.best-deal{
+  background-color: #89489C;
+}
+
+.sub-title-content {
+  color: #89489C;
+}
+
+.sub-title-line{
+  border-color: #E03E9F;
+}
+
+.sub-title-line-rame{
+  border-top: 4px solid #89489C;
+}
+
+.haus-rame{
+  background-color:#E03E9F;
+}
+
+.sub-title-content-haus-rame{
+  color: #E03E9F;
+}
+
+.haus-mobile{
+  color: #89489C;
+}
+
+.btn-haus-rame{
+  background-color: #89489C;
+}
+
+
+body{
+  overflow-x: hidden;
+}
+
+/* Animation for Promo Button */
+@keyframes clickMeAnimation {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0); }
+}
+
+.promo-footer-aksen {
+  animation: clickMeAnimation 2s infinite; 
+}
+

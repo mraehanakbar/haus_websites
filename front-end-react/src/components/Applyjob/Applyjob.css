@@ -1,0 +1,143 @@
+* {
+  font-family: "Poppins", sans-serif;
+}
+
+.applyjob {
+  margin: 10px;
+  padding: 20px 10px 30px 20px;
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+  border-radius: 50px;
+}
+
+.applyjob h1 {
+  font-size: 26px;
+  font-weight: 500;
+  line-height: 58px;
+  letter-spacing: -0.021em;
+  text-align: left;
+  flex: 8;
+}
+
+.detail p {
+  width: 150px;
+  color: #e03e9f;
+  font-size: 26px;
+  font-weight: 500;
+  line-height: 58px;
+  letter-spacing: -0.021em;
+  text-align: left;
+}
+
+.container-req {
+  background-color: rgb(246, 246, 246);
+}
+
+.requirements-popup {
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.requirements-popup ul {
+  list-style: square;
+  padding: 0 30px;
+}
+
+.requirements-popup ul li {
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 28px;
+  letter-spacing: -0.021em;
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+.applybutton {
+  display: flex;
+  justify-content: flex-end;
+  padding: 20px 40px;
+}
+
+.applyemail {
+  margin-right: 20px;
+  background-color: #fff;
+  box-shadow: -2px 2px 8px 0px #00000040;
+  width: 200px;
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  color: #e03e9f;
+  font-weight: 600;
+}
+
+.applyemail:hover {
+  background-color: #e03e9f;
+  color: #fff;
+}
+
+.applylinkedin {
+  box-shadow: -2px 2px 8px 0px #00000040;
+  background-color: #fff;
+  box-shadow: -2px 2px 8px 0px #00000040;
+  width: 130px;
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  color: #fff;
+  background-color: rgb(0, 38, 255);
+}
+
+.applylinkedin:hover {
+  background-color: #fff;
+  color: rgb(0, 38, 255);
+}
+
+.rotate {
+  transform: rotate(90deg);
+  transition: transform 0.3s ease;
+}
+
+.show {
+  transition: opacity 0.3s ease, max-height 0.3s ease;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .applyjob {
+    margin: 10px;
+    padding: 20px 10px 30px 20px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    cursor: pointer;
+    border-radius: 50px;
+  }
+
+  .applyjob h1 {
+    font-size: 26px;
+    font-weight: 500;
+    line-height: 58px;
+    letter-spacing: -0.021em;
+    text-align: left;
+    flex: 8;
+  }
+
+  .detail p {
+    width: 150px;
+    color: #e03e9f;
+    font-size: 26px;
+    font-weight: 500;
+    line-height: 58px;
+    letter-spacing: -0.021em;
+    text-align: left;
+  }
+
+  .requirements-popup ul {
+    padding: 0;
+  }
+}
