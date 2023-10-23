@@ -10,7 +10,7 @@ import pedes_cyin_selected from "../../assets/images/menu/button_icon/pedes_cyin
 const ToggleButtonGroup = () => {
   return (
     <>
-      <div class="w-11/12 lg:w-10/12 px-10 mx-auto grid grid-cols-4 md:grid-cols-10 gap-x-4 gap-y-4 text-base sm:text-lg md:text-xl justify-center font-bold ">
+      <div class="mx-auto grid w-11/12 lg:w-10/12 md:px-5 grid-cols-6 md:grid-cols-10 gap-x-3 gap-y-4 text-base sm:text-lg md:text-xl justify-center font-bold ">
         <button
           x-on:click="all = true;minuman = false;roti=false; pedes_cyin=false;hot_oppa=false"
           class=" bg-gray-button rounded-3xl text-pink-main col-span-2"
@@ -22,7 +22,7 @@ const ToggleButtonGroup = () => {
         {/* <!-- MINUMAN --> */}
         <button
           x-on:click="all = false; minuman = true;roti=false; pedes_cyin=false;hot_oppa=false"
-          class=" py-6 bg-gray-button rounded-3xl text-pink-main flex justify-between flex-col items-center col-span-2"
+          class=" py-3 md:py-4 lg:py-5 bg-gray-button rounded-3xl text-pink-main flex justify-between flex-col items-center col-span-2"
           x-bind:class="!minuman ? '' : 'bg-purple-main text-white'"
         >
           <img
@@ -40,7 +40,7 @@ const ToggleButtonGroup = () => {
         {/* <!-- GANJEL ROTI --> */}
         <button
           x-on:click="all = false; minuman=false;roti=true; pedes_cyin=false;hot_oppa=false"
-          class=" py-6 bg-gray-button rounded-3xl text-pink-main flex justify-between flex-col items-center col-span-2"
+          class=" py-3 md:py-4 lg:py-5 bg-gray-button rounded-3xl text-pink-main flex justify-between flex-col items-center col-span-2"
           x-bind:class="!roti ? '' : 'bg-purple-main text-white'"
         >
           <img
@@ -59,7 +59,7 @@ const ToggleButtonGroup = () => {
         {/* <!-- PEDES CYIN --> */}
         <button
           x-on:click="all = false; minuman=false;roti=false; pedes_cyin=true;hot_oppa=false"
-          class=" py-6 bg-gray-button rounded-3xl text-pink-main flex justify-between flex-col items-center col-span-2"
+          class=" py-3 md:py-4 lg:py-5 bg-gray-button rounded-3xl text-pink-main flex justify-between flex-col items-center col-start-2 md:col-start-7 col-span-2"
           x-bind:class="!pedes_cyin ? '' : 'bg-purple-main text-white'"
         >
           <img
@@ -78,7 +78,7 @@ const ToggleButtonGroup = () => {
         {/* <!-- HOT OPPA --> */}
         <button
           x-on:click="all = false; minuman=false;roti=false; pedes_cyin=false;hot_oppa=true"
-          class=" py-6 bg-gray-button rounded-3xl text-pink-main flex justify-between flex-col items-center col-span-2 col-start-2 md:col-start-9"
+          class=" py-3 md:py-4 lg:py-5 bg-gray-button rounded-3xl text-pink-main flex justify-between flex-col items-center col-span-2 md:col-start-9"
           x-bind:class="!hot_oppa ? '' : 'bg-purple-main text-white'"
         >
           <img

@@ -275,7 +275,7 @@ const LocationIter = ({}) => {
   };
 
   return (
-    <div className="space-y-8">
+    <div className="space-y-8 w-screen">
       {Object.keys(storeList).map((city) => (
         <LocationList city={city} cityData={storeList[city]} />
       ))}

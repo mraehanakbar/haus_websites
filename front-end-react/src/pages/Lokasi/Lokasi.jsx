@@ -23,9 +23,9 @@ const Lokasi = () => {
         </div>
 
         <section className="flex justify-center mt-10">
-          <div className=" grid grid-cols-1 sm:grid-cols-7 lg:grid-cols-9 items-center text-center px-3">
+          <div className=" grid grid-cols-1 md:space-x-6 lg:space-x-20 xl:space-x-40 md:grid-cols-2 items-center text-center px-3">
             {/* FIRST COLUMN */}
-            <div className="col-span-1 sm:col-span-3 flex justify-center w-88">
+            <div className="col-span-1 flex justify-center w-88">
               <div>
                 <NewLocation
                   title="Haus! Cibadak"
@@ -42,9 +42,7 @@ const Lokasi = () => {
               </div>
             </div>
 
-            <div className="hidden sm:col-span-1 sm:flex lg:col-span-3 justify-center"></div>
-
-            <div className="hidden sm:col-span-3 sm:flex justify-center w-88 ">
+            <div className="col-span sm:flex justify-center w-88 ">
               <div>
                 <NewLocation
                   title="Haus! Srengseng"

@@ -14,7 +14,7 @@ const LocationList = ({ city, cityData }) => {
     <div x-data="{ open: false, svgUp: true}">
       <button
         x-on:click="open = !open; svgUp = !svgUp"
-        class="flex m-auto justify-between w-9/12"
+        class="flex m-auto justify-between w-11/12 md:w-9/12"
       >
         <h1 class="text-1.5xl font-bold text-pink-main">
           {capitalizeWords(city)}
@@ -24,23 +24,33 @@ const LocationList = ({ city, cityData }) => {
       </button>
       <div
         x-show="open"
-        class="flex m-auto justify-center w-9/12 p-4 bg-pink-dropdown text-gray-700"
+        class="flex m-auto justify-center w-12/12 md:w-9/12 p-4 bg-pink-dropdown text-gray-700"
         aria-labelledby="dropdownMenuButton1"
       >
         <div class="grid grid-cols-2 justify-stretch w-full">
           {cityData.map((store, index) => [
             <div
               key={`col1-${index}`}
-              class="col-span-1 py-1.5 text-sm font-semibold"
+              class="col-span-1 p-0.5 md:1.5 text-xs md:text-sm font-semibold"
             >
-              <img class="inline" src={map} width="28px" height="28px" />
+              <img
+                class="inline scale-75 md:scale-100"
+                src={map}
+                width="28px"
+                height="28px"
+              />
               <h1 className="inline ml-2">{capitalizeWords(store)}</h1>
             </div>,
             <div
               key={`col2-${index}`}
-              class="col-span-1 py-1.5 text-sm font-semibold"
+              class="col-span-1 p-0.5 md:1.5 text-xs md:text-sm font-semibold"
             >
-              <img class="inline" src={map} width="28px" height="28px" />
+              <img
+                class="inline  scale-75 md:scale-100"
+                src={map}
+                width="28px"
+                height="28px"
+              />
               <h1 className="inline ml-2">{capitalizeWords(store)}</h1>
             </div>,
           ])}
