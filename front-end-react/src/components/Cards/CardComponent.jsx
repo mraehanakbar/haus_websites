@@ -1,5 +1,5 @@
 import PropTypes from "prop-types"; // Import PropTypes
-import "./Card.css";
+import "./card.css";
 
 const CardComponent = ({ date, content, imageUrl }) => {
   return (

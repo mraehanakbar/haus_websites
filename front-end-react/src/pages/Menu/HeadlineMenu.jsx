@@ -7,7 +7,7 @@ import coneMilo from "../../assets/images/menu/best_seller/cone Milo.png";
 import freshLemon from "../../assets/images/menu/best_seller/Fresh Lemon Tea.png";
 import greenThai from "../../assets/images/menu/best_seller/Green Thai Tea.png";
 import mangoYakult from "../../assets/images/menu/best_seller/Mango Yakult.png";
-import oreo from "../../assets/images/menu/best_seller/oreo.png";
+import oreo from "../../assets/images/menu/best_seller/Oreo.png";
 import thaiTea from "../../assets/images/menu/best_seller/thai Tea.png";
 
 const HeadlineMenu = () => {

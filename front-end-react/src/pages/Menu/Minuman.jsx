@@ -8,7 +8,7 @@ import greenThai from "../../assets/images/menu/classic_series/5_Green Thai Tea.
 
 // CHEESE SERIES
 import greenTeaC from "../../assets/images/menu/cheese_series/2_Green Tea Cheese.jpg";
-import chocoAvocadoC from "../../assets/images/menu/cheese_series/1_Choco avocado cheese.jpg";
+import chocoAvocadoC from "../../assets/images/menu/cheese_series/1_Choco Avocado Cheese.jpg";
 import mangoCT from "../../assets/images/menu/cheese_series/3_Mango Cheese Tea.jpg";
 import ovaltineC from "../../assets/images/menu/cheese_series/4_Oreo Cheese.jpg";
 import oreoC from "../../assets/images/menu/cheese_series/5_Ovaltine Cheese.jpg";

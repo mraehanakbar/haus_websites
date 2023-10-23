@@ -5,7 +5,7 @@ import vektor from "../../assets/images/Vector.png";
 import pin from "../../assets/images/Pin.png";
 import flyer from "../../assets/images/FlyerBigOrder.jpg";
 import iconback from "../../assets/images/iconbackground.png";
-import "./Bigorder.css";
+import "./bigorder.css";
 
 const downloadFlyer = () => {
   const link = document.createElement("a");
