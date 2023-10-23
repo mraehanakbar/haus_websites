@@ -136,4 +136,8 @@
     letter-spacing: -0.021em;
     text-align: left;
   }
+
+  .requirements-popup ul {
+    padding: 0;
+  }
 }

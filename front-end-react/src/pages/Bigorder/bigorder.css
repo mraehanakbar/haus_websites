@@ -1,22 +1,30 @@
 .topcontainerorder {
   width: 100%;
-  height: 500px;
+  height: 100%;
   background: linear-gradient(272.54deg, #cd3b8e 37.52%, #ffffff 68.2%);
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 100px;
-  padding: 0 100px 0 100px;
+  padding: 20px 100px 20px 100px;
+}
+
+.decstoporder{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 100px 0 0;
 }
 
 .decstoporder img {
   position: absolute;
-  top: 190px;
+  top: 90px;
   left: 100px;
   z-index: 1;
 }
 
-.decstoporder-text{
+.decstoporder-text {
   margin-left: 100px;
   z-index: 2;
 }
@@ -44,16 +52,16 @@
 }
 
 .callus {
-  width: 80%;
-  height: 505px;
-  margin: 50px 0 100px 0;
+  width: 90%;
+  height: 544px;
   background: rgba(243, 243, 243, 1);
   display: flex;
   justify-content: center;
   flex-direction: column;
   flex-wrap: wrap;
-  padding: 0 0 0 50px;
+  padding: 50px 0 50px 50px;
   margin: 30px auto;
+  overflow: auto;
 }
 
 .callline {
@@ -142,8 +150,7 @@
 
 .callus p {
   display: flex;
-  align-items: center;
-  margin-top: 20px;
+  margin: 20px 0 0 0;
   gap: 10px;
 }
 
@@ -152,8 +159,58 @@
   flex-direction: column;
 }
 
-.callusimg {
-  margin-top: 50px;
+.desc-call p{
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0em;
+  text-align: left; 
+}
+
+@media (max-width: 1200px) {
+  .topcontainerorder {
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to bottom, #cd3b8e 37.52%, #ffffff 68.2%);
+    display: flex;
+    align-items: center;
+    justify-self: flex-start;
+    flex-direction: column-reverse;
+    margin-bottom: 100px;
+  }
+
+  .decstoporder img {
+    display: none;
+    position: absolute;
+  }
+
+  .decstoporder-text {
+    margin-left: 100px;
+    z-index: 2;
+  }
+
+  .decstoporder h1 {
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 48px;
+    text-align: center;
+    margin-right: 0;
+  }
+  .decstoporder p {
+  text-align: center;
+  }
+  
+  .callus{
+    width: 90%;
+    height: 544px;
+    background: rgba(243, 243, 243, 1);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding: 50px 0 50px 50px;
+    margin: 30px auto;
+  }
 }
 
 @media (max-width: 768px) {
@@ -164,9 +221,13 @@
     background-image: linear-gradient(to bottom, #cd3b8e 37.52%, #ffffff 68.2%);
   }
 
-  .topcontainerorder img{
-  height: auto;
-  width: 100%;
+  .decstoporder {
+    margin: 0 0 0 0;
+  }
+
+  .topcontainerorder img {
+    height: auto;
+    width: 100%;
   }
 
   .decstoporder h1 {
@@ -217,10 +278,15 @@
   .callline {
     display: flex;
     align-items: center;
+    
   }
 
   .head-call {
     order: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 100px;
   }
 
   .callusimg {
@@ -230,6 +296,7 @@
   .desc-call {
     order: 3;
     margin: 0 20px;
+    text-align: left;
   }
 
   .address-call {
@@ -240,17 +307,8 @@
     order: 5;
   }
 
-  .decstoporder-text{
+  .decstoporder-text {
     margin: 20px 30px 0 30px;
   }
-
-  .decstoporder img{
-    display: flex;
-    margin: 120px 0 0 0;
-    left: 40px;
-    width: 70%;
-    opacity: 0.5;
-  }
-
 
 }

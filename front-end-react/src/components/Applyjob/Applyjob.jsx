@@ -49,7 +49,7 @@ const Applyjob = ({ title, requirements }) => {
           </div>
           <div className="applybutton">
             <button className="applyemail" onClick={emailTO}>
-              Kirim email ke HR Haus!
+              Apply with Email
             </button>
             <button className="applylinkedin" onClick={linkedinHaus}>
               See on Linkedin
