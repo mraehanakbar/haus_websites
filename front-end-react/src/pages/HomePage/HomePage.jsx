@@ -5,7 +5,7 @@ import app_order_decoration from "../../assets/images/app-order-decoration.png";
 import ilustrasi_visual from "../../assets/images/illlustrasi-visual-lifestyle.png";
 import kitkat_drink from "../../assets/images/kitkat-drink.png";
 import cone_milo from "../../assets/images/cone-milo.png";
-import thai_tea from "../../assets/images/green-thai-tea.png";
+import thai_tea from "../../assets/images/thai-tea.png";
 import mango_yakult from "../../assets/images/mango-yakult.png";
 import choco_lava_milo_float from "../../assets/images/choco-lava-milo-float.png";
 import fresh_lemon_tea from "../../assets/images/fresh-lemon-tea.png";
@@ -14,8 +14,12 @@ import oreo from "../../assets/images/oreo.png";
 import arrow_right from "../../assets/images/arrow-right.svg";
 import arrow_left from "../../assets/images/arrow-left.svg";
 import ganjel_ah from "../../assets/images/ganjel-ah.png";
-import tamvan_series from "../../assets/images/tamvan-series.png";
-import teh_tarik from "../../assets/images/teh-tarik.png";
+import student_promo from "../../assets/images/student-promo.png";
+import haus_pahala from "../../assets/images/haus-pahala.png";
+import haus_gan from "../../assets/images/haus-gan.png";
+import haus_cyin from "../../assets/images/haus-cyin.png";
+import haus_bro from "../../assets/images/haus-bro.png";
+import ganjel_in from "../../assets/images/ganjel-in.png";
 import box_bottom_left from "../../assets/images/box-bottom-left.png";
 import box_top_right from "../../assets/images/box-top-right.png";
 import polygon_arrow from "../../assets/images/polygon-arrow.svg";
@@ -23,6 +27,7 @@ import footer_aksen from "../../assets/images/footer-aksen.png";
 import logo_halal from "../../assets/images/halal-logo.png";
 import kitkat_text from "../../assets/images/kitkat-text.png";
 import kitkat_gelas from "../../assets/images/kitkat-gelas.png";
+import tamvan_series from "../../assets/images/tamvan-series.png";
 import kitkat_logo from "../../assets/images/kitkat-logo.png";
 import haus_logo_putih from "../../assets/images/haus-logo.png";
 import kitkat_blur_bottom_left from "../../assets/images/kitkat-blur-bottom-left.png";
@@ -39,7 +44,7 @@ const scrollToBestDeal = () => {
 };
 
 const HomePage = () => {
-  const img = [ganjel_ah, tamvan_series, teh_tarik];
+  const img = [ganjel_ah, ganjel_in, haus_bro, haus_cyin, haus_gan, haus_pahala, student_promo];
 
   const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -103,7 +108,6 @@ const HomePage = () => {
             src={kitkat_blur_bottom_right}
             alt="Kitkat Blur Top Right"
           />
-
           {/* Kitkat Text and Logo */}
           <div className="flex flex-row justify-center px-14 pt-5 lg:px-52">
             <div className="w-1/2 my-auto">
@@ -121,7 +125,6 @@ const HomePage = () => {
               />
             </div>
           </div>
-
           {/* Kitkat Text and Picture */}
           <div className="flex pt-10 flex-col justify-center lg:flex-row lg:mt-0 lg:h-[60%] lg:w-auto ">
             <div className="flex justify-center  lg:py-0 lg:h-auto my-auto lg:w-[40%] lg:justify-end">
@@ -139,7 +142,6 @@ const HomePage = () => {
               />
             </div>
           </div>
-
           {/* Logo Halal */}
           <div className="flex lg:py-0 justify-end lg:absolute right-0  lg:mb-30 lg:m-auto lg:h-auto lg:w-1/5">
             <img
@@ -148,7 +150,6 @@ const HomePage = () => {
               alt="Logo Halal"
             />
           </div>
-
           {/* Promo & Footer Aksen */}
           <div
             onClick={scrollToBestDeal}
@@ -158,7 +159,7 @@ const HomePage = () => {
               Promo
             </div>
             <img
-              className="z-10   lg:w-[4%] mx-auto "
+              className="z-10 w-20 md:w-[60%] lg:w-[4%] mx-auto "
               src={polygon_arrow}
               alt="Polygon Arrow"
             />
@@ -169,7 +170,6 @@ const HomePage = () => {
             alt="Footer Aksen"
           />
         </div>
-
         {/* Special Deal */}
         <div
           id="best-deal"
@@ -201,7 +201,7 @@ const HomePage = () => {
             <div className="slider w-full overflow">
               <div className="relative">
                 {/* Diakalin pake ini */}
-                <img src={tamvan_series} alt="" className="w-[90%] opacity-0" />
+                <img src={tamvan_series} alt="" className=" w-90% lg:w-[75%]  mx-auto opacity-0" />
 
                 {img.map((image, index) => (
                   <div
@@ -227,15 +227,27 @@ const HomePage = () => {
                   </div>
                 ))}
               </div>
+
+              <div className="flex justify-center">
+                {img.map((_, index) => (
+                  <div
+                    key={index}
+                    className={`w-3 h-3 mx-2 rounded-full ${
+                      index === currentIndex ? "bg-white" : "bg-gray-400"
+                    }`}
+                    onClick={() => setCurrentIndex(index)}
+                  ></div>
+                ))}
+              </div>
             </div>
           </div>
 
           {/* Arrow for navigation Promo */}
           <div>
-            <div className="absolute z-20 inset-y-0 left-0 flex  mt-8 lg:mt-0 ml-1 w-[10%] lg:w-[7%] lg:ml-14 cursor-pointer">
+            <div className="absolute z-20 inset-y-0 left-0 flex  lg:mt-0 ml-1 w-[10%] lg:w-[7%] lg:ml-14 cursor-pointer">
               <img src={arrow_left} onClick={prevImage} />
             </div>
-            <div className="absolute z-20 inset-y-0 right-0 flex  mt-8 lg:mt-0 mr-1 w-[10%] lg:w-[7%] lg:mr-14 cursor-pointer">
+            <div className="absolute z-20 inset-y-0 right-0 flex mr-1 w-[10%] lg:w-[7%] lg:mr-14 cursor-pointer">
               <img src={arrow_right} onClick={nextImage} />
             </div>
           </div>
