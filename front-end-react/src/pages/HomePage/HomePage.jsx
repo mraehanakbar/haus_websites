@@ -93,8 +93,8 @@ const HomePage = () => {
 
   return (
     <>
-      <NavbarComponent />
       {/* Kitkat */}
+      <NavbarComponent />
       <body className="w-full">
         <div className="relative w-full kitkat-bg h-auto lg:h-screen">
           {/* Decoration Background  */}
@@ -129,7 +129,7 @@ const HomePage = () => {
           <div className="flex pt-10 flex-col justify-center lg:flex-row lg:mt-0 lg:h-[60%] lg:w-auto ">
             <div className="flex justify-center  lg:py-0 lg:h-auto my-auto lg:w-[40%] lg:justify-end">
               <img
-                className="kitkat-text w-[60%] lg:w-auto lg:max-w-[65%] object-contain"
+                className="kitkat-text w-[60%] lg:w-auto object-contain"
                 src={kitkat_text}
                 alt="Kitkat Text"
               />
@@ -153,7 +153,7 @@ const HomePage = () => {
           {/* Promo & Footer Aksen */}
           <div
             onClick={scrollToBestDeal}
-            className="promo-footer-aksen cursor-pointer mx-auto h-auto flex flex-col pb-5 w-[10%] md:pb-14  lg:w-[80%] lg:pb-18 lg:absolute lg:inset-x-0 bottom-0 lg:h-[28%] lg:justify-center"
+            className="promo-footer-aksen cursor-pointer mx-auto h-auto flex flex-col pb-5 w-[10%] md:pb-14  lg:w-[80%]  lg:absolute lg:inset-x-0 bottom-0 lg:h-[28%] lg:justify-center"
           >
             <div className="z-20 text-sm text-white flex justify-center md:text-lg">
               Promo
@@ -164,11 +164,7 @@ const HomePage = () => {
               alt="Polygon Arrow"
             />
           </div>
-          <img
-            className="footer-aksen absolute bottom-0 w-full lg:h-[12%]"
-            src={footer_aksen}
-            alt="Footer Aksen"
-          />
+
         </div>
         {/* Special Deal */}
         <div
