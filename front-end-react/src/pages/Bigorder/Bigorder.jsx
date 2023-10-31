@@ -79,7 +79,7 @@ const Bigorder = () => {
           </button>
         </div>
         <div className="callusimg">
-          <img src={contentimage} alt="Content image" width={600} />
+          <img src={contentimage} alt="Content image" />
         </div>
       </div>
       <FooterComponent />
