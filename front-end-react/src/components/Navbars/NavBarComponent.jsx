@@ -18,10 +18,10 @@ const NavbarComponent = () => {
 
   return (
     <>
-      <nav className="bg-white sticky top-0 z-10 flex justify-between px-4 lg:px-8 py-2 items-center shadow-md  h-20 z-30">
-        <div className="ml-10 md:ml-3 lg:ml-10 pb-2">
+      <nav className="bg-white sticky top-0 z-10 flex justify-between px-4 lg:px-8 py-2 items-center shadow-md  h-[10vh] z-30">
+        <div className="ml-4 md:ml-3 lg:ml-10 pb-2">
           <Link to="/">
-            <img src={logo} alt="Logo" className="w-36  cursor-pointer" />
+            <img src={logo} alt="Logo" className="w-24 cursor-pointer" />
           </Link>
         </div>
         <div className="hidden md:flex xl:ml-auto lg:ml-auto md:ml-0 text items-center">

@@ -87,13 +87,15 @@
   border: none;
   cursor: pointer;
   font-weight: 600;
-  color: #fff;
-  background-color:#0A66C2;
+  color: #0A66C2;
+  background-color:#fff;
+
+
 }
 
 .applylinkedin:hover {
-  background-color: #fff;
-  color: rgb(0, 38, 255);
+  background-color: #0A66C2;
+  color: #fff;
 }
 
 .rotate {

@@ -5,7 +5,8 @@ export default {
     extend: {
 
       scale:{
-        '135': '1.35'
+        '135': '1.35',
+        '120': '1.20'
       },
       boxShadow: {
         "nav-shadow":
