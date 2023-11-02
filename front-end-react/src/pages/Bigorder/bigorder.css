@@ -9,7 +9,7 @@
   padding: 50px 100px 50px 100px;
 }
 
-.decstoporder{
+.decstoporder {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -34,7 +34,7 @@
   font-weight: 700;
   line-height: 48px;
   text-align: left;
-  margin-right: 200px;
+  margin-right: 50px;
 }
 
 .descorder p {
@@ -51,23 +51,33 @@
   flex-direction: column;
 }
 
-.callus {
-  width: 90%;
-  height: 544px;
+.callus-wrapper {
   background: rgba(243, 243, 243, 1);
   display: flex;
-  justify-content: center;
   flex-direction: column;
-  flex-wrap: wrap;
-  padding: 50px 0 50px 50px;
   margin: 30px auto;
+  padding: 50px 0 50px 50px;
+  width: 90%;
+}
+
+.callus {
+  background: rgba(243, 243, 243, 1);
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  flex-wrap: wrap;
   overflow: auto;
+}
+
+.callusimg{
+  flex: 1;
 }
 
 .callline {
   display: flex;
   align-items: flex-start;
   flex-direction: column;
+  
 }
 
 .calllines {
@@ -159,12 +169,17 @@
   flex-direction: column;
 }
 
-.desc-call p{
+.desc-call p {
   font-size: 16px;
   font-weight: 400;
   line-height: 24px;
   letter-spacing: 0em;
-  text-align: left; 
+  text-align: left;
+}
+
+.address-call img{
+  width: 22px;
+  height: 22px;
 }
 
 @media (max-width: 1200px) {
@@ -177,11 +192,19 @@
     justify-self: flex-start;
     flex-direction: column-reverse;
     margin-bottom: 100px;
+    position: relative;
   }
 
   .decstoporder img {
-    display: none;
     position: absolute;
+    left: 0;
+    display: flex;
+    position: absolute;
+    position: absolute;
+    bottom: -108px;
+    right: 0;
+    margin: 100px auto 0;
+    z-index: 1;
   }
 
   .decstoporder-text {
@@ -197,19 +220,70 @@
     margin-right: 0;
   }
   .decstoporder p {
-  text-align: center;
+    text-align: center;
   }
-  
-  .callus{
+
+  .callus {
     width: 90%;
     height: 544px;
     background: rgba(243, 243, 243, 1);
     display: flex;
     justify-content: center;
-    flex-direction: column;
+    flex-direction: column-reverse;
     flex-wrap: wrap;
     padding: 50px 0 50px 50px;
     margin: 30px auto;
+  }
+}
+
+.head-call {
+  display: flex;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 30px;
+}
+
+
+
+@media (min-width: 768px ) and (max-width: 1200px) {
+  .head-call {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+  .callline {
+    display: flex;
+    align-items: center;
+  }
+
+  .callus {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    padding: 20px;
+  }
+
+  .callusimg {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .contentImg {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .button-call {
+    display: flex;
+    flex-direction: column;
+    align-items: center;  
   }
 }
 
@@ -219,6 +293,7 @@
     height: auto;
     padding: 30px 10px 0 10px;
     background-image: linear-gradient(to bottom, #cd3b8e 37.52%, #ffffff 68.2%);
+    position: relative;
   }
 
   .decstoporder {
@@ -266,49 +341,46 @@
 
   .callus {
     display: flex;
-    flex-direction: column;
+    flex-direction: column-reverse;
     justify-content: center;
     align-items: center;
     height: auto;
-    width: 100%;
     padding: 20px;
-    margin: 20px 0 0 0;
   }
 
   .callline {
     display: flex;
     align-items: center;
-    
   }
 
   .head-call {
-    order: 1;
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 0 100px;
+    justify-content: center;
+    width: 100%;
+    padding: 40px 0 0 0;
   }
 
   .callusimg {
-    order: 2;
+    width: 100%;
   }
 
   .desc-call {
-    order: 3;
-    margin: 0 20px;
+    /* margin: 0 20px; */
     text-align: left;
   }
 
-  .address-call {
-    order: 4;
-  }
 
   .button-call {
-    order: 5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;  
   }
 
   .decstoporder-text {
     margin: 20px 30px 0 30px;
   }
 
+  .callus-wrapper{
+    padding: 0;
+  }
 }
