@@ -20,7 +20,7 @@ const HeadlineMenu = () => {
           className="min-w-full bg-pink-menu-headline -z-30 "
         />
 
-        <div className="absolute -top-8 md:top-0 lg:top-8 min-w-full">
+        <div className="absolute -top-8 md:top-0 lg:top-0 min-w-full">
           <div className="">
             <div className="mt-12 flex justify-center w-full">
               <div className="bg-pink-main w-32 md:w-40 h-1.5"></div>
