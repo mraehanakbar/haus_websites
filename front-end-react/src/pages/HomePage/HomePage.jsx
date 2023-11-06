@@ -392,7 +392,7 @@ const HomePage = () => {
                 Download aplikasi di
               </div>
               <img
-                className="w-2/6 lg:w-3/12"
+                className="w-2/6 lg:w-3/12 cursor-pointer"
                 src={google_play}
                 alt="Google Play Icon"
                 onClick={donwloadAPK}

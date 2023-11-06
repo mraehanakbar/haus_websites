@@ -64,13 +64,16 @@
   margin-right: 20px;
   background-color: #fff;
   box-shadow: -2px 2px 8px 0px #00000040;
-  width: 200px;
+  height: 100%;
   padding: 10px;
   border-radius: 10px;
   border: none;
   cursor: pointer;
   color: #e03e9f;
+  font-size: 20px;
   font-weight: 600;
+  line-height: 30px;
+  text-align: left;
 }
 
 .applyemail:hover {
@@ -82,14 +85,17 @@
   box-shadow: -2px 2px 8px 0px #00000040;
   background-color: #fff;
   box-shadow: -2px 2px 8px 0px #00000040;
-  width: 130px;
   padding: 10px;
+  height: 100%;
   border-radius: 10px;
   border: none;
   cursor: pointer;
-  font-weight: 600;
   color: #fff;
   background-color: rgb(0, 38, 255);
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 30px;
+  text-align: left;  
 }
 
 .applylinkedin:hover {

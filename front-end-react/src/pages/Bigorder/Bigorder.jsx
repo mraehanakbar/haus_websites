@@ -30,7 +30,9 @@ const Bigorder = () => {
             <p>Semua menu haus! dalam paket rame - rame</p>
           </div>
         </div>
-        <img src={orderimage} alt="content image" />
+        <img src={orderimage} alt="content image" style={{
+          zIndex: 3
+        }} />
       </div>
       <div className="line">
         <div className="lines"></div>
@@ -49,37 +51,43 @@ const Bigorder = () => {
           </p>
         </div>
       </div>
-      <div className="callus">
+      <div className="callus-wrapper">
         <div className="head-call">
           <div className="callline">
             <div className="calllines"></div>
+            <h2>Hubungi Kami</h2>
           </div>
-          <h2>Hubungi Kami</h2>
         </div>
-        <div className="desc-call">
-          <p>Untuk info dan pemesanan haus rame - rame harap hubungi kami</p>
-        </div>
-        <div className="address-call">
-          <h3>Kontak Kami</h3>
-          <p>
-            <img src={vektor} alt="" />
-            hello@haus.co.id
-          </p>
-          <p>
-            <img src={pin} alt="" /> Taman Meruya Ilir, Jl. Safir I Blok E6 No.
-            27
-          </p>
-        </div>
-        <div className="button-call">
-          <button className="packagedl" onClick={downloadFlyer}>
-            Download Package
-          </button>
-          <button className="whatsapp" onClick={contactTO}>
-            Contact Via Whatsapp
-          </button>
-        </div>
-        <div className="callusimg">
-          <img src={contentimage} alt="Content image" width={600} />
+        <div className="callus">
+          <div className="callusimg">
+            <div className="desc-call">
+              <p>
+                Untuk info dan pemesanan haus rame - rame harap hubungi kami
+              </p>
+            </div>
+            <div className="address-call">
+              <h3>Kontak Kami</h3>
+              <p>
+                <img src={vektor} alt="" />
+                hello@haus.co.id
+              </p>
+              <p>
+                <img src={pin} alt="" /> Taman Meruya Ilir, Jl. Safir I Blok E6 No.
+                27
+              </p>
+            </div>
+            <div className="button-call">
+              <button className="packagedl">Download Package</button>
+              <button className="whatsapp" onClick={contactTO}>
+                Contact Via Whatsapp
+              </button>
+            </div>
+          </div>
+          <div className="contentImg">
+            <img
+              src={contentimage}
+              alt="Content image"            />
+          </div>
         </div>
       </div>
       <FooterComponent />

@@ -58,6 +58,18 @@ footer {
   gap: 10px;
 }
 
+.follow .footerinstagram{
+  cursor: pointer;
+}
+
+.follow .footertiktok{
+  cursor: pointer;
+}
+
+.follow .footerlinkedin{
+  cursor: pointer;
+}
+
 @media screen and (max-width: 992px) {
   footer {
     height: 100%;
