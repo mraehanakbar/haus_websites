@@ -10,7 +10,7 @@ const Lokasi = () => {
   return (
     <>
       <NavbarComponent />
-      <div className="mt-9">
+      <div className="-mt-2">
         {/* <div className="flex justify-center">
           <div className="px-4 w-72">
             <div className="flex justify-center w-full">
