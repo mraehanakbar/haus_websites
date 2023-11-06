@@ -260,10 +260,10 @@ const HomePage = () => {
 
           {/* Arrow for navigation Promo */}
           <div>
-            <div className="absolute z-20 inset-y-0 left-0 flex  lg:mt-20 ml-1 w-[10%] lg:w-[7%] lg:ml-14 cursor-pointer">
+            <div className="absolute z-20 inset-y-0 left-0 flex -mt-5 lg:mt-20 ml-1 w-[10%] lg:w-[7%] lg:ml-14 cursor-pointer">
               <img src={arrow_left} onClick={prevImage} />
             </div>
-            <div className="absolute z-20 inset-y-0 right-0 flex lg:mt-20 mr-1 w-[10%] lg:w-[7%] lg:mr-14 cursor-pointer">
+            <div className="absolute z-20 inset-y-0 right-0 flex -mt-5 lg:mt-20 mr-1 w-[10%] lg:w-[7%] lg:mr-14 cursor-pointer">
               <img src={arrow_right} onClick={nextImage} />
             </div>
           </div>
@@ -274,7 +274,7 @@ const HomePage = () => {
           {/* Subtitle */}
           <div className="flex flex-col items-center pb-2 lg:pb-6 ">
             <hr className="sub-title-line mb-3.5 border-t-4  w-1/5 lg:w-[15%] mx-auto lg:my-3 lg:my-0" />
-            <div className="sub-title-content mt-2 text-[#89489C] text-lg lg:text-[28px] lg:mt-1  font-bold">
+            <div className="sub-title-content mt-2 text-[#89489C] text-lg lg:text-[28px] lg:mt-1 font-bold">
               Best Seller Menu
             </div>
           </div>
@@ -331,7 +331,7 @@ const HomePage = () => {
         </div>
 
         {/* Haus Rame-Rame */}
-        <div className="w-full my-5 haus-rame  lg:my-0 ">
+        <div className="w-full my-5 haus-rame lg:my-0 ">
           {/* Sub Title */}
           <div className="flex flex-col items-center pt-10 md:pt-20 lg:pt-20 pb-10 lg:bg-white">
             <hr className=" sub-title-line-rame z-10 border-t-4 h-fit w-1/5 lg:w-[15%] pb-2 lg:border-pink-500" />
@@ -341,16 +341,16 @@ const HomePage = () => {
           </div>
 
           {/* Content */}
-          <div className=" haus-rame flex flex-col lg:flex-row lg:py-14">
+          <div className=" haus-rame flex flex-col lg:flex-row lg:py-8 ">
             {/* Text and Button */}
-            <div className="flex flex-col items-center lg:items-start lg:order-2 lg:w-1/2 lg:py-10">
-              <div className="my-5 text-center text-white font-bold leading-normal w-[80%] lg:my-0 lg:w-[90%] lg:w-4/5 lg:text-left text-[28px] lg:text-[32px]">
+            <div className="flex flex-col items-center lg:items-start lg:order-2 lg:w-1/2 lg:py-10 ">
+              <div className="my-5 text-center text-white font-bold leading-normal w-[80%] lg:my-0 lg:w-[85%] lg:text-left text-[28px] lg:text-[32px]">
                 Ciptakan Momen Bahagiamu Bersama Haus!
               </div>
-              <div className="  text-white py-8 w-[70%] text-center lg:pt-5 lg:pb-8 text-base lg:text-xl lg:text-left lg:w-4/5">
+              <div className="  text-white py-8 w-[70%] text-center font-medium lg:pt-5 lg:pb-8 text-base lg:text-xl lg:text-left lg:w-4/5">
                 Semua menu haus! dalam paket rame-rame
               </div>
-              <button className="btn-haus-rame hidden lg:block btn-haus-rame text-white font-bold border text-xl border-white py-3 mt-10 rounded-full w-5/12">
+              <button className="btn-haus-rame hidden lg:block text-white font-bold border text-[16px] border-white py-2 mt-8 rounded-full w-[45%]">
                 <a href="/bigorder">Pelajari Selengkapnya</a>
               </button>
             </div>
@@ -358,7 +358,7 @@ const HomePage = () => {
             {/* Ilustrasi Visual Image */}
             <div className="flex flex-col items-center lg:order-1 lg:w-1/2 lg:my-auto">
               <img
-                className="w-[95%] lg:w-[70%]"
+                className="w-[95%] lg:w-[70%] lg:object-contain "
                 src={ilustrasi_visual}
                 alt="Ilustrasi Visual Lifestyle"
               />
@@ -379,7 +379,7 @@ const HomePage = () => {
               alt="App Haus Decoration"
             />
             <img
-              className="w-full absolute bottom-0 z-10"
+              className="w-full absolute bottom-0 z-10 "
               src={app_order_decoration}
               alt="App Haus Decoration"
             />
@@ -408,7 +408,7 @@ const HomePage = () => {
                 Download aplikasi di
               </div>
               <img
-                className="w-2/6 lg:w-3/12 cursor-pointer"
+                className="w-2/6 lg:w-[20%] cursor-pointer"
                 src={google_play}
                 alt="Google Play Icon"
                 onClick={donwloadAPK}
@@ -418,7 +418,7 @@ const HomePage = () => {
             {/* <Ilustrasi Haus App Image */}
             <div className="flex flex-col items-center lg:order-1 lg:w-1/2 lg:justify-end">
               <img
-                className="z-20 pt-3 md:pt-0 lg:pt-0 w-[85%] md:w-[60%] lg:w-[70%] lg:mt-0"
+                className="z-20 pt-3 md:pt-0 lg:pt-0 w-[85%] md:w-[60%] lg:w-[75%] lg:mt-0"
                 src={hp}
                 alt="Handphone"
               />
