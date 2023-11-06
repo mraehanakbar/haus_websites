@@ -17,10 +17,10 @@ const PedesCyn = () => {
           content={
             <>
               {" "}
-              <ListMenu imgSource={basreng} title="Basreng BBQ" />
+              <ListMenu imgSource={basreng} title="Baso Goreng" />
               <ListMenu imgSource={makaroni} title="Makaroni Cheese" />
-              <ListMenu imgSource={tempe} title="Tempe Chili" />
-              <ListMenu imgSource={usus} title="Usus Seaweed" />
+              <ListMenu imgSource={tempe} title="Tempe Goreng" />
+              <ListMenu imgSource={usus} title="Usus Goreng" />
             </>
           }
         />

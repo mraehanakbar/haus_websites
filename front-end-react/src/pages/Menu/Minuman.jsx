@@ -10,8 +10,8 @@ import greenThai from "../../assets/images/menu/classic_series/5_Green Thai Tea.
 import greenTeaC from "../../assets/images/menu/cheese_series/2_Green Tea Cheese.jpg";
 import chocoAvocadoC from "../../assets/images/menu/cheese_series/1_Choco Avocado Cheese.jpg";
 import mangoCT from "../../assets/images/menu/cheese_series/3_Mango Cheese Tea.jpg";
-import ovaltineC from "../../assets/images/menu/cheese_series/4_Oreo Cheese.jpg";
-import oreoC from "../../assets/images/menu/cheese_series/5_Ovaltine Cheese.jpg";
+import oreoC from "../../assets/images/menu/cheese_series/4_Oreo Cheese.jpg";
+import ovaltineC from "../../assets/images/menu/cheese_series/5_Ovaltine Cheese.jpg";
 import strawberryCT from "../../assets/images/menu/cheese_series/8_Strawberry Cheese Tea.jpg";
 import taroC from "../../assets/images/menu/cheese_series/9_Taro Cheese.jpg";
 import thaiTC from "../../assets/images/menu/cheese_series/10_Thai Tea Cheese.jpg";
@@ -53,14 +53,11 @@ const Minuman = () => {
           title="Classic Series"
           content={
             <>
-              <ListMenu imgSource={greenTeaC} title="Green Tea Cheese" />
-              <ListMenu
-                imgSource={chocoAvocadoC}
-                title="Choco Avocado Cheese"
-              />
-              <ListMenu imgSource={mangoCT} title="Mango Cheese Tea" />
-              <ListMenu imgSource={ovaltineC} title="Ovaltine Cheese" />
-              <ListMenu imgSource={oreoC} title="Oreo Cheese" />
+              <ListMenu imgSource={ovaltine} title="Ovaltine" />
+              <ListMenu imgSource={oreo} title="Oreo" />
+              <ListMenu imgSource={taro} title="Taro" />
+              <ListMenu imgSource={thaiTea} title="Thaitea" />
+              <ListMenu imgSource={greenThai} title="Green Thaitea" />
             </>
           }
         />
@@ -70,6 +67,14 @@ const Minuman = () => {
           title="Cheese Series"
           content={
             <>
+              <ListMenu imgSource={greenTeaC} title="Greentea Cheese " />
+              <ListMenu
+                imgSource={chocoAvocadoC}
+                title="Choco Avocado Cheese"
+              />
+              <ListMenu imgSource={mangoCT} title="Mango Cheese Tea" />
+              <ListMenu imgSource={ovaltineC} title="Ovaltine Cheese Tea" />
+              <ListMenu imgSource={oreoC} title="Oreo Cheese" />
               <ListMenu
                 imgSource={strawberryCT}
                 title="Strawberry Cheese Tea"
@@ -84,11 +89,6 @@ const Minuman = () => {
                 imgSource={chocoLavaMiloC}
                 title="Choco Lava Milo Cheese"
               />
-              <ListMenu imgSource={ovaltine} title="Ovaltine" />
-              <ListMenu imgSource={oreo} title="Oreo" />
-              <ListMenu imgSource={taro} title="Taro" />
-              <ListMenu imgSource={thaiTea} title="Thai Tea" />
-              <ListMenu imgSource={greenThai} title="Green Thai Tea" />
             </>
           }
         />
@@ -98,9 +98,9 @@ const Minuman = () => {
           title="Choco Series"
           content={
             <>
-              <ListMenu imgSource={chocoAvocado} title="Choco Avocado" />
               <ListMenu imgSource={chocoHazelnut} title="Choco Hazelnut" />
               <ListMenu imgSource={chocoLavaMilo} title="Choco Lava Milo" />
+              <ListMenu imgSource={chocoAvocado} title="Choco Avocado" />
             </>
           }
         />
@@ -129,9 +129,9 @@ const Minuman = () => {
             <>
               <ListMenu imgSource={strawberryT} title="Strawberry Tea" />
               <ListMenu imgSource={blackJasmineT} title="Black Jasmine Tea" />
-              <ListMenu imgSource={kiwiT} title="Kiwi Tea" />
-              <ListMenu imgSource={lycheeT} title="Lychee Tea" />
               <ListMenu imgSource={mangoT} title="Mango Tea" />
+              <ListMenu imgSource={lycheeT} title="Lychee Tea" />
+              <ListMenu imgSource={kiwiT} title="Kiwi Tea" />
             </>
           }
         />
@@ -140,9 +140,9 @@ const Minuman = () => {
           title="Yakult Series"
           content={
             <>
-              <ListMenu imgSource={grapeYk} title="Grape Yakult" />
-              <ListMenu imgSource={lycheeYk} title="Lychee Yakult" />
               <ListMenu imgSource={mangoYk} title="Mango Yakult" />
+              <ListMenu imgSource={lycheeYk} title="Lychee Yakult" />
+              <ListMenu imgSource={grapeYk} title="Grape Yakult" />
             </>
           }
         />

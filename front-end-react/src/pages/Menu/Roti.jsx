@@ -90,11 +90,11 @@ const Roti = () => {
               />
               <ListMenu imgSource={Mcokelat} title="Roti Maryam Cokelat" />
               <ListMenu imgSource={Mkeju} title="Roti Maryam Keju" />
-              <ListMenu imgSource={Msusu} title="Roti Maryam Room Susu" />
               <ListMenu
                 imgSource={Mstrawberry}
                 title="Roti Maryam Strawberry"
               />
+              <ListMenu imgSource={Msusu} title="Roti Maryam Susu" />
             </>
           }
         />

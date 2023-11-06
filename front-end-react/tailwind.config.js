@@ -17,7 +17,8 @@ export default {
         "pink-font": "#C73480",
         "pink-dropdown": "#FAFAFA",
         "pink-menu-headline": "#CE2F8C",
-        "gray-button": "#EDEDED",
+        "gray-button": "#F3F3FF",
+        "blue-button": "#F3F3FF",
       },
       fontSize: {
         "1.5xl": "22px",
