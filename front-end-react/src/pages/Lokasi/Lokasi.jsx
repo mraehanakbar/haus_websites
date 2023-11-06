@@ -11,7 +11,7 @@ const Lokasi = () => {
     <>
       <NavbarComponent />
       <div className="mt-9">
-        <div className="flex justify-center">
+        {/* <div className="flex justify-center">
           <div className="px-4 w-72">
             <div className="flex justify-center w-full">
               <div className="bg-pink-main w-36 h-1.5"></div>
@@ -24,7 +24,6 @@ const Lokasi = () => {
 
         <section className="flex justify-center mt-10">
           <div className=" grid grid-cols-1 md:space-x-6 lg:space-x-20 xl:space-x-40 md:grid-cols-2 items-center text-center px-3">
-            {/* FIRST COLUMN */}
             <div className="col-span-1 flex justify-center w-88">
               <div>
                 <NewLocation
@@ -59,7 +58,7 @@ const Lokasi = () => {
               </div>
             </div>
           </div>
-        </section>
+        </section> */}
 
         <section></section>
       </div>
@@ -70,7 +69,7 @@ const Lokasi = () => {
             <div className="bg-pink-main w-36 h-1.5"></div>
           </div>
           <h1 className="mt-2.5 font-semibold text-center text-2.5xl">
-            Lokasi Store Baru
+            Lokasi Store
           </h1>
           <p className="mt-2.5 text-center text-2xl font-normal">
             Temukan Store terdekat dari lokasimu

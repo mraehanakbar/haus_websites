@@ -31,7 +31,9 @@ const LocationList = ({ city, cityData }) => {
           {cityData.map((store, index) => [
             <div
               key={`col1-${index}`}
-              class="col-span-1 p-0.5 md:1.5 text-xs md:text-sm font-semibold"
+              class={`col-span-1 p-0.5 md:1.5 text-xs md:text-sm font-semibold ${
+                index % 2 === 0 ? "hidden" : ""
+              }`}
             >
               <img
                 class="inline scale-75 md:scale-100"
@@ -43,7 +45,9 @@ const LocationList = ({ city, cityData }) => {
             </div>,
             <div
               key={`col2-${index}`}
-              class="col-span-1 p-0.5 md:1.5 text-xs md:text-sm font-semibold"
+              class={`col-span-1 p-0.5 md:1.5 text-xs md:text-sm font-semibold ${
+                index % 2 === 1 ? "hidden" : ""
+              }`}
             >
               <img
                 class="inline  scale-75 md:scale-100"
