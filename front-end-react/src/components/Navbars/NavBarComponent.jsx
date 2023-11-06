@@ -18,7 +18,7 @@ const NavbarComponent = () => {
 
   return (
     <>
-      <nav className="bg-white sticky top-0 z-10 flex justify-between px-4 lg:px-8 py-2 items-center shadow-md  h-20 z-30">
+      <nav className="bg-white sticky top-0 z-10 flex justify-between px-4 lg:px-8 py-2 items-center shadow-md  h-[10vh] z-30">
         <div className="ml-10 md:ml-3 lg:ml-10 pb-2">
           <NavLink to="/">
             <img src={logo} alt="Logo" className="w-36  cursor-pointer" />

@@ -260,10 +260,10 @@ const HomePage = () => {
 
           {/* Arrow for navigation Promo */}
           <div>
-            <div className="absolute z-20 inset-y-0 left-0 flex  lg:mt-0 ml-1 w-[10%] lg:w-[7%] lg:ml-14 cursor-pointer">
+            <div className="absolute z-20 inset-y-0 left-0 flex  lg:mt-20 ml-1 w-[10%] lg:w-[7%] lg:ml-14 cursor-pointer">
               <img src={arrow_left} onClick={prevImage} />
             </div>
-            <div className="absolute z-20 inset-y-0 right-0 flex mr-1 w-[10%] lg:w-[7%] lg:mr-14 cursor-pointer">
+            <div className="absolute z-20 inset-y-0 right-0 flex lg:mt-20 mr-1 w-[10%] lg:w-[7%] lg:mr-14 cursor-pointer">
               <img src={arrow_right} onClick={nextImage} />
             </div>
           </div>
