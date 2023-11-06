@@ -4,27 +4,15 @@
 
 .applyjob {
   margin: 10px;
-  padding: 20px 10px 30px 20px;
   display: flex;
   justify-content: space-between;
   cursor: pointer;
   border-radius: 50px;
 }
 
-.applyjob h1 {
-  font-size: 26px;
-  font-weight: 500;
-  line-height: 58px;
-  letter-spacing: -0.021em;
-  text-align: left;
-  flex: 8;
-}
-
 .detail p {
   width: 150px;
   color: #e03e9f;
-  font-size: 26px;
-  font-weight: 500;
   line-height: 58px;
   letter-spacing: -0.021em;
   text-align: left;
@@ -57,22 +45,15 @@
 .applybutton {
   display: flex;
   justify-content: flex-end;
-  padding: 20px 40px;
 }
 
 .applyemail {
-  margin-right: 20px;
   background-color: #fff;
-  box-shadow: -2px 2px 8px 0px #00000040;
-  height: 100%;
-  padding: 10px;
   border-radius: 10px;
   border: none;
   cursor: pointer;
   color: #e03e9f;
-  font-size: 20px;
-  font-weight: 600;
-  line-height: 30px;
+  font-size: 15px;
   text-align: left;
 }
 
@@ -82,20 +63,12 @@
 }
 
 .applylinkedin {
-  box-shadow: -2px 2px 8px 0px #00000040;
-  box-shadow: -2px 2px 8px 0px #00000040;
-  width: 200px;
-  padding: 10px;
-  height: 100%;
+  background-color: #fff;
   border-radius: 10px;
   border: none;
   cursor: pointer;
   color: #0a66c2;
-  background-color: #fff;
-
-  font-size: 20px;
-  font-weight: 600;
-  line-height: 30px;
+  font-size: 15px;
   text-align: left;
 }
 
@@ -117,7 +90,7 @@
 @media (max-width: 768px) {
   .applyjob {
     margin: 10px;
-    padding: 20px 10px 30px 20px;
+    /* padding: 20px 10px 30px 20px; */
     display: flex;
     justify-content: space-between;
     flex-direction: column;
@@ -137,7 +110,6 @@
   .detail p {
     width: 150px;
     color: #e03e9f;
-    font-size: 26px;
     font-weight: 500;
     line-height: 58px;
     letter-spacing: -0.021em;
@@ -146,5 +118,9 @@
 
   .requirements-popup ul {
     padding: 0;
+  }
+
+  .requirements-popup ul li {
+    font-size: 16px;
   }
 }

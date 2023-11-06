@@ -25,10 +25,10 @@ const Applyjob = ({ title, requirements }) => {
 
   return (
     <div className="applycontainer">
-      <div className="applyjob" onClick={toggleRequirements}>
-        <h1>{title}</h1>
+      <div className="applyjob lg:py-6 lg:px-5" onClick={toggleRequirements}>
+        <div className="text-[16px] lg:text-[26px] font-medium">{title}</div>
         <div className="detail">
-          <p>Lihat Detail</p>
+          <p className="text-[14px] lg:text-[26px] font-medium me-10">Lihat Detail</p>
           <img
             src={arrow}
             alt="arrow"
@@ -47,11 +47,17 @@ const Applyjob = ({ title, requirements }) => {
               ))}
             </ul>
           </div>
-          <div className="applybutton">
-            <button className="applyemail" onClick={emailTO}>
+          <div className="applybutton lg:flex lg:flex-row justify-evenly md:justify-end  mx-3 pb-4 lg:right-0">
+            <button
+              className="applyemail lg:w-fit lg:text-[20px] text-center me-1 p-2 lg:p-3 shadow-lg font-medium"
+              onClick={emailTO}
+            >
               Apply with Email
             </button>
-            <button className="applylinkedin" onClick={linkedinHaus}>
+            <button
+              className="applylinkedin  lg:w-fit lg:text-[20px] text-center ms-1 p-2 lg:p-3 shadow-lg font-medium"
+              onClick={linkedinHaus}
+            >
               See on Linkedin
             </button>
           </div>
