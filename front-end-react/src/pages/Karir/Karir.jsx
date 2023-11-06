@@ -57,8 +57,6 @@ const Karir = () => {
           </div>
 
         </div>
-      
-      
       </div>
 
       <div className="line">

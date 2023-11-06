@@ -114,7 +114,7 @@ const HomePage = () => {
               alt="Kitkat Blur Bottom Left"
             />
             <img
-              className="decoration-bg-kitkat-right absolute top-16 right-0 w-2/5 lg:w-auto"
+              className="decoration-bg-kitkat-right absolute top-30 lg:top-14 right-0 w-2/5 lg:w-auto"
               src={kitkat_blur_bottom_right}
               alt="Kitkat Blur Top Right"
             />
@@ -173,10 +173,10 @@ const HomePage = () => {
             </div>
 
             {/* Promo & Footer Aksen */}
-            <div onClick={scrollToBestDeal} className="promo-footer-aksen cursor-pointer absolute bottom-0 flex justify-center w-full pb-2 lg:pb-8">
+            <div onClick={scrollToBestDeal} className="promo-footer-aksen cursor-pointer absolute bottom-0 flex justify-center w-full pb-5 lg:pb-8">
               <div className="text-white w-[9%] lg:w-fit">
                 <div className="text-center text-[9px] lg:text-[18px]">Promo</div>
-                <img className=" flex mx-auto lg:w-[75%]" src={polygon_arrow} alt="Polygon Arrow" />
+                <img className=" flex mx-auto md:w-[50%] lg:w-[75%]" src={polygon_arrow} alt="Polygon Arrow" />
               </div>
             </div>
           </div>
