@@ -25,23 +25,43 @@ const NavbarComponent = () => {
           </NavLink>
         </div>
         <div className="hidden md:flex xl:ml-auto lg:ml-auto md:ml-0 text items-center">
-          <NavLink className="px-1.5 lg:px-3" to="/about" activeClassName="active">
+          <NavLink
+            className="px-1.5 lg:px-3"
+            to="/about"
+            activeClassName="active"
+          >
             TENTANG KAMI
           </NavLink>
 
-          <NavLink className="px-1.5 lg:px-3" to="/menu" activeClassName="active">
+          <NavLink
+            className="px-1.5 lg:px-3"
+            to="/menu"
+            activeClassName="active"
+          >
             MENU
           </NavLink>
 
-          <NavLink className="px-1.5 lg:px-3" to="/lokasi" activeClassName="active">
+          <NavLink
+            className="px-1.5 lg:px-3"
+            to="/lokasi"
+            activeClassName="active"
+          >
             LOKASI TOKO
           </NavLink>
 
-          <NavLink className="px-1.5 lg:px-3" to="/bigorder" activeClassName="active">
+          <NavLink
+            className="px-1.5 lg:px-3"
+            to="/bigorder"
+            activeClassName="active"
+          >
             BIG ORDER
           </NavLink>
 
-          <NavLink className="px-1.5 lg:px-3" to="/karir" activeClassName="active">
+          <NavLink
+            className="px-1.5 lg:px-3"
+            to="/karir"
+            activeClassName="active"
+          >
             KARIR
           </NavLink>
           <button

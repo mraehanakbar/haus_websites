@@ -44,7 +44,15 @@ const scrollToBestDeal = () => {
 };
 
 const HomePage = () => {
-  const img = [ganjel_ah, ganjel_in, haus_bro, haus_cyin, haus_gan, haus_pahala, student_promo];
+  const img = [
+    ganjel_ah,
+    ganjel_in,
+    haus_bro,
+    haus_cyin,
+    haus_gan,
+    haus_pahala,
+    student_promo,
+  ];
 
   const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -93,83 +101,87 @@ const HomePage = () => {
 
   return (
     <>
-      <NavbarComponent />
       {/* Kitkat */}
+      <NavbarComponent />
       <body className="w-full">
-        <div className="relative w-full kitkat-bg h-auto lg:h-screen">
-          {/* Decoration Background  */}
-          <img
-            className="decoration-bg-kitkat-left absolute bottom-0 left-0 w-1/3 lg:w-auto"
-            src={kitkat_blur_bottom_left}
-            alt="Kitkat Blur Bottom Left"
-          />
-          <img
-            className="decoration-bg-kitkat-right absolute top-0 right-0 w-1/3 lg:w-auto"
-            src={kitkat_blur_bottom_right}
-            alt="Kitkat Blur Top Right"
-          />
-          {/* Kitkat Text and Logo */}
-          <div className="flex flex-row justify-center px-14 pt-5 lg:px-52">
-            <div className="w-1/2 my-auto">
-              <img
-                className="w-3/5 lg:w-[30%] lg:min-width-[25%]"
-                src={haus_logo_putih}
-                alt="Haus Logo Putih"
-              />
-            </div>
-            <div className="w-1/2 flex justify-end z-10">
-              <img
-                className="w-1/2 right-0 lg:w-[20%] right-0"
-                src={kitkat_logo}
-                alt="Kitkat Logo"
-              />
-            </div>
-          </div>
-          {/* Kitkat Text and Picture */}
-          <div className="flex pt-10 flex-col justify-center lg:flex-row lg:mt-0 lg:h-[60%] lg:w-auto ">
-            <div className="flex justify-center  lg:py-0 lg:h-auto my-auto lg:w-[40%] lg:justify-end">
-              <img
-                className="kitkat-text w-[60%] lg:w-auto lg:max-w-[65%] object-contain"
-                src={kitkat_text}
-                alt="Kitkat Text"
-              />
-            </div>
-            <div className=" flex justify-center lg:h-auto lg:w-[60%] lg:justify-start ">
-              <img
-                className="kitkat-gelas w-[90%]  lg:w-full object-contain"
-                src={kitkat_gelas}
-                alt="Kitkat Gelas"
-              />
-            </div>
-          </div>
-          {/* Logo Halal */}
-          <div className="flex lg:py-0 justify-end lg:absolute right-0  lg:mb-30 lg:m-auto lg:h-auto lg:w-1/5">
+        {/* Kitkat Header */}
+        <div className="h-[90vh] w-full kitkat-bg">
+          {/* Background Decoration */}
+          <div>
             <img
-              className="mr-10 w-[15%] md:w-[10%] lg:w-full h-auto lg:mr-32 lg:object-contain lg:max-w-[20%]"
-              src={logo_halal}
-              alt="Logo Halal"
+              className="decoration-bg-kitkat-left absolute bottom-0 left-0 w-2/5 lg:w-auto"
+              src={kitkat_blur_bottom_left}
+              alt="Kitkat Blur Bottom Left"
+            />
+            <img
+              className="decoration-bg-kitkat-right absolute top-16 right-0 w-2/5 lg:w-auto"
+              src={kitkat_blur_bottom_right}
+              alt="Kitkat Blur Top Right"
             />
           </div>
-          {/* Promo & Footer Aksen */}
-          <div
-            onClick={scrollToBestDeal}
-            className="promo-footer-aksen cursor-pointer mx-auto h-auto flex flex-col pb-5 w-[10%] md:pb-14  lg:w-[80%] lg:pb-18 lg:absolute lg:inset-x-0 bottom-0 lg:h-[28%] lg:justify-center"
-          >
-            <div className="z-20 text-sm text-white flex justify-center md:text-lg">
-              Promo
+
+          {/* Content Parent */}
+          <div className="flex flex-col h-[90vh]">
+            {/* Haus and Kitkat Logo */}
+            <div className="flex h-[10%] mt-4 lg:mt-10 w-full">
+              {/* Haus Logo */}
+              <div className="w-1/2">
+                <img
+                  className="w-[50%] lg:w-[40%] h-full lg:h-[80%] object-contain ms-8 lg:ms-14"
+                  src={haus_logo_putih}
+                  alt="Haus Logo Putih"
+                />
+              </div>
+              {/* Kitkat Logo */}
+              <div className="flex justify-end w-1/2 z-20 me-8 lg:me-0">
+                <img
+                  className="w-[40%] lg:scale-135 h-full object-contain"
+                  src={kitkat_logo}
+                  alt="Kitkat Logo"
+                />
+              </div>
             </div>
-            <img
-              className="z-10 w-20 md:w-[60%] lg:w-[4%] mx-auto "
-              src={polygon_arrow}
-              alt="Polygon Arrow"
-            />
+
+            {/* Kitkat Text & Kikat Cup Image*/}
+            <div className="flex flex-col lg:flex-row h-[70%] lg:h-[55%] pt-5 lg:pt-0">
+              {/* Kitkat Text */}
+              <div className="flex justify-center  h-[35%] lg:h-full lg:w-[45%]">
+                <img
+                  className="object-contain lg:w-[75%] lg:ms-20 lg:mt-8"
+                  src={kitkat_text}
+                  alt="Kitkat Text"
+                />
+              </div>
+
+              {/* Kitkat Cup Image */}
+              <div className="flex justify-center h-[65%] pt-5 lg:h-full lg:w-[55%]">
+                <img
+                  className="w-[80%] object-contain scale-125 lg:w-[80%]"
+                  src={kitkat_gelas}
+                  alt="Kitkat Text"
+                />
+              </div>
+            </div>
+
+            {/* Halal Logo */}
+            <div className="h-[10%] lg:h-[15%] flex justify-end">
+              <img
+                className="w-[10%] lg:h-[80%] object-contain me-10 mt-4 lg:mt-10"
+                src={logo_halal}
+                alt="Logo Halal"
+              />
+            </div>
+
+            {/* Promo & Footer Aksen */}
+            <div onClick={scrollToBestDeal} className="promo-footer-aksen cursor-pointer absolute bottom-0 flex justify-center w-full pb-2 lg:pb-8">
+              <div className="text-white w-[9%] lg:w-fit">
+                <div className="text-center text-[9px] lg:text-[18px]">Promo</div>
+                <img className=" flex mx-auto lg:w-[75%]" src={polygon_arrow} alt="Polygon Arrow" />
+              </div>
+            </div>
           </div>
-          <img
-            className="footer-aksen absolute bottom-0 w-full lg:h-[12%]"
-            src={footer_aksen}
-            alt="Footer Aksen"
-          />
         </div>
+
         {/* Special Deal */}
         <div
           id="best-deal"
@@ -201,7 +213,11 @@ const HomePage = () => {
             <div className="slider w-full overflow">
               <div className="relative">
                 {/* Diakalin pake ini */}
-                <img src={tamvan_series} alt="" className=" w-90% lg:w-[75%]  mx-auto opacity-0" />
+                <img
+                  src={tamvan_series}
+                  alt=""
+                  className=" w-90% lg:w-[75%]  mx-auto opacity-0"
+                />
 
                 {img.map((image, index) => (
                   <div

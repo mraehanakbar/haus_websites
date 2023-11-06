@@ -83,24 +83,25 @@
 
 .applylinkedin {
   box-shadow: -2px 2px 8px 0px #00000040;
-  background-color: #fff;
   box-shadow: -2px 2px 8px 0px #00000040;
+  width: 200px;
   padding: 10px;
   height: 100%;
   border-radius: 10px;
   border: none;
   cursor: pointer;
-  color: #fff;
-  background-color: rgb(0, 38, 255);
+  color: #0a66c2;
+  background-color: #fff;
+
   font-size: 20px;
   font-weight: 600;
   line-height: 30px;
-  text-align: left;  
+  text-align: left;
 }
 
 .applylinkedin:hover {
-  background-color: #fff;
-  color: rgb(0, 38, 255);
+  background-color: #0a66c2;
+  color: #fff;
 }
 
 .rotate {
