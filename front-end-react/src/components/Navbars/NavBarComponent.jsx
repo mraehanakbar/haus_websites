@@ -87,25 +87,25 @@ const NavbarComponent = () => {
       </nav>
       {isDropdownOpen && (
         <div className="fixed py-3 z-50 flex flex-col w-full items-end space-y-2 bg-white bg-opacity-90 font-semibold text-purple-main">
-          <Link className="px-7 lg:px-3" to="/about">
+          <NavLink className="px-7 lg:px-3" to="/about">
             TENTANG KAMI
-          </Link>
+          </NavLink>
 
-          <Link className="px-7 lg:px-3" to="/menu">
+          <NavLink className="px-7 lg:px-3" to="/menu">
             MENU
-          </Link>
+          </NavLink>
 
-          <Link className="px-7 lg:px-3" to="/lokasi">
+          <NavLink className="px-7 lg:px-3" to="/lokasi">
             LOKASI TOKO
-          </Link>
+          </NavLink>
 
-          <Link className="px-7 lg:px-3" to="/bigorder">
+          <NavLink className="px-7 lg:px-3" to="/bigorder">
             BIG ORDER
-          </Link>
+          </NavLink>
 
-          <Link className="px-7 lg:px-3" to="/karir">
+          <NavLink className="px-7 lg:px-3" to="/karir">
             KARIR
-          </Link>
+          </NavLink>
           <button
             onClick={donwloadAPK}
             className="mr-7 px-3 py-2 lg:px-3 bg-purple-main hover:bg-[#6e3e7e] rounded-md text-white "
