@@ -204,7 +204,7 @@ const HomePage = () => {
           {/*Promo Image*/}
           <div className="relative h-auto z-10 ">
             <div className="special-deal-title hidden lg:block flex flex-col items-center pb-2 text-center lg:pb-10 ">
-              <hr className="sub-title-line mb-3.5 border-t-4  w-1/5 lg:w-[15%] mx-auto lg:my-3" />
+              <hr className="sub-title-line mb-3.5 border-t-4  w-1/5 lg:w-[10%] mx-auto lg:my-3" />
               <div className="sub-title-content text-white text-lg lg:text-[28px] lg:mt-1  font-bold">
                 Special Deal
               </div>
@@ -273,7 +273,7 @@ const HomePage = () => {
         <div className="w-full py-10 lg:py-22 lg:h-auto lg:flex lg:flex-col lg:justify-center">
           {/* Subtitle */}
           <div className="flex flex-col items-center pb-2 lg:pb-6 ">
-            <hr className="sub-title-line mb-3.5 border-t-4  w-1/5 lg:w-[15%] mx-auto lg:my-3 lg:my-0" />
+            <hr className="sub-title-line w-[30%] border-t-4  w-1/5 lg:w-[12%] mx-auto lg:my-3 lg:my-0" />
             <div className="sub-title-content mt-2 text-[#89489C] text-lg lg:text-[28px] lg:mt-1 font-bold">
               Best Seller Menu
             </div>
@@ -334,7 +334,7 @@ const HomePage = () => {
         <div className="w-full my-5 haus-rame lg:my-0 ">
           {/* Sub Title */}
           <div className="flex flex-col items-center pt-10 md:pt-20 lg:pt-20 pb-10 lg:bg-white">
-            <hr className=" sub-title-line-rame z-10 border-t-4 h-fit w-1/5 lg:w-[15%] pb-2 lg:border-pink-500" />
+            <hr className=" sub-title-line-rame z-10 w-[25%] border-t-4 h-fit w-1/5 lg:w-[14%] lg:mb-4  lg:border-pink-500" />
             <div className="sub-title-content font-bold mt-2 text-white lg:mt-0 lg:text-[#89489C] text-lg lg:text-[28px]">
               Haus Rame-Rame
             </div>
@@ -389,7 +389,7 @@ const HomePage = () => {
           <div className=" mx-4 flex flex-col lg:flex-row mx-auto">
             {/* Text & Google Play */}
             <div className="flex flex-col items-center mx-auto lg:items-start lg:order-2 lg:w-1/2">
-              <div className="haus-mobile w-full md:w-[75%] font-bold lg:mx-0 lg:w-full md:text-left text-center text-[22px] md:text-4xl lg:text-[32px]">
+              <div className="haus-mobile w-[85%]  md:w-[75%] font-bold lg:mx-0 lg:w-full md:text-left  text-[22px] md:text-4xl lg:text-[32px]">
                 Haus Mobile App For Order
               </div>
               <div className=" text-base w-[85%] md:w-[75%] py-5 text-left font-bold lg:text-left lg:w-4/5 text-sm md:text-2xl lg:text-[22px] lg:py-3">
