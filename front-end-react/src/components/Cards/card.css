@@ -1,13 +1,13 @@
 .card {
-  width: 464px;
-  height: 384px;
+  width: 45%;
+  height: auto;
   overflow: hidden;
-  margin: 50px;
+  margin: 10px auto;
 }
 
 .card-image {
-  width: 100%;
-  height: 200px;
+  width: 557px;
+  height: 364px;
   object-fit: cover;
 }
 
@@ -25,10 +25,10 @@
   color: #333;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1000px) {
   .card {
     width: 100%;
     height: 100%;
-    margin: 0;
+    margin: 0 auto;
   }
 }
