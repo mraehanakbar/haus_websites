@@ -23,7 +23,6 @@ import ganjel_in from "../../assets/images/ganjel-in.png";
 import box_bottom_left from "../../assets/images/box-bottom-left.png";
 import box_top_right from "../../assets/images/box-top-right.png";
 import polygon_arrow from "../../assets/images/polygon-arrow.svg";
-import footer_aksen from "../../assets/images/footer-aksen.png";
 import logo_halal from "../../assets/images/halal-logo.png";
 import kitkat_text from "../../assets/images/kitkat-text.png";
 import kitkat_gelas from "../../assets/images/kitkat-gelas.png";
@@ -32,6 +31,7 @@ import kitkat_logo from "../../assets/images/kitkat-logo.png";
 import haus_logo_putih from "../../assets/images/haus-logo.png";
 import kitkat_blur_bottom_left from "../../assets/images/kitkat-blur-bottom-left.png";
 import kitkat_blur_bottom_right from "../../assets/images/kitkat-blur-top-right.png";
+import jingle_haus from "../../assets/audio/jingle_haus.mp3";
 import "./HomePage.css";
 import React, { useState, useEffect } from "react";
 import { useRef } from "react";
@@ -85,11 +85,46 @@ const HomePage = () => {
     // Start the initial interval
     resetInterval();
 
+    // function to play song when mouse is moved
+    const handleMouseClick = () => {
+      //play song where the song havent been played before
+      const shouldPlay = localStorage.getItem("shouldPlay"); //shouldPlay default value is null/true
+      if (shouldPlay === "true" || shouldPlay === null) {
+        audio.play();
+        localStorage.setItem("shouldPlay", "false");
+      }
+
+      // Delete event listener so the song will not be played again
+      document.removeEventListener("click", handleMouseClick);
+    };
+
+    // add listeners for mouse movement
+    document.addEventListener("click", handleMouseClick);
+
+    // create audio element
+    const audio = new Audio(jingle_haus);
+
+    //check if the song should be played from local storage
+    localStorage.setItem("shouldPlay", "true");
+
+    //Loop songs when the song is ended
+    audio.addEventListener("ended", () => {
+      audio.currentTime = 0;
+      audio.play();
+    });
+
     return () => {
       // Clear the interval when the component is unmounted
       if (intervalRef.current) {
         clearInterval(intervalRef.current);
       }
+
+      audio.pause();
+      document.removeEventListener("click", handleMouseClick);
+      audio.removeEventListener("ended", () => {
+        audio.currentTime = 0;
+        audio.play();
+      });
     };
   }, []);
 
@@ -104,6 +139,8 @@ const HomePage = () => {
       {/* Kitkat */}
       <NavbarComponent />
       <body className="w-full">
+        <audio id="my_audio" src={jingle_haus} loop="loop"></audio>
+
         {/* Kitkat Header */}
         <div className="h-[90vh] w-full kitkat-bg">
           {/* Background Decoration */}
@@ -173,10 +210,19 @@ const HomePage = () => {
             </div>
 
             {/* Promo & Footer Aksen */}
-            <div onClick={scrollToBestDeal} className="promo-footer-aksen cursor-pointer absolute bottom-0 flex justify-center w-full pb-5 lg:pb-8">
+            <div
+              onClick={scrollToBestDeal}
+              className="promo-footer-aksen cursor-pointer absolute bottom-0 flex justify-center w-full pb-5 lg:pb-8"
+            >
               <div className="text-white w-[9%] lg:w-fit">
-                <div className="text-center text-[9px] lg:text-[18px]">Promo</div>
-                <img className=" flex mx-auto md:w-[50%] lg:w-[75%]" src={polygon_arrow} alt="Polygon Arrow" />
+                <div className="text-center text-[9px] lg:text-[18px]">
+                  Promo
+                </div>
+                <img
+                  className=" flex mx-auto md:w-[50%] lg:w-[75%]"
+                  src={polygon_arrow}
+                  alt="Polygon Arrow"
+                />
               </div>
             </div>
           </div>
@@ -204,7 +250,7 @@ const HomePage = () => {
           {/*Promo Image*/}
           <div className="relative h-auto z-10 ">
             <div className="special-deal-title hidden lg:block flex flex-col items-center pb-2 text-center lg:pb-10 ">
-              <hr className="sub-title-line mb-3.5 border-t-4  w-1/5 lg:w-[10%] mx-auto lg:my-3" />
+              <hr className="sub-title-line mb-3.5 border-t-4 lg:border-[3px] w-1/5 lg:w-[10%] mx-auto lg:mb-6 lg:mt-3" />
               <div className="sub-title-content text-white text-lg lg:text-[28px] lg:mt-1  font-bold">
                 Special Deal
               </div>
@@ -273,7 +319,7 @@ const HomePage = () => {
         <div className="w-full py-10 lg:py-22 lg:h-auto lg:flex lg:flex-col lg:justify-center">
           {/* Subtitle */}
           <div className="flex flex-col items-center pb-2 lg:pb-6 ">
-            <hr className="sub-title-line w-[30%] border-t-4  w-1/5 lg:w-[12%] mx-auto lg:my-3 lg:my-0" />
+            <hr className="sub-title-line w-[30%] border-t-4 lg:border-[3px] w-1/5 lg:w-[12%] mx-auto lg:mb-4 lg:mt-3" />
             <div className="sub-title-content mt-2 text-[#89489C] text-lg lg:text-[28px] lg:mt-1 font-bold">
               Best Seller Menu
             </div>
@@ -334,7 +380,7 @@ const HomePage = () => {
         <div className="w-full my-5 haus-rame lg:my-0 ">
           {/* Sub Title */}
           <div className="flex flex-col items-center pt-10 md:pt-20 lg:pt-20 pb-10 lg:bg-white">
-            <hr className=" sub-title-line-rame z-10 w-[25%] border-t-4 h-fit w-1/5 lg:w-[14%] lg:mb-4  lg:border-pink-500" />
+            <hr className=" sub-title-line-rame z-10 w-[25%] border-t-4 lg:border-[3px] h-fit w-1/5 lg:w-[14%] lg:mb-7  lg:border-pink-500" />
             <div className="sub-title-content font-bold mt-2 text-white lg:mt-0 lg:text-[#89489C] text-lg lg:text-[28px]">
               Haus Rame-Rame
             </div>

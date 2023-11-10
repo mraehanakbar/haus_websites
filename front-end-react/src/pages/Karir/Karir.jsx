@@ -64,15 +64,17 @@ const Karir = () => {
       </div>
 
       <div className="w-screen">
-        <div className="line">
-          <div className="lines"></div>
-        </div>
-        <div className="title-karir">
-          <div className="text-[20px] lg:text-[28px] font-semibold text-center leading-8 lg:leading-[42px]">Posisi yang Dibutuhkan</div>
+        <div className="title-karir flex flex-col">
+          <hr className="sub-title-line mb-3.5 border-t-4 lg:border-[3px] w-1/5 w-[40%] md:w-[18%] lg:w-[13%] mx-auto mt-8 lg:mt-12" />
+          <div className="text-[20px] lg:text-[28px] font-semibold text-center leading-8 lg:leading-[42px]">
+            Posisi Yang Dibutuhkan
+          </div>
         </div>
         <div></div>
         <div className="operational flex flex-col justify-center my-[50px] mb-[500px]">
-          <div className="font-semibold text-[24px] lg:text-[35px] leading-9 mb-5 lg:mb-8">Operational</div>
+          <div className="font-semibold text-[24px] lg:text-[35px] leading-9 mb-5 lg:mb-8">
+            Operational
+          </div>
           <div className="job">
             <Applyjob
               title="Store Manager"
