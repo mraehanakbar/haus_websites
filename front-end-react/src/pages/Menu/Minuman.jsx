@@ -21,7 +21,7 @@ import chocoLavaMiloC from "../../assets/images/menu/cheese_series/7_Choco Lava 
 // CHOCO SERIES
 import chocoAvocado from "../../assets/images/menu/choco_series/1_Choco Avocado.jpg";
 import chocoHazelnut from "../../assets/images/menu/choco_series/2_Choco Hazelnut.jpg";
-import chocoLavaMilo from "../../assets/images/menu/choco_series/3_Choco lava milo.jpg";
+import chocoLavaMilo from "../../assets/images/menu/choco_series/3_Choco Lava Milo.jpg";
 
 // BOBA
 import bobaMilk from "../../assets/images/menu/boba_series/1_Boba Brown Sugar Fresh Milk.jpg";
