@@ -1,4 +1,4 @@
-import { HomePage, Karir, AboutPage, Bigorder, Lokasi, Menu } from "./pages";
+import { HomePage, Karir, AboutPage, Bigorder, Lokasi, Menu, PostPage } from "./pages";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 function App() {
@@ -13,6 +13,8 @@ function App() {
           <Route path="/lokasi" element={<Lokasi />} />
           <Route path="/bigorder" element={<Bigorder />} />
           <Route path="/karir" element={<Karir />} />
+          {/* test integrating */}
+          <Route path="/test" element={<PostPage />} />
         </Routes>
       </Router>
     </>

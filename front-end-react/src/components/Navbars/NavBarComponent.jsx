@@ -64,6 +64,13 @@ const NavbarComponent = () => {
           >
             KARIR
           </NavLink>
+          <NavLink
+            className="px-1.5 lg:px-3"
+            to="/test"
+            activeClassName="active"
+          >
+            TEST
+          </NavLink>
           <button
             onClick={donwloadAPK}
             className="p-2 bg-purple-main  hidden md:flex hover:bg-[#6e3e7e] rounded-md text-white text-sm xl:ml-12 lg:ml-8 "

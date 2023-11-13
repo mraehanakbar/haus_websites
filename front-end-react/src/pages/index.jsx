@@ -4,5 +4,6 @@ import Karir from "./Karir/Karir";
 import Bigorder from "./Bigorder/Bigorder";
 import Lokasi from "./Lokasi/Lokasi";
 import Menu from "./Menu/Menu";
+import PostPage from "./PostPage/PostPage";
 
-export { AboutPage, Karir, Bigorder, HomePage, Lokasi, Menu };
+export { AboutPage, Karir, Bigorder, HomePage, Lokasi, Menu, PostPage };
