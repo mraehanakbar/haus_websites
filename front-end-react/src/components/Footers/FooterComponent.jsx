@@ -3,8 +3,8 @@ import logo from "../../assets/images/logoatas.png";
 import playstore from "../../assets/images/googleplay.png";
 import vektor from "../../assets/images/Vector.png";
 import instagram from "../../assets/images/Instagram.png";
-import tiktok from "../../assets/images/tiktok.png";
-import linkedin from "../../assets/images/linkedin.png";
+import tiktok from "../../assets/images/Tiktok.png";
+import linkedin from "../../assets/images/Linkedin.png";
 
 const donwloadAPK = () => {
   window.open(
@@ -42,9 +42,24 @@ const FooterComponent = () => {
             <strong>Follow Us</strong>
           </p>
           <div className="follow">
-            <img src={instagram} alt="instagram" onClick={linkInstagram} className="footerinstagram" />
-            <img src={tiktok} alt="tiktok" onClick={linkTiktok} className="footertiktok"/>
-            <img src={linkedin} alt="linkedin" onClick={linkLinkedin} className="footerlinkedin"/>
+            <img
+              src={instagram}
+              alt="instagram"
+              onClick={linkInstagram}
+              className="footerinstagram"
+            />
+            <img
+              src={tiktok}
+              alt="tiktok"
+              onClick={linkTiktok}
+              className="footertiktok"
+            />
+            <img
+              src={linkedin}
+              alt="linkedin"
+              onClick={linkLinkedin}
+              className="footerlinkedin"
+            />
           </div>
         </div>
         <div className="mid-footer">
