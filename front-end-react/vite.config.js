@@ -5,6 +5,7 @@ import react from "@vitejs/plugin-react";
 export default defineConfig({
   plugins: [react()],
   server: {
+    host:true, //show network for run localhost on mobile phone
     hmr: {
       overlay: false,
     },
