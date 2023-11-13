@@ -35,7 +35,7 @@ const FooterComponent = () => {
           <p className="pt">PT. INSPIRASI BISNIS NUSANTARA</p>
           <div className="email-footer">
             <p>
-              <img src={vektor} alt="" /> hello@haus.co.id
+              <img src={vektor} alt="" /> halo@haus.co.id
             </p>
           </div>
           <p>
@@ -88,11 +88,11 @@ const FooterComponent = () => {
           <p>
             <strong>Lokasi Kami</strong>
           </p>
-          <p>Taman Meruya Ilir, Jl. Safir I Blok E6 No. 27</p>
+          <p>Gedung Sastra Graha Lantai 2, Jalan Raya Perjuangan No 21, Kebon Jeruk, Jakarta Barat 11530</p>
           <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.5023034653254!2d106.74862968821648!3d-6.197263677779562!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f7c3885e7399%3A0xc7bdecffc78174f2!2sHAUS*21%20Meruya!5e0!3m2!1sid!2sid!4v1697947882837!5m2!1sid!2sid"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d247.90946736197765!2d106.76576966433358!3d-6.190718729354608!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f71af90bdcd7%3A0x79b9b3028466eed3!2sJl.%20Perjuangan%20Blok%20B%20No.21%2C%20RT.1%2FRW.10%2C%20Kb.%20Jeruk%2C%20Kec.%20Kb.%20Jeruk%2C%20Kota%20Jakarta%20Barat%2C%20Daerah%20Khusus%20Ibukota%20Jakarta%2011530!5e0!3m2!1sid!2sid!4v1699882129565!5m2!1sid!2sid"
             width="400"
-            height="200"
+            height="150"
             style={{ border: 0 }}
             allowFullScreen=""
             loading="lazy"

@@ -26,7 +26,7 @@ const AboutPage = () => {
           <div className="lines"></div>
           <h1>Cerita Perjalanan Kami</h1>
         </div>
-        <p>Didirikan pada tahun 2018, Haus! merupakan perusahaan Food & Beverage lokal yang berfokus pada kategori “New Boba & Tea. Dengan Spirit, “Spreading Happiness through a cup of Drink,” Kami menyajikan produk untuk segmen market middle low. Haus! menyediakan lebih dari 40 Varian minuman kekinian dan Ice Cream dengan range harga Rp5.000 - Rp26.000. Sejak 2020, kami juga menawarkan beragam Varian menu pelengkap seperti roti dan cemilan pedas melelui sub brand Ganjel Roti, Pedes Cyin juga Hot Oppa. Saat ini Haus! sudah beroperasi di lebih dari 220 Cabang, yang tersebar di 18 Kota dan kedepannya akan terus melakukan ekspansi ke lebih banyak kota.</p>
+        <p>Didirikan pada tahun 2018, Haus! merupakan perusahaan Food & Beverage lokal yang berfokus pada kategori “New Boba and Tea”. Dengan spirit “Spreading Happiness to Everyone Through Cup of Drink”, kami menyajikan produk untuk segmen market middle low. Haus! menyediakan lebih dari 40 varian minuman kekinian dan ice cream dengan range harga Rp5.000 - Rp26.000. Sejak 2020, kami juga menawarkan beragam varian menu pelengkap melalui sub brand Ganjel Roti, Pedes Cyin, dan Hot Oppa. Saat ini Haus! sudah beroperasi di lebih dari 200 cabang yang tersebar di 21 kota dan akan terus melakukan ekspansi ke lebih banyak kota.</p>
         <div className="founder">
           <img src={founder} alt="" />
           <div className="co-founder">
@@ -56,11 +56,9 @@ const AboutPage = () => {
         <div className="content-1">
           <div className="text1">
             <h1>Our Vision</h1>
-            <h3>&ldquo;The World with a Test of Joy&rdquo;</h3>
+            <h3>&ldquo;The World with a Taste of Joy&rdquo;</h3>
             <p>
-              Melalui visi ini, kami akan memberikan kontribusi untuk indonesia
-              serta Dunia dengan menghadirkan citarasa yang enak dan
-              menyenangkan untuk semua kalangan
+              Melalui visi ini kami akan memberikan kontribusi untuk Indonesia serta dunia dengan menghadirkan cita rasa yang enak dan menyenangkan untuk semua kalangan
             </p>
           </div>
           <img src={img1} alt="" />
@@ -74,9 +72,7 @@ const AboutPage = () => {
               &ldquo;Spreading Happiness to Everyone Through Cup of Drink&rdquo;
             </h3>
             <p>
-              Melalui misi inilah kami memiiki tujuan untuk selalu dapat
-              menyebarkan kebahagiaan melalui gelas minuman, seperti tagline
-              kami #SemuaBerhakMinumEnak
+              Melalui misi ini kami memiliki tujuan untuk dapat selalu menyebarkan kebahagiaan melalui gelas minuman, seperti tagline kami #SemuaBerhakMinumEnak
             </p>
           </div>
         </div>
@@ -99,13 +95,13 @@ const AboutPage = () => {
       <div className="outlets">
         <div className="box-outlets">
           <h2>
-            <CountUp end={197} duration={5} />
+            <CountUp end={219} duration={5} />
           </h2>
           <h4>Outlets</h4>
         </div>
         <div className="box-outlets">
           <h2>
-            <CountUp end={18} duration={5} />
+            <CountUp end={21} duration={5} />
           </h2>
           <h4>Cities</h4>
         </div>

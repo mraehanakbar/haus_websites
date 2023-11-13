@@ -26,28 +26,24 @@ const Bigorder = () => {
         <div className="decstoporder">
           <img src={iconback} alt="" />
           <div className="decstoporder-text">
-            <h1>Meriahkan Acaramu dengan Product Haus!</h1>
-            <p>Semua menu haus! dalam paket rame - rame</p>
+            <h1>Meriahkan Acaramu dengan Produk Haus!</h1>
+            <p>Semua menu Haus! dalam paket rame-rame</p>
           </div>
         </div>
         <img src={orderimage} alt="content image" style={{
           zIndex: 3
         }} />
       </div>
-      <div className="line">
+      <div className="line-order">
         <div className="lines"></div>
       </div>
       <div className="title-order">
-        <h1>Haus! Rame - rame</h1>
+        <h1>Haus! Rame - Rame</h1>
       </div>
       <div className="contentorder">
         <div className="descorder">
           <p>
-            Untuk acara spesial Warga, kami memiliki Paket Haus Rame - Rame.
-            Untuk pertemuan kantor, rapat, ulang tahun, atau acara khusus
-            lainnya, Warga akan mendapatkan layanan terbaik & produk berkualitas
-            tinggi, harga yang affordable, dan layanan crew haus kami untuk
-            membuat berbagai minuman Haus! dan menu lainnya.
+            Untuk acara spesial Warga Haus!, kami memiliki paket Haus! Rame - Rame. Untuk pertemuan kantor, rapat, ulang tahun, atau acara khusus lainnya, Warga Haus! akan mendapatkan layanan terbaik, produk berkualitas tinggi, harga yang affordable, serta layanan crew kami untuk membuat berbagai minuman Haus! dan menu lainnya.
           </p>
         </div>
       </div>
@@ -69,15 +65,14 @@ const Bigorder = () => {
               <h3>Kontak Kami</h3>
               <p>
                 <img src={vektor} alt="" />
-                hello@haus.co.id
+                halo@haus.co.id
               </p>
               <p>
-                <img src={pin} alt="" /> Taman Meruya Ilir, Jl. Safir I Blok E6 No.
-                27
+                <img src={pin} alt="" /> Gedung Sastra Graha Lantai 2, Jalan Raya Perjuangan No 21, Kebon Jeruk, Jakarta Barat 11530
               </p>
             </div>
             <div className="button-call">
-              <button className="packagedl">Download Package</button>
+              <button className="packagedl" onClick={downloadFlyer}>Download Package</button>
               <button className="whatsapp" onClick={contactTO}>
                 Contact Via Whatsapp
               </button>
@@ -86,7 +81,7 @@ const Bigorder = () => {
           <div className="contentImg">
             <img
               src={contentimage}
-              alt="Content image"            />
+              alt="Content image" />
           </div>
         </div>
       </div>
