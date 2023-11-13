@@ -142,7 +142,7 @@ const HomePage = () => {
         <audio id="my_audio" src={jingle_haus} loop="loop"></audio>
 
         {/* Kitkat Header */}
-        <div className="h-[90vh] w-full kitkat-bg">
+        <div className="h-[90dvh] lg:h-[90vh] kitkat-bg">
           {/* Background Decoration */}
           <div>
             <img
@@ -193,7 +193,7 @@ const HomePage = () => {
               {/* Kitkat Cup Image */}
               <div className="flex justify-center h-[65%] pt-5 lg:h-full lg:w-[55%]">
                 <img
-                  className="w-[80%] object-contain scale-125 lg:w-[80%]"
+                  className="w-[80%] object-contain scale-125 z-20 lg:w-[80%]"
                   src={kitkat_gelas}
                   alt="Kitkat Text"
                 />
