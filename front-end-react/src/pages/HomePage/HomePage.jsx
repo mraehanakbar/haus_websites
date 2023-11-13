@@ -113,6 +113,16 @@ const HomePage = () => {
       audio.play();
     });
 
+    const handleVisibilityChange = () => {
+      if (document.hidden) {
+        audio.pause();
+      } else {
+        audio.play();
+      }
+    }
+
+    document.addEventListener("visibilitychange", handleVisibilityChange);
+
     return () => {
       // Clear the interval when the component is unmounted
       if (intervalRef.current) {
@@ -125,6 +135,8 @@ const HomePage = () => {
         audio.currentTime = 0;
         audio.play();
       });
+
+      document.removeEventListener("visibilitychange", handleVisibilityChange);
     };
   }, []);
 
@@ -142,7 +154,7 @@ const HomePage = () => {
         <audio id="my_audio" src={jingle_haus} loop="loop"></audio>
 
         {/* Kitkat Header */}
-        <div className="h-[90dvh] lg:h-[90vh] kitkat-bg">
+        <div className="h-[90svh] md:h-[90vh] kitkat-bg">
           {/* Background Decoration */}
           <div>
             <img
