@@ -1,7 +1,7 @@
 import { NavbarComponent, FooterComponent } from "../../components";
 import orderimage from "../../assets/images/bigorder.png";
 import contentimage from "../../assets/images/callus.png";
-import vektor from "../../assets/images/Vector.png";
+import vektor from "../../assets/images/vector.png";
 import pin from "../../assets/images/pin.png";
 import flyer from "../../assets/images/flyerbigorder.jpg";
 import iconback from "../../assets/images/iconbackground.png";
