@@ -1,4 +1,4 @@
-import { HomePage, Karir, AboutPage, Bigorder, Lokasi, Menu, PostPage } from "./pages";
+import { HomePage, Karir, AboutPage, Bigorder, Lokasi, Menu, PostPage, PostPost } from "./pages";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 function App() {
@@ -15,6 +15,7 @@ function App() {
           <Route path="/karir" element={<Karir />} />
           {/* test integrating */}
           <Route path="/test" element={<PostPage />} />
+          <Route path="/test/post" element={<PostPost />} />
         </Routes>
       </Router>
     </>
