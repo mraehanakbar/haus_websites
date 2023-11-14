@@ -3,7 +3,7 @@ import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-const CardTest = ({ id, name, version, model, onDelete }) => {
+const CardTest = ({ id, name, version, model, onDelete, onEdit }) => {
 
     return (
         <>
@@ -17,8 +17,11 @@ const CardTest = ({ id, name, version, model, onDelete }) => {
                     <Card.Text>
                         {model}
                     </Card.Text>
-                    <Button variant="primary" onClick={() => onDelete(id)}>
+                    <Button variant="danger" onClick={() => onDelete(id)}>
                         Delete
+                    </Button>
+                    <Button variant="secondary" onClick={() => onEdit(id)}>
+                        Edit
                     </Button>
                 </Card.Body>
             </Card>

@@ -6,6 +6,9 @@ import NewLocation from "./Newlocation";
 import ListLokasi from "./ListLokasi/ListLokasi";
 import ListMenu from "./ListMenu/ListMenu";
 import LocationList from "./LocationList";
+import CardTest from "./cardtest/cardtest";
+import EditForm from "./Edit/EditComponent";
+
 
 export {
   NavbarComponent,
@@ -16,4 +19,6 @@ export {
   ListLokasi,
   ListMenu,
   LocationList,
+  CardTest,
+  EditForm,
 };

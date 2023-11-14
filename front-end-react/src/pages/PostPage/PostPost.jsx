@@ -37,13 +37,29 @@ const PostPost = () => {
                     draggable: true,
                     progress: undefined,
                 });
+                // Clear form
+                setCarData({
+                    name: "",
+                    version: "",
+                    model: "",
+                });
             } else {
                 console.error("Failed to post car data");
             }
         } catch (error) {
             console.error("Error posting car data to API", error);
+            toast.error("Failed to post car data", {
+                position: "top-right",
+                autoClose: 3000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+            });
         }
     };
+
 
     return (
         <>
