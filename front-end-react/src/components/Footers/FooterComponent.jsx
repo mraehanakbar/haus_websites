@@ -84,13 +84,13 @@ const FooterComponent = () => {
             <br />
           </div>
         </div>
-        <div className="lokasi">
+        <div className="lokasi mb-14 lg:mb-0">
           <p>
             <strong>Lokasi Kami</strong>
           </p>
           <p>Gedung Sastra Graha Lantai 2, Jalan Raya Perjuangan No 21, Kebon Jeruk, Jakarta Barat 11530</p>
           <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d247.90946736197765!2d106.76576966433358!3d-6.190718729354608!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f71af90bdcd7%3A0x79b9b3028466eed3!2sJl.%20Perjuangan%20Blok%20B%20No.21%2C%20RT.1%2FRW.10%2C%20Kb.%20Jeruk%2C%20Kec.%20Kb.%20Jeruk%2C%20Kota%20Jakarta%20Barat%2C%20Daerah%20Khusus%20Ibukota%20Jakarta%2011530!5e0!3m2!1sid!2sid!4v1699882129565!5m2!1sid!2sid"
+            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d991.6377949722723!2d106.765526!3d-6.1907584!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f71da1536081%3A0xe42ff8ae85877252!2sATM%20BCA%20Sastra%20Graha!5e0!3m2!1sen!2sid!4v1699938751890!5m2!1sen!2sid"
             width="400"
             height="150"
             style={{ border: 0 }}
