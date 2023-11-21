@@ -3,14 +3,14 @@ import google_play from "../../assets/images/google-play.png";
 import hp from "../../assets/images/hp.png";
 import app_order_decoration from "../../assets/images/app-order-decoration.png";
 import ilustrasi_visual from "../../assets/images/illlustrasi-visual-lifestyle.png";
-import kitkat_drink from "../../assets/images/kitkat-drink.png";
-import cone_milo from "../../assets/images/cone-milo.png";
+import kitkat_drink from "../../assets/images/choco-cheese-crunchy.png";
+import cone_milo from "../../assets/images/choco-ice-cream-cone.png";
 import thai_tea from "../../assets/images/thai-tea.png";
 import mango_yakult from "../../assets/images/mango-yakult.png";
-import choco_lava_milo_float from "../../assets/images/choco-lava-milo-float.png";
+import choco_lava_milo_float from "../../assets/images/choco-lava-float.png";
 import fresh_lemon_tea from "../../assets/images/fresh-lemon-tea.png";
 import green_thai_tea from "../../assets/images/green-thai-tea.png";
-import oreo from "../../assets/images/oreo.png";
+import oreo from "../../assets/images/cookies-and-cream.png";
 import arrow_right from "../../assets/images/arrow-right.svg";
 import arrow_left from "../../assets/images/arrow-left.svg";
 import ganjel_ah from "../../assets/images/ganjel-ah.png";
@@ -340,11 +340,13 @@ const HomePage = () => {
           <div className="flex flex-row justify-around lg:justify-evenly lg:flex-col lg:mx-auto lg:w-full">
             {/* Row Pertama */}
             <div className="flex flex-col flex-wrap items-center w-full py-4 lg:py-2 lg:flex-row lg:justify-evenly">
+              {/* Diganti */}
               <img
                 className="haus-menu w-[75%] py-2 lg:py-0 md:w-[60%] lg:w-[13%] "
                 src={kitkat_drink}
                 alt="Kitkat Drink"
               />
+              {/* Diganti */}
               <img
                 className="haus-menu w-[75%] py-2 lg:py-0 md:w-[60%] lg:w-[13%]"
                 src={cone_milo}
@@ -363,6 +365,7 @@ const HomePage = () => {
             </div>
 
             {/* Row Kedua */}
+            {/* Diganti */}
             <div className="flex flex-col items-center w-full py-4 lg:py-2 lg:flex-row lg:justify-evenly">
               <img
                 className="haus-menu w-[75%] py-2 lg:py-0 md:w-[60%] lg:w-[13%]"
@@ -379,6 +382,7 @@ const HomePage = () => {
                 src={green_thai_tea}
                 alt="Green Thai Tea"
               />
+              {/* Diganti */}
               <img
                 className="haus-menu w-[75%] py-2 lg:py-0 md:w-[60%] lg:w-[13%]"
                 src={oreo}
