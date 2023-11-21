@@ -16,12 +16,12 @@ import strawberryCT from "../../assets/images/menu/cheese_series/8_Strawberry Ch
 import taroC from "../../assets/images/menu/cheese_series/9_Taro Cheese.jpg";
 import thaiTC from "../../assets/images/menu/cheese_series/10_Thai Tea Cheese.jpg";
 import chocoHazelnutC from "../../assets/images/menu/cheese_series/6_Choco Hazelnut Cheese.jpg";
-import chocoLavaMiloC from "../../assets/images/menu/cheese_series/7_Choco Lava Milo Cheese.jpg";
+import chocoLavaC from "../../assets/images/menu/cheese_series/7_Choco Lava Cheese.jpg";
 
 // CHOCO SERIES
 import chocoAvocado from "../../assets/images/menu/choco_series/1_Choco Avocado.jpg";
 import chocoHazelnut from "../../assets/images/menu/choco_series/2_Choco Hazelnut.jpg";
-import chocoLavaMilo from "../../assets/images/menu/choco_series/3_Choco Lava Milo.jpg";
+import chocoLava from "../../assets/images/menu/choco_series/3_Choco Lava.jpg";
 
 // BOBA
 import bobaMilk from "../../assets/images/menu/boba_series/1_Boba Brown Sugar Fresh Milk.jpg";
@@ -54,7 +54,7 @@ const Minuman = () => {
           content={
             <>
               <ListMenu imgSource={ovaltine} title="Ovaltine" />
-              <ListMenu imgSource={oreo} title="Oreo" />
+              <ListMenu imgSource={oreo} title="Cookies & Cream" />
               <ListMenu imgSource={taro} title="Taro" />
               <ListMenu imgSource={thaiTea} title="Thaitea" />
               <ListMenu imgSource={greenThai} title="Green Thaitea" />
@@ -74,7 +74,7 @@ const Minuman = () => {
               />
               <ListMenu imgSource={mangoCT} title="Mango Cheese Tea" />
               <ListMenu imgSource={ovaltineC} title="Ovaltine Cheese Tea" />
-              <ListMenu imgSource={oreoC} title="Oreo Cheese" />
+              <ListMenu imgSource={oreoC} title="Cookies & Cream Cheese" />
               <ListMenu
                 imgSource={strawberryCT}
                 title="Strawberry Cheese Tea"
@@ -85,10 +85,7 @@ const Minuman = () => {
                 imgSource={chocoHazelnutC}
                 title="Choco Hazelnut Cheese"
               />
-              <ListMenu
-                imgSource={chocoLavaMiloC}
-                title="Choco Lava Milo Cheese"
-              />
+              <ListMenu imgSource={chocoLavaC} title="Choco Lava Cheese" />
             </>
           }
         />
@@ -99,7 +96,7 @@ const Minuman = () => {
           content={
             <>
               <ListMenu imgSource={chocoHazelnut} title="Choco Hazelnut" />
-              <ListMenu imgSource={chocoLavaMilo} title="Choco Lava Milo" />
+              <ListMenu imgSource={chocoLava} title="Choco Lava" />
               <ListMenu imgSource={chocoAvocado} title="Choco Avocado" />
             </>
           }
