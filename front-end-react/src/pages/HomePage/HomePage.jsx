@@ -3,10 +3,10 @@ import google_play from "../../assets/images/google-play.png";
 import hp from "../../assets/images/hp.png";
 import app_order_decoration from "../../assets/images/app-order-decoration.png";
 import ilustrasi_visual from "../../assets/images/illlustrasi-visual-lifestyle.png";
-import kitkat_drink from "../../assets/images/choco-cheese-crunchy.png";
-import cone_milo from "../../assets/images/choco-ice-cream-cone.png";
+import kitkat_drink from "../../assets/images/choco-cheese-crunchy-new.png";
+import cone_milo from "../../assets/images/cone-choco-new.png";
 import thai_tea from "../../assets/images/thai-tea.png";
-import mango_yakult from "../../assets/images/mango-yakult.png";
+import mango_yakult from "../../assets/images/mango-yakult-new.png";
 import choco_lava_milo_float from "../../assets/images/choco-lava-float.png";
 import fresh_lemon_tea from "../../assets/images/fresh-lemon-tea.png";
 import green_thai_tea from "../../assets/images/green-thai-tea.png";
@@ -24,13 +24,13 @@ import box_bottom_left from "../../assets/images/box-bottom-left.png";
 import box_top_right from "../../assets/images/box-top-right.png";
 import polygon_arrow from "../../assets/images/polygon-arrow.svg";
 import logo_halal from "../../assets/images/halal-logo.png";
-import kitkat_text from "../../assets/images/kitkat-text.png";
-import kitkat_gelas from "../../assets/images/kitkat-gelas.png";
+import choco_cheese_crunchy_text from "../../assets/images/choco-cheese-crunchy-text.png";
+import choco_cheese_crunchy_element from "../../assets/images/choco-cheese-crunchy-element.png";
 import tamvan_series from "../../assets/images/tamvan-series.png";
-import kitkat_logo from "../../assets/images/kitkat-logo.png";
+// import kitkat_logo from "../../assets/images/kitkat-logo.png";
 import haus_logo_putih from "../../assets/images/haus-logo.png";
-import kitkat_blur_bottom_left from "../../assets/images/kitkat-blur-bottom-left.png";
-import kitkat_blur_bottom_right from "../../assets/images/kitkat-blur-top-right.png";
+// import kitkat_blur_bottom_left from "../../assets/images/kitkat-blur-bottom-left.png";
+// import kitkat_blur_bottom_right from "../../assets/images/kitkat-blur-top-right.png";
 import jingle_haus from "../../assets/audio/jingle_haus.mp3";
 import "./HomePage.css";
 import React, { useState, useEffect } from "react";
@@ -155,59 +155,39 @@ const HomePage = () => {
 
         {/* Kitkat Header */}
         <div className="h-[90svh] md:h-[90vh] kitkat-bg">
-          {/* Background Decoration */}
-          <div>
-            <img
-              className="decoration-bg-kitkat-left absolute bottom-0 left-0 w-2/5 lg:w-auto"
-              src={kitkat_blur_bottom_left}
-              alt="Kitkat Blur Bottom Left"
-            />
-            <img
-              className="decoration-bg-kitkat-right absolute top-30 lg:top-14 right-0 w-2/5 lg:w-auto"
-              src={kitkat_blur_bottom_right}
-              alt="Kitkat Blur Top Right"
-            />
-          </div>
-
+          
           {/* Content Parent */}
           <div className="flex flex-col h-[90vh]">
             {/* Haus and Kitkat Logo */}
-            <div className="flex h-[10%] mt-4 lg:mt-10 w-full">
+            <div className="h-[10%] mt-4 md:mt-8 lg:mt-10 w-full">
               {/* Haus Logo */}
-              <div className="w-1/2">
+              <div className="w-1/2"> 
                 <img
-                  className="w-[50%] lg:w-[40%] h-full lg:h-[80%] object-contain ms-8 lg:ms-14"
+                  className="w-[50%] md:w-[40%] lg:w-[25%] h-full lg:h-[80%] object-contain ms-8 lg:ms-14"
                   src={haus_logo_putih}
                   alt="Haus Logo Putih"
                 />
               </div>
-              {/* Kitkat Logo */}
-              <div className="flex justify-end w-1/2 z-20 me-8 lg:me-0">
-                <img
-                  className="w-[40%] lg:scale-135 h-full object-contain"
-                  src={kitkat_logo}
-                  alt="Kitkat Logo"
-                />
-              </div>
+
             </div>
 
             {/* Kitkat Text & Kikat Cup Image*/}
-            <div className="flex flex-col lg:flex-row h-[70%] lg:h-[55%] pt-5 lg:pt-0">
+            <div className="flex flex-col lg:flex-row h-[70%] lg:h-[60%]  lg:pt-0">
               {/* Kitkat Text */}
-              <div className="flex justify-center  h-[35%] lg:h-full lg:w-[45%]">
+              <div className="flex justify-center h-[35%] lg:h-full lg:w-[45%]">
                 <img
                   className="object-contain lg:w-[75%] lg:ms-20 lg:mt-8"
-                  src={kitkat_text}
-                  alt="Kitkat Text"
+                  src={choco_cheese_crunchy_text}
+                  alt="Choco Cheese Crunchy Text"
                 />
               </div>
 
               {/* Kitkat Cup Image */}
-              <div className="flex justify-center h-[65%] pt-5 lg:h-full lg:w-[55%]">
+              <div className="flex justify-center md:mt-4 h-[65%] pt-5 lg:h-full lg:w-[55%]">
                 <img
-                  className="w-[80%] object-contain scale-125 z-20 lg:w-[80%]"
-                  src={kitkat_gelas}
-                  alt="Kitkat Text"
+                  className="w-[75%] object-contain scale-125  md:w-[60%] lg:w-[80%]"
+                  src={choco_cheese_crunchy_element}
+                  alt="Choco Cheese Crunchy Element"
                 />
               </div>
             </div>
@@ -224,7 +204,7 @@ const HomePage = () => {
             {/* Promo & Footer Aksen */}
             <div
               onClick={scrollToBestDeal}
-              className="promo-footer-aksen cursor-pointer absolute bottom-0 flex justify-center w-full pb-5 lg:pb-8"
+              className="promo-footer-aksen cursor-pointer absolute bottom-0 z-20 flex justify-center w-full pb-5 lg:pb-8"
             >
               <div className="text-white w-[9%] lg:w-fit">
                 <div className="text-center text-[9px] lg:text-[18px]">
