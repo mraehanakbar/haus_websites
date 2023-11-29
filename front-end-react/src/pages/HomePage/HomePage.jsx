@@ -1,6 +1,6 @@
 import { NavbarComponent, FooterComponent } from "../../components";
 import google_play from "../../assets/images/google-play.png";
-import hp from "../../assets/images/hp.png";
+import hp from "../../assets/images/haus-mobapp-new.png";
 import app_order_decoration from "../../assets/images/app-order-decoration.png";
 import ilustrasi_visual from "../../assets/images/illlustrasi-visual-lifestyle.png";
 import kitkat_drink from "../../assets/images/choco-cheese-crunchy-new.png";
@@ -15,7 +15,8 @@ import arrow_right from "../../assets/images/arrow-right.svg";
 import arrow_left from "../../assets/images/arrow-left.svg";
 import ganjel_ah from "../../assets/images/ganjel-ah.png";
 import student_promo from "../../assets/images/student-promo.png";
-import haus_pahala from "../../assets/images/haus-pahala.png";
+import haus_pahala_new from "../../assets/images/haus-pahala-new.png";
+import haus_pahala_old from "../../assets/images/haus-pahala-old.png";
 import haus_gan from "../../assets/images/haus-gan.png";
 import haus_cyin from "../../assets/images/haus-cyin.png";
 import haus_bro from "../../assets/images/haus-bro.png";
@@ -24,13 +25,10 @@ import box_bottom_left from "../../assets/images/box-bottom-left.png";
 import box_top_right from "../../assets/images/box-top-right.png";
 import polygon_arrow from "../../assets/images/polygon-arrow.svg";
 import logo_halal from "../../assets/images/halal-logo.png";
-import choco_cheese_crunchy_text from "../../assets/images/choco-cheese-crunchy-text.png";
-import choco_cheese_crunchy_element from "../../assets/images/choco-cheese-crunchy-element.png";
+import choco_cheese_crunchy_text from "../../assets/images/choco-cheese-crunchy-text-new.png";
+import choco_cheese_crunchy_element from "../../assets/images/new-haus-take-it.png";
 import tamvan_series from "../../assets/images/tamvan-series.png";
-// import kitkat_logo from "../../assets/images/kitkat-logo.png";
 import haus_logo_putih from "../../assets/images/haus-logo.png";
-// import kitkat_blur_bottom_left from "../../assets/images/kitkat-blur-bottom-left.png";
-// import kitkat_blur_bottom_right from "../../assets/images/kitkat-blur-top-right.png";
 import jingle_haus from "../../assets/audio/jingle_haus.mp3";
 import "./HomePage.css";
 import React, { useState, useEffect } from "react";
@@ -50,7 +48,8 @@ const HomePage = () => {
     haus_bro,
     haus_cyin,
     haus_gan,
-    haus_pahala,
+    haus_pahala_old,
+    haus_pahala_new,
     student_promo,
   ];
 
@@ -172,20 +171,20 @@ const HomePage = () => {
             </div>
 
             {/* Kitkat Text & Kikat Cup Image*/}
-            <div className="flex flex-col lg:flex-row h-[70%] lg:h-[60%]  lg:pt-0">
+            <div className="flex flex-col lg:flex-row h-[70%] lg:h-[60%] lg:pt-0">
               {/* Kitkat Text */}
-              <div className="flex justify-center h-[35%] lg:h-full lg:w-[45%]">
+              <div className="flex justify-center h-[35%] z-20 lg:h-full lg:w-[45%]">
                 <img
-                  className="object-contain lg:w-[75%] lg:ms-20 lg:mt-8"
+                  className="object-contain lg:w-[70%] lg:ms-0 lg:mt-8"
                   src={choco_cheese_crunchy_text}
                   alt="Choco Cheese Crunchy Text"
                 />
               </div>
 
               {/* Kitkat Cup Image */}
-              <div className="flex justify-center md:mt-4 h-[65%] pt-5 lg:h-full lg:w-[55%]">
+              <div className="flex justify-center lg:justify-start md:mt-4 h-[65%] pt-5 lg:h-full lg:w-[55%]">
                 <img
-                  className="w-[75%] object-contain scale-125  md:w-[60%] lg:w-[80%]"
+                  className="w-[100%] object-contain scale-110 md:scale-145 lg:scale-150 md:w-[60%] lg:w-fit"
                   src={choco_cheese_crunchy_element}
                   alt="Choco Cheese Crunchy Element"
                 />
@@ -193,7 +192,7 @@ const HomePage = () => {
             </div>
 
             {/* Halal Logo */}
-            <div className="h-[10%] lg:h-[15%] flex justify-end">
+            <div className="h-[10%] lg:h-[15%] flex justify-end z-20">
               <img
                 className="w-[10%] lg:h-[80%] object-contain me-10 mt-4 lg:mt-10"
                 src={logo_halal}
